@@ -1,25 +1,41 @@
 # 鲁班零号 / Luban Zero
 
-> **公开项目介绍页 / Public project introduction**
+> **内测中 / Private beta**
 >
-> 代码、模型和研究资料不在本仓库公开。/ Source code, models, and research materials are not published in this repository.
+> 本页面公开项目介绍，不公开源代码、模型权重或内部研究资料。> This page introduces the project publicly; source code, model weights, and internal research materials remain restricted.
 
 官网 / Website: [ai.maihh.net](https://ai.maihh.net/)
 
 ## 中文简介
 
-鲁班零号（luban0）是一个以约 2B 语言核心起步的本地 AI 原型。项目探索前端快速决策、本地模型、后端 API 教师，以及可学习、增长和休眠的内部神经模块；暂时不用的冷权重可保存到硬盘。
+鲁班零号（luban0）是一个以约 2B 语言核心起步的本地 AI 原型，面向个人设备上的模型运行、快速回答路由和受控学习探索。项目正在进行内测，功能、接口和产品范围仍会根据实测继续调整。
 
-“持续成长”是工程愿景，不代表已经证明无限能力增长。本公开仓库只用于项目介绍和官网入口，不提供源代码、模型权重或内部研究资料，也不授予开源许可。
+当前公开介绍的方向包括：
+
+- 本地模型与 API 服务入口
+- 本地回答、后端 API 教师和设置管理
+- 受控的学习与能力成长实验
+- 中英文产品页面和官网体验
+
+这些是当前的产品方向，不代表所有能力已经完成或经过公开评测。项目中的“持续成长”是工程愿景，不代表已经证明无限能力增长。
 
 ## English
 
-Luban Zero (luban0) is a private local AI prototype starting from an approximately 2B language core. It explores a fast decision layer, a local model, a backend API teacher, and internal neural modules that can learn, grow, and sleep; cold weights can be persisted to disk when they are not active.
+Luban Zero (luban0) is a local AI prototype starting from an approximately 2B language core. It explores on-device model serving, fast answer routing, and controlled learning for personal devices. The project is currently in private beta, and its features, APIs, and product scope are still being refined through testing.
 
-“Continuous growth” is an engineering goal, not a claim of proven unlimited capability. This public repository contains only the project introduction and website link. It does not publish source code, model weights, or internal research materials, and it grants no open-source license.
+Current public product directions include:
 
-## 项目状态 / Project status
+- A local model and API service entry point
+- Local answers, a backend API teacher, and settings management
+- Controlled learning and capability-growth experiments
+- Bilingual product pages and a public website
 
-实现、研究证据和内部流程保留在受限项目环境中，按阶段整理和维护。
+These describe the current direction and do not claim that every capability is complete or publicly benchmarked. “Continuous growth” is an engineering goal, not a claim of proven unlimited capability.
 
-Implementation, research evidence, and internal workflows remain in a restricted project environment and are maintained in organized stages.
+## 公开范围 / Public scope
+
+公开仓库只提供项目介绍、内测状态和官网入口。源代码、模型权重、内部研究证据、流程脑图和实验资料保留在受限项目环境中；本仓库不授予开源许可。
+
+This public repository contains only the project introduction, beta status, and website link. Source code, model weights, internal research evidence, workflow maps, and experiment materials remain in a restricted project environment; this repository grants no open-source license.
+
+更多状态说明见 [STATUS.md](STATUS.md)。
