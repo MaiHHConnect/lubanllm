@@ -8,29 +8,43 @@
 
 ## 中文简介
 
-鲁班零号（luban0）是一个以约 2B 语言核心起步的本地 AI 原型，面向个人设备上的模型运行、快速回答路由和受控学习探索。项目正在进行内测，功能、接口和产品范围仍会根据实测继续调整。
+鲁班零号（luban0）是一个以约 2B 语言核心起步的本地 AI 原型，面向个人设备上的低成本推理、快速路由和受控学习。
 
-当前公开介绍的方向包括：
+回答前，前置路由头会根据任务选择本地模型或远程模型进行推理处理。对于本地模型回答错误或需要改进的内容，系统会记录为学习材料并尝试临时专家训练。临时学习采用“盈亏比”思路：根据预期收益、训练成本和遗忘风险决定是否采纳，不强制每一次临时训练都立即学会；在有新材料、资源和授权时持续积累。
 
-- 本地模型与 API 服务入口
-- 本地回答、后端 API 教师和设置管理
-- 受控的学习与能力成长实验
-- 中英文产品页面和官网体验
+当学习材料积累到足够规模并通过独立资格检查后，可以启动 MoE 混合专家训练，为模型增加独立专家，让模型在持续使用和验证中逐步扩展可用能力。每次增长都需要经过质量、保留和失败回滚检查，实际效果以测试结果为准。
 
-这些是当前的产品方向，不代表所有能力已经完成或经过公开评测。项目中的“持续成长”是工程愿景，不代表已经证明无限能力增长。
+当前内测中，在 Mac mini M4 上约 2B 模型的实测生成速度达到 **58 词元/秒**；速度会随模型版本、上下文长度、量化方式和设备状态变化。
+
+## 适合的场景
+
+- 低成本客服模型建立
+- 企业内部知识库问答
+- 不复杂的自动化任务
+- 陪伴个人成长的本地模型
+- 根据长期使用逐步增加模型参数和专长
+
+这些是产品方向和内测目标，不代表所有能力已经完成或经过公开评测。“越用越有料”描述的是受控学习与专家扩展的设计方向，不是无限能力增长的保证。
 
 ## English
 
-Luban Zero (luban0) is a local AI prototype starting from an approximately 2B language core. It explores on-device model serving, fast answer routing, and controlled learning for personal devices. The project is currently in private beta, and its features, APIs, and product scope are still being refined through testing.
+Luban Zero (luban0) is a local AI prototype starting from an approximately 2B language core. It focuses on low-cost inference, fast routing, and controlled learning on personal devices.
 
-Current public product directions include:
+Before an answer is generated, a front routing head selects either a local model or a remote model for inference. When the local model gives an incorrect or improvable answer, the system records it as learning material and may run temporary expert training. This process follows a return-on-investment idea: expected benefit, training cost, and forgetting risk are considered before adoption. A temporary update is not forced to succeed every time; material can continue to accumulate when new data, resources, and authorization are available.
 
-- A local model and API service entry point
-- Local answers, a backend API teacher, and settings management
-- Controlled learning and capability-growth experiments
-- Bilingual product pages and a public website
+After enough learning material has accumulated and passed independent qualification checks, MoE mixture-of-experts training can be started to add independent experts. The model is intended to expand its usable capabilities gradually through continued use and validation. Each update remains subject to quality, retention, and failure rollback checks; actual results are determined by tests.
 
-These describe the current direction and do not claim that every capability is complete or publicly benchmarked. “Continuous growth” is an engineering goal, not a claim of proven unlimited capability.
+In the current beta, an approximately 2B model measured about **58 tokens per second** on a Mac mini M4. Speed varies with the model version, context length, quantization, and device state.
+
+## Suitable scenarios
+
+- Building a low-cost customer-service model
+- Enterprise knowledge-base question answering
+- Non-complex automation tasks
+- A local model for personal growth and companionship
+- Gradually adding parameters and specialties through long-term use
+
+These are product directions and beta goals, not claims that every capability is complete or publicly benchmarked. “More useful with use” describes the controlled learning and expert-expansion direction; it is not a guarantee of unlimited capability growth.
 
 ## 公开范围 / Public scope
 
