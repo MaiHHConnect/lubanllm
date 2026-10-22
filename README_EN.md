@@ -1,6 +1,6 @@
 # Luban Zero
 
-**Application: private beta · Technical report: Research Preview**
+**Application: public beta · Technical report: Research Preview**
 
 [Website](https://ai.maihh.net/?lang=en) · [中文](README.md) · [Beta status](STATUS.md)
 
@@ -31,4 +31,4 @@ These are directions rather than completed capability promises. See [the current
 
 This repository publishes project information, the technical report, and sanitized aggregate results. Source code, personal data, complete raw research evidence, and internal workflow documents remain restricted. Publication grants no new source-code or model license; upstream components retain their own licenses.
 
-Publishing this report does not publish the application installer. Consult the [website](https://ai.maihh.net/?lang=en) and [Releases](https://github.com/MaiHHConnect/lubanllm/releases) for download availability.
+Application 0.3.217 is available as a public beta: [Download the macOS beta](https://github.com/MaiHHConnect/lubanllm/releases/tag/v0.3.217-beta.1) · [Quark Drive](https://pan.quark.cn/s/0e9c14c97c78). Requires macOS 26 or later and Apple Silicon; not notarized by Apple.

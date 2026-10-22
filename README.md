@@ -31,4 +31,4 @@
 
 本仓库公开项目介绍、技术报告和脱敏实验汇总。源码、个人数据、完整原始研究证据和内部流程资料不在本仓库公开；未授予项目源码或模型新的开源许可，上游组件保留各自许可。
 
-报告公开不等于应用安装包已经公开发布，下载状态以[官网](https://ai.maihh.net/)和[Release列表](https://github.com/MaiHHConnect/lubanllm/releases)为准。
+应用 0.3.217 已开放内测下载：[下载 macOS 内测版](https://github.com/MaiHHConnect/lubanllm/releases/tag/v0.3.217-beta.1) · [夸克网盘](https://pan.quark.cn/s/0e9c14c97c78)。需要 macOS 26 或更新版本、Apple Silicon；尚未经过 Apple 公证。
