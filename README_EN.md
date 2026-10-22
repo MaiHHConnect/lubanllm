@@ -6,9 +6,13 @@
 
 Luban Zero (luban0) is a continual-learning AI prototype for personal devices, starting from an approximately 2B language core. It explores local inference, routing, learning from authorized material, and forgetting control.
 
-## Research & Technical Report
+## Research Paper — Luban0
 
 **Luban: Budget-Constrained Continual Learning with Disk-Resident Neural Experts**
+
+DOI: [10.5281/zenodo.23552845](https://doi.org/10.5281/zenodo.23552845)
+
+Status: **Technical Report / Preprint (not peer reviewed)**.
 
 [📄 Read Paper](paper/Luban_Technical_Report.md) · [PDF](paper/Luban_Technical_Report.pdf) · [Chinese supplement](paper/Luban_Technical_Report_ZH.md) · [📊 Experimental Results](docs/EXPERIMENTS.md)
 

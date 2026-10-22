@@ -6,9 +6,13 @@
 
 鲁班零号（luban0）是面向个人设备的持续学习AI原型，以约2B语言核心起步，探索本地推理、路由选择、用户授权资料学习和遗忘控制。
 
-## 研究与技术报告
+## Research Paper — Luban0
 
 **Luban: Budget-Constrained Continual Learning with Disk-Resident Neural Experts**
+
+DOI: [10.5281/zenodo.23552845](https://doi.org/10.5281/zenodo.23552845)
+
+状态：**Technical Report / Preprint（未经同行评审）**。
 
 [📄 Read Paper](paper/Luban_Technical_Report.md) · [PDF](paper/Luban_Technical_Report.pdf) · [中文补充](paper/Luban_Technical_Report_ZH.md) · [📊 Experimental Results](docs/EXPERIMENTS.md)
 
