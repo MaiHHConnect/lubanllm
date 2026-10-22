@@ -12,7 +12,7 @@ Luban Zero (luban0) is a continual-learning AI prototype for personal devices, s
 
 [📄 Read Paper](paper/Luban_Technical_Report.md) · [PDF](paper/Luban_Technical_Report.pdf) · [Chinese supplement](paper/Luban_Technical_Report_ZH.md) · [📊 Experimental Results](docs/EXPERIMENTS.md)
 
-Report v0.1 (22 October 2026) describes the current MLX 4-bit architecture, expert learning, route-aware evaluation, net-gain admission, observed failures, and limitations. It is a **Technical Report — Research Preview / Work in Progress**, not submitted or peer reviewed. Author: vinson. Affiliation: 麦好火电商研究. Final manuscript review remains pending; no independent peer review is claimed. The report and sanitized summaries use [CC BY 4.0](LICENSE-REPORT.txt).
+Report v0.1 (22 October 2026) describes the current MLX 4-bit architecture, expert learning, route-aware evaluation, net-gain admission, observed failures, and limitations. It is a **Technical Report — Research Preview / Work in Progress**, not submitted or peer reviewed. Author: vinson. Affiliation: 麦好火电商研究. Final manuscript review remains pending; no independent peer review is claimed. The report and sanitized summaries use [CC BY-NC-ND 4.0](LICENSE-REPORT.txt).
 
 Current daily learning freezes the base and accepted core while training an expert candidate. The Evolution action uses this same expert-learning path. Adoption requires measured validation gains to exceed sampled forgetting, plus quality and persistence checks. Automatic specialization into many independent experts and sustained long-term improvement remain research directions.
 

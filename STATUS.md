@@ -8,7 +8,7 @@ Updated2026-10-22 / 更新于2026-10-22。
 | 技术报告 / Technical report | v0.1 Research Preview，公开研究预览 / Public research preview |
 | 同行评审 / Peer review | 尚未投稿或评审 / Not submitted or peer reviewed |
 | 作者与机构 / Author and affiliation | vinson · 麦好火电商研究 |
-| 报告许可 / Report license | [CC BY 4.0](LICENSE-REPORT.txt)，限报告及脱敏汇总 / Report and sanitized summaries only |
+| 报告许可 / Report license | [CC BY-NC-ND 4.0](LICENSE-REPORT.txt)，限报告及脱敏汇总 / Report and sanitized summaries only |
 | 当前学习 / Current learning | 冻结核心的MLX专家学习 / MLX expert updates with a frozen core |
 | 自动多专家扩展 / Automatic multi-expert expansion | 后续研究方向 / Future research |
 | 完整独立复现 / Full independent reproduction | 暂不具备公开实现及原始材料 / Complete implementation and raw materials are not public |

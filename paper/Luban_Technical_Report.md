@@ -113,4 +113,4 @@ The planned comparisons are a frozen backbone, a fixed-capacity expert/adapter, 
 
 Report v0.1, 22 October 2026. English is primary; Chinese is supplementary. Review remains pending. This report does not announce an application release.
 
-Copyright 2026 vinson (麦好火电商研究). The report, Chinese supplement, architecture description and sanitized experiment summaries are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Application source code, model weights, private data and upstream works are excluded. Attribution: vinson, 麦好火电商研究, *Luban Technical Report v0.1*, 2026.
+Copyright 2026 vinson (麦好火电商研究). The report, Chinese supplement, architecture description and sanitized experiment summaries are licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/). Application source code, model weights, private data and upstream works are excluded. Attribution: vinson, 麦好火电商研究, *Luban Technical Report v0.1*, 2026.

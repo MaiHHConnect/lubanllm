@@ -1,10 +1,12 @@
 Luban Technical Report v0.1
 Copyright 2026 vinson (麦好火电商研究).
 
-The technical report (PDF and Markdown), Chinese supplement, architecture description, sanitized experimental summaries and accompanying deposit description are licensed under Creative Commons Attribution 4.0 International (CC BY 4.0).
-License: https://creativecommons.org/licenses/by/4.0/
-Legal code: https://creativecommons.org/licenses/by/4.0/legalcode
+The technical report (PDF and Markdown), Chinese supplement, architecture description, sanitized experimental summaries and accompanying deposit description are licensed under Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0).
+License: https://creativecommons.org/licenses/by-nc-nd/4.0/
+Legal code: https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode
 
 This license does not apply to the application source code, model weights, personal/private material, upstream works, or the remainder of the project. Their respective terms remain unchanged.
 
 Attribution: vinson, 麦好火电商研究, Luban: Budget-Constrained Continual Learning with Disk-Resident Neural Experts, Technical Report v0.1, 2026.
+
+License history: An earlier GitHub revision (dd3938c8d54ae75c70f79ebf74450daed75b4b1c) was offered under CC BY 4.0 with the author's authorization. This updated notice does not revoke rights already granted under that license. The license selected for the current Zenodo deposit is CC BY-NC-ND 4.0.

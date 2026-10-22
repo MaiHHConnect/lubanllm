@@ -55,4 +55,4 @@ E1前一轮256步净增0被拒绝；手动启动和首个自动任务发生数�
 
 ## 许可
 
-版权归vinson（麦好火电商研究），2026年。本技术报告、中文补充、架构说明及脱敏实验汇总采用[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)许可，可在遵守署名要求等条款下分享与改编；不包括应用源码、模型权重、私人数据或上游作品。建议署名：vinson，麦好火电商研究，《Luban Technical Report v0.1》，2026。
+版权归vinson（麦好火电商研究），2026年。本技术报告、中文补充、架构说明及脱敏实验汇总采用[CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/)许可，可在遵守署名要求等条款下进行非商业原样分享，不得用于商业目的或传播改编版本；不包括应用源码、模型权重、私人数据或上游作品。建议署名：vinson，麦好火电商研究，《Luban Technical Report v0.1》，2026。
