@@ -2,9 +2,11 @@
 
 **Technical Report v0.1 - Research Preview / Work in Progress**
 
-Luban Zero project | 22 October 2026 | Implementation reference: application 0.3.217 (build 225)
+**Author: vinson | Affiliation: 麦好火电商研究**
 
-Human research reviewer designated by the project owner: **vinson**. Review completion has not been confirmed. This report has not been submitted to a venue or peer reviewed. AI assistance was used to organize the report and implement parts of the prototype.
+22 October 2026 | Implementation reference: application 0.3.217 (build 225)
+
+The author is responsible for the report. Completion of the final manuscript review has not been confirmed; no independent review is claimed. This report has not been submitted to a venue or peer reviewed. AI assistance was used to organize the report and implement parts of the prototype.
 
 [PDF reading edition](Luban_Technical_Report.pdf) | [中文补充](Luban_Technical_Report_ZH.md) | [Experimental results](../docs/EXPERIMENTS.md)
 
@@ -107,6 +109,8 @@ The planned comparisons are a frozen backbone, a fixed-capacity expert/adapter, 
 2. MLX contributors. [MLX](https://github.com/ml-explore/mlx). Array framework for Apple Silicon.
 3. Qwen team. [Qwen3-ASR-0.6B model card](https://huggingface.co/Qwen/Qwen3-ASR-0.6B). Separate speech-recognition foundation.
 
-### Version and availability
+### Version and license
 
-Report v0.1, 22 October 2026. English is the primary report; the Chinese supplement explains the same scope and limitations. Human review remains pending. Publication of this document grants no source-code or model license and makes no representation that the application download is publicly released. Upstream components retain their own licenses.
+Report v0.1, 22 October 2026. English is primary; Chinese is supplementary. Review remains pending. This report does not announce an application release.
+
+Copyright 2026 vinson (麦好火电商研究). The report, Chinese supplement, architecture description and sanitized experiment summaries are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). Application source code, model weights, private data and upstream works are excluded. Attribution: vinson, 麦好火电商研究, *Luban Technical Report v0.1*, 2026.
