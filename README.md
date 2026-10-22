@@ -1,55 +1,34 @@
 # 鲁班零号 / Luban Zero
 
-> **内测中 / Private beta**
->
-> 本页面公开项目介绍，不公开源代码、模型权重或内部研究资料。> This page introduces the project publicly; source code, model weights, and internal research materials remain restricted.
+**应用内测中 · 技术报告 Research Preview**
 
-官网 / Website: [ai.maihh.net](https://ai.maihh.net/)
+[官网](https://ai.maihh.net/) · [English](README_EN.md) · [内测状态](STATUS.md)
 
-## 中文简介
+鲁班零号（luban0）是面向个人设备的持续学习AI原型，以约2B语言核心起步，探索本地推理、路由选择、用户授权资料学习和遗忘控制。
 
-鲁班零号（luban0）是一个以约 2B 语言核心起步的本地 AI 原型，面向个人设备上的低成本推理、快速路由和受控学习。
+## 研究与技术报告
 
-回答前，前置路由头会根据任务选择本地模型或远程模型进行推理处理。对于本地模型回答错误或需要改进的内容，系统会记录为学习材料并尝试临时专家训练。临时学习采用“盈亏比”思路：根据预期收益、训练成本和遗忘风险决定是否采纳，不强制每一次临时训练都立即学会；在有新材料、资源和授权时持续积累。
+**Luban: Budget-Constrained Continual Learning with Disk-Resident Neural Experts**
 
-当学习材料积累到足够规模并通过独立资格检查后，可以启动 MoE 混合专家训练，为模型增加独立专家，让模型在持续使用和验证中逐步扩展可用能力。每次增长都需要经过质量、保留和失败回滚检查，实际效果以测试结果为准。
+[📄 Read Paper](paper/Luban_Technical_Report.md) · [PDF](paper/Luban_Technical_Report.pdf) · [中文补充](paper/Luban_Technical_Report_ZH.md) · [📊 Experimental Results](docs/EXPERIMENTS.md)
 
-当前内测中，在 Mac mini M4 上约 2B 模型的实测生成速度达到 **58 词元/秒**；速度会随模型版本、上下文长度、量化方式和设备状态变化。
+技术报告v0.1（2026-10-22）以英文为主，介绍当前MLX 4bit架构、专家学习、实际路由验收、净增采纳、失败记录及研究限制。状态为 **Technical Report — Research Preview / Work in Progress**，尚未投稿或经过同行评审；vinson为指定人工研究审阅者，审阅尚未完成。
 
-## 适合的场景
+当前日常学习冻结基座和已采纳核心，训练专家候选；“进化”入口同样使用该专家学习链。新增掌握多于抽查遗忘且通过质量检查，才保存采纳。自动分化多个独立专家和长期持续增长仍是研究方向。
 
-- 低成本客服模型建立
-- 企业内部知识库问答
-- 不复杂的自动化任务
-- 陪伴个人成长的本地模型
-- 根据长期使用逐步增加模型参数和专长
+小规模实测中，两个身份事实的开发验证题从2/6提高到6/6，但该轮历史保护池为空，不能据此宣称全面无遗忘或广泛泛化。详细条件和失败见[实验记录](docs/EXPERIMENTS.md)。
 
-这些是产品方向和内测目标，不代表所有能力已经完成或经过公开评测。“越用越有料”描述的是受控学习与专家扩展的设计方向，不是无限能力增长的保证。
+## 项目方向
 
-## English
+- 本地客服和企业知识问答
+- 个人知识与工作习惯适配
+- 简单自动化任务
+- 在有限资源下验证长期学习与专家扩展
 
-Luban Zero (luban0) is a local AI prototype starting from an approximately 2B language core. It focuses on low-cost inference, fast routing, and controlled learning on personal devices.
+以上为产品方向，不是已完成的能力承诺。完整当前架构见[ARCHITECTURE.md](docs/ARCHITECTURE.md)。
 
-Before an answer is generated, a front routing head selects either a local model or a remote model for inference. When the local model gives an incorrect or improvable answer, the system records it as learning material and may run temporary expert training. This process follows a return-on-investment idea: expected benefit, training cost, and forgetting risk are considered before adoption. A temporary update is not forced to succeed every time; material can continue to accumulate when new data, resources, and authorization are available.
+## 公开范围
 
-After enough learning material has accumulated and passed independent qualification checks, MoE mixture-of-experts training can be started to add independent experts. The model is intended to expand its usable capabilities gradually through continued use and validation. Each update remains subject to quality, retention, and failure rollback checks; actual results are determined by tests.
+本仓库公开项目介绍、技术报告和脱敏实验汇总。源码、个人数据、完整原始研究证据和内部流程资料不在本仓库公开；未授予项目源码或模型新的开源许可，上游组件保留各自许可。
 
-In the current beta, an approximately 2B model measured about **58 tokens per second** on a Mac mini M4. Speed varies with the model version, context length, quantization, and device state.
-
-## Suitable scenarios
-
-- Building a low-cost customer-service model
-- Enterprise knowledge-base question answering
-- Non-complex automation tasks
-- A local model for personal growth and companionship
-- Gradually adding parameters and specialties through long-term use
-
-These are product directions and beta goals, not claims that every capability is complete or publicly benchmarked. “More useful with use” describes the controlled learning and expert-expansion direction; it is not a guarantee of unlimited capability growth.
-
-## 公开范围 / Public scope
-
-公开仓库只提供项目介绍、内测状态和官网入口。源代码、模型权重、内部研究证据、流程脑图和实验资料保留在受限项目环境中；本仓库不授予开源许可。
-
-This public repository contains only the project introduction, beta status, and website link. Source code, model weights, internal research evidence, workflow maps, and experiment materials remain in a restricted project environment; this repository grants no open-source license.
-
-更多状态说明见 [STATUS.md](STATUS.md)。
+报告公开不等于应用安装包已经公开发布，下载状态以[官网](https://ai.maihh.net/)和[Release列表](https://github.com/MaiHHConnect/lubanllm/releases)为准。
