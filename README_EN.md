@@ -28,7 +28,7 @@ Report v0.1 (22 October 2026) describes the current MLX 4-bit architecture, expe
 
 Current daily learning freezes the base and accepted core while training an expert candidate. The Evolution action uses this same expert-learning path. Adoption requires measured validation gains to exceed sampled forgetting, plus quality and persistence checks. Automatic specialization into many independent experts and sustained long-term improvement remain research directions.
 
-A small study improved development-validation answers from 2/6 to 6/6 for two identity facts. Its historical protection pool was empty, so it does not demonstrate broad retention or generalization. A later three-round FAQ prefix performed 408 Adam updates, with 1 commit and 2 quality rejections; 20 rounds are not yet complete. Read the [experiment summary](docs/EXPERIMENTS.md) and [reproduction protocol](docs/REPRODUCIBILITY.md) for conditions, instability and missing evaluation.
+A small study improved development-validation answers from 2/6 to 6/6 for two identity facts. Its historical protection pool was empty, so it does not demonstrate broad retention or generalization. The later FAQ study paused at18/20 actual rounds,2800 Adam updates,4 commits and14 quality rejections because no uncovered eligible independent validation records remained. The208/218/private219 phases are reported separately; this is neither20 completed rounds nor18 novel abilities. Read the [experiment summary](docs/EXPERIMENTS.md) and [reproduction protocol](docs/REPRODUCIBILITY.md) for conditions, instability and missing evaluation.
 
 ## Product directions
 

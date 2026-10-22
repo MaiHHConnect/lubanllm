@@ -28,9 +28,15 @@ Round 2 baseline repeated observations differed on 2/30 records (core); its last
 
 ### Existing-data continuation / 现有资料续训
 
-From 0.3.218, explicit learning may retry a fully quality-checked rejected expert run that performed positive actual updates. Automatic scheduling retains deduplication; zero-update admission rejections, successful commits and interrupted jobs do not qualify. The 20-round controller continues using existing approved materials without adding questions. Version, material selection and retry-rule changes are a separate protocol phase. Exact repetition with the same seed is not an independent seed replication. The first continuation performed 192 updates but was rejected (G/F 1/2); the next preparation encountered a zero-update database-lock failure. Preserve failed submissions separately and count no Adam that did not run. A normal retry is an operational observation, not proof that the locking cause is fixed.
+From 0.3.218, explicit learning may retry a fully quality-checked rejected expert run that performed positive actual updates. Automatic scheduling retains deduplication; zero-update admission rejections, successful commits and interrupted jobs do not qualify. The 20-round controller continued using existing approved materials without adding questions, then stopped at18 actual rounds as documented below. Version, material selection and retry-rule changes are a separate protocol phase. Exact repetition with the same seed is not an independent seed replication. The first continuation performed 192 updates but was rejected (G/F 1/2); the next preparation encountered a zero-update database-lock failure. Preserve failed submissions separately and count no Adam that did not run. A normal retry is an operational observation, not proof that the locking cause is fixed.
 
-0.3.218只开放明确手动重试已实际训练的质量拒绝轮；不降低采纳规则。已有资料足够，不再为了改变签名新增问法；后继另记版本及协议，重复同种子不算独立重复。首个续训192步后G/F为1/2而拒绝，后继0步数据库锁失败单独保留，不计学习轮；正常重试进入训练不代表根因已修复。
+0.3.218只开放明确手动重试已实际训练的质量拒绝轮；不降低采纳规则。按用户要求复用已有资料，不再为了改变签名新增问法；后继另记版本及协议，重复同种子不算独立重复。首个续训192步后G/F为1/2而拒绝，后继0步数据库锁失败单独保留，不计学习轮；正常重试进入训练不代表根因已修复。
+
+### Stopped at18/20 / 停在18/20
+
+The controller stopped after18 actual rounds/2800 updates/4 commits. Its unchanged136TRAIN/37VALID pool had zero uncovered eligible daily VALID after the final commit; an additional submission was rejected before job creation. Do not reuse already-covered questions as new evidence, reclassify excluded material or add data merely to meet a round count. Private219 database coordination is a distinct phase; the full phase ledger is in [experiments.json](experiments.json).
+
+最后采纳后未覆盖合格VALID为0，原门要求至少2条，故停在18/20并暂停跟进；不重标已掌握/排除材料，不为凑轮数加料。原37条库存不等于37条当前可用新验证题；协议与工作量另见汇总。
 
 ## Evidence required before scientific completion / 科学结论仍需的证据
 

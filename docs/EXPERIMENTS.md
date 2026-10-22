@@ -60,6 +60,33 @@ The existing pool remains 136 TRAIN/37 VALID, with no new questions. The first c
 
 218现有资料136TRAIN/37VALID不新增，首轮16TRAIN/10VALID/8保护，192Adam后拒绝；344.3273秒墙钟与342.4822秒引擎时间分开。后继25.1759秒数据库锁失败为0步、不计轮，正常重试随后进入训练；仲裁机制仅疑似，未捕获当时持锁者，也未证明修复。此固定截点累计实际4轮/600Adam/1采纳，208与218阶段不混合成同条件实验。
 
+### E5: existing-data continuation and stopping condition
+
+The finite study stopped at **18 of 20 actual rounds**, with **2,800 Adam updates, 4 commits and 14 quality rejections**. Counts below include the fixed E4 prefix; changes of application and protocol prevent treating the total as a single unchanged-condition experiment.
+
+| Phase | Actual rounds | Adam updates | Committed / rejected |
+| --- | --- | --- | --- |
+| 0.3.208 / build 216 | 3 | 408 | 1 / 2 |
+| 0.3.218 / build 226 | 3 | 576 | 0 / 3 |
+| Private 0.3.219 / build 227 | 12 | 1816 | 3 / 9 |
+| Total work | 18 | 2800 | 4 / 14 |
+
+After the first three rounds, the stored pool stayed at 136 TRAIN and 37 VALID; no new questions were added. Existing material rules admit 80 TRAIN and 18 daily VALID records. Following the final 56-update commit, all 18 eligible VALID records were covered by the accepted report, leaving 29 uncovered eligible TRAIN and zero uncovered eligible VALID. The next request was rejected before job creation because at least two independent VALID records are required. The other 19 stored VALID records are excluded by existing daily-material rules; they were not relabelled. Two earlier 218 database-preparation failures also performed zero updates. These three continuation failures do not count as training rounds; an earlier zero-update route rejection is retained separately.
+
+Private 219 reused the main database connection and awaited existing RPC leases asynchronously for short ledger stages. Relevant CPU tests passed 98/98; its 12 real rounds completed without another observed database-lock failure. The original failed-round lock holder was not captured, and repeated-output instability remains unresolved. This coordination repair does not establish improved model mathematics or remove quality checks. Public installer 218 remains a separate frozen artifact.
+
+The controller exited, no native job or model lease remained, automatic learning stayed off and controlled teacher calls remained zero. Follow-up was paused rather than inventing two extra rounds or adding material against the existing-data instruction. The 18-record knowledge pool includes prior and previously correct records; it is not 18 newly learned abilities or a simultaneous fresh retest of every retained record. Rotating historical checks and repeated same-family development validation do not establish broad transfer, universal retention or scientific completion. The published DOI archive was not replaced by this repository update.
+
+## 现有资料续训与停止条件
+
+本次有限研究停在 **18/20个实际训练轮、2800次Adam、4轮采纳、14轮质量拒绝**。其中0.3.208/build216为3轮/408步/1采纳，0.3.218/build226为3轮/576步/0采纳，私有0.3.219/build227为12轮/1816步/3采纳。版本与协议变化分开记录；总数只是工作量，不是同条件重复实验。
+
+前三轮后资料池始终136TRAIN/37VALID，不再新增问法。按原有日常资料规则，合格80TRAIN/18VALID；最后一轮56次Adam后采纳，18条合格VALID均已被当前采纳报告覆盖，剩余未覆盖合格TRAIN29条、VALID0条。下一次请求因至少需要2条独立VALID在建job前被拒绝；其余19条库存VALID不符合日常规则，没有重标用途或放宽规则。两次早先218数据库准备锁失败也为0步；这三次续训失败不计实际轮，另有更早0步路由拒绝单列。
+
+私有219复用主服务Memory并在短账本阶段异步等待既有RPC租约，98项相关CPU测试通过；后继12个实际轮未再观察到数据库锁失败。原历史持锁者未捕获，底层双遍输出不一致仍未解决；数据库协调修复不是新数学资格或模型能力证明。公开218完整包保持独立冻结。
+
+控制器已退出，无运行任务或租约，自动学习和教师继续关闭；受控训练教师新增0，早期2次/1958词元、金额未知的准备事故保留。定时跟进暂停，未凑满剩余2轮、未违背原资料续训要求加料。当前18条知识池包含历史和原本答对的条目，不等于18项新增能力，也没有在停止时重新同时验证全部条目；轮换保护和同事实开发验证不能证明广泛迁移或全面无遗忘。本次仓库更新不替换已发布DOI归档。
+
 ## Availability / 可用性
 
 The JSON contains sanitized aggregate observations only. No raw prompts, personal records, local filesystem paths, credentials, or internal workflow documents are included. Full independent reproduction remains unavailable because the complete implementation and raw evidence are restricted.

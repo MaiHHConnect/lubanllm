@@ -45,6 +45,6 @@ DOI 对应归档预印本；本仓库文件包含后续实验更新。
 
 完整安装包含基础模型、语音模型、元数据和初始专家，约3.62GB，建议下载前预留16GB。应用0.3.218内测下载：[完整包（含模型）](https://ai.maihh.net/downloads/Luban-0.3.218-macos-arm64-full.zip) · [下载 macOS 内测版](https://github.com/MaiHHConnect/lubanllm/releases/tag/v0.3.218-beta.1) · [夸克网盘](https://pan.quark.cn/s/0c64deea0cd9)。需要 macOS 26 或更新版本、Apple Silicon；尚未经过 Apple 公证。
 
-10月22日的连续FAQ研究已核验前三轮408次Adam、1轮采纳、2轮质量拒绝；20轮尚在进行，确定性失败与教师准备费用如实保留。详[实验汇总](docs/EXPERIMENTS.md)和[复现协议](docs/REPRODUCIBILITY.md)。
+10月22日连续FAQ研究因现有合格独立验证题已覆盖而暂停，实际18/20轮、2800次Adam、4轮采纳、14轮质量拒绝；跨208/218/私有219阶段分别报告，不声称20轮完成或18项新能力，确定性失败与教师准备费用保留。详[实验汇总](docs/EXPERIMENTS.md)和[复现协议](docs/REPRODUCIBILITY.md)。
 
 完整包包含基座、元数据、语音和初始专家；GitHub应用小包是单独的进阶选项。

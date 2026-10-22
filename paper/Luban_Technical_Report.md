@@ -76,6 +76,23 @@ Preparation probes unexpectedly triggered two existing background teacher review
 
 The user subsequently requested reuse of the existing data. Continuation on 0.3.218 changes the application and material-retry protocol and is recorded as a separate phase; it is not merged into this fixed-runtime prefix. The 20-round target was not complete at this report's observation cutoff. In the first continuation round on 0.3.218, the unchanged existing pool contained 136 TRAIN and 37 VALID records; normal selection again used 16 TRAIN, 10 VALID and 8 historical checks. It performed 192 updates in 344.3273 wall seconds (342.4822 engine seconds), but was rejected: last-candidate G/F was 1/2. The next submission failed during database preparation after 25.1759 seconds with zero updates and is not counted. A normal retry subsequently entered training. A same-process connection/transaction-arbitration issue is suspected; the original lock holder was not captured, and no fix is claimed by this observation.
 
+### E5: existing-data continuation and stopping condition
+
+The finite study stopped at **18 of 20 actual rounds**, with **2,800 Adam updates, 4 commits and 14 quality rejections**. Counts below include the fixed E4 prefix; changes of application and protocol prevent treating the total as a single unchanged-condition experiment.
+
+| Phase | Actual rounds | Adam updates | Committed / rejected |
+| --- | --- | --- | --- |
+| 0.3.208 / build 216 | 3 | 408 | 1 / 2 |
+| 0.3.218 / build 226 | 3 | 576 | 0 / 3 |
+| Private 0.3.219 / build 227 | 12 | 1816 | 3 / 9 |
+| Total work | 18 | 2800 | 4 / 14 |
+
+After the first three rounds, the stored pool stayed at 136 TRAIN and 37 VALID; no new questions were added. Existing material rules admit 80 TRAIN and 18 daily VALID records. Following the final 56-update commit, all 18 eligible VALID records were covered by the accepted report, leaving 29 uncovered eligible TRAIN and zero uncovered eligible VALID. The next request was rejected before job creation because at least two independent VALID records are required. The other 19 stored VALID records are excluded by existing daily-material rules; they were not relabelled. Two earlier 218 database-preparation failures also performed zero updates. These three continuation failures do not count as training rounds; an earlier zero-update route rejection is retained separately.
+
+Private 219 reused the main database connection and awaited existing RPC leases asynchronously for short ledger stages. Relevant CPU tests passed 98/98; its 12 real rounds completed without another observed database-lock failure. The original failed-round lock holder was not captured, and repeated-output instability remains unresolved. This coordination repair does not establish improved model mathematics or remove quality checks. Public installer 218 remains a separate frozen artifact.
+
+The controller exited, no native job or model lease remained, automatic learning stayed off and controlled teacher calls remained zero. Follow-up was paused rather than inventing two extra rounds or adding material against the existing-data instruction. The 18-record knowledge pool includes prior and previously correct records; it is not 18 newly learned abilities or a simultaneous fresh retest of every retained record. Rotating historical checks and repeated same-family development validation do not establish broad transfer, universal retention or scientific completion. The published DOI archive was not replaced by this repository update.
+
 ## Results
 
 | Observation | Before | After | Interpretation |

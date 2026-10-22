@@ -93,7 +93,7 @@
     {
       "id": "E4",
       "date": "2026-10-22",
-      "status": "ongoing-study-fixed-three-round-prefix",
+      "status": "fixed-three-round-prefix-of-paused-study",
       "scheduled_actual_training_rounds": 20,
       "reported_actual_training_rounds": 3,
       "accepted_rounds": 1,
@@ -386,5 +386,238 @@
       "adopted": 1
     },
     "same_condition_replication": false
+  },
+  "study_outcome": {
+    "date": "2026-10-22",
+    "status": "paused_material_shortage",
+    "target_actual_rounds": 20,
+    "actual_rounds": 18,
+    "remaining_target_rounds": 2,
+    "adam_updates": 2800,
+    "adopted_rounds": 4,
+    "quality_rejected_rounds": 14,
+    "phases": [
+      {
+        "application": "0.3.208/build216",
+        "actual_rounds": 3,
+        "adam_updates": 408,
+        "adopted": 1,
+        "quality_rejected": 2,
+        "round_wall_seconds_sum": 762.2015652656555,
+        "engine_seconds_sum": 752.4789397490001
+      },
+      {
+        "application": "0.3.218/build226",
+        "actual_rounds": 3,
+        "adam_updates": 576,
+        "adopted": 0,
+        "quality_rejected": 3,
+        "round_wall_seconds_sum": 934.6466550827026,
+        "engine_seconds_sum": 921.846915957
+      },
+      {
+        "application": "0.3.219/build227",
+        "actual_rounds": 12,
+        "adam_updates": 1816,
+        "adopted": 3,
+        "quality_rejected": 9,
+        "round_wall_seconds_sum": 2965.5972204208374,
+        "engine_seconds_sum": 2909.737440042
+      }
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "application": "0.3.208/build216",
+        "adam_updates": 24,
+        "adopted": true,
+        "outcome": "committed",
+        "submission_through_lease_release_seconds": 53.19678997993469,
+        "engine_reported_seconds": 47.92777479100006
+      },
+      {
+        "round": 2,
+        "application": "0.3.208/build216",
+        "adam_updates": 192,
+        "adopted": false,
+        "outcome": "rejected_quality",
+        "submission_through_lease_release_seconds": 350.1305170059204,
+        "engine_reported_seconds": 347.141721041
+      },
+      {
+        "round": 3,
+        "application": "0.3.208/build216",
+        "adam_updates": 192,
+        "adopted": false,
+        "outcome": "rejected_quality",
+        "submission_through_lease_release_seconds": 358.8742582798004,
+        "engine_reported_seconds": 357.4094439170001
+      },
+      {
+        "round": 4,
+        "application": "0.3.218/build226",
+        "adam_updates": 192,
+        "adopted": false,
+        "outcome": "rejected_quality",
+        "submission_through_lease_release_seconds": 344.3273470401764,
+        "engine_reported_seconds": 342.48222316600004
+      },
+      {
+        "round": 5,
+        "application": "0.3.218/build226",
+        "adam_updates": 192,
+        "adopted": false,
+        "outcome": "rejected_quality",
+        "submission_through_lease_release_seconds": 299.7038950920105,
+        "engine_reported_seconds": 294.42981187499987
+      },
+      {
+        "round": 6,
+        "application": "0.3.218/build226",
+        "adam_updates": 192,
+        "adopted": false,
+        "outcome": "rejected_quality",
+        "submission_through_lease_release_seconds": 290.61541295051575,
+        "engine_reported_seconds": 284.9348809160001
+      },
+      {
+        "round": 7,
+        "application": "0.3.219/build227",
+        "adam_updates": 192,
+        "adopted": false,
+        "outcome": "rejected_quality",
+        "submission_through_lease_release_seconds": 277.7808060646057,
+        "engine_reported_seconds": 275.728675917
+      },
+      {
+        "round": 8,
+        "application": "0.3.219/build227",
+        "adam_updates": 16,
+        "adopted": true,
+        "outcome": "committed",
+        "submission_through_lease_release_seconds": 36.11094403266907,
+        "engine_reported_seconds": 30.24144524999999
+      },
+      {
+        "round": 9,
+        "application": "0.3.219/build227",
+        "adam_updates": 192,
+        "adopted": false,
+        "outcome": "rejected_quality",
+        "submission_through_lease_release_seconds": 269.28608226776123,
+        "engine_reported_seconds": 265.689000791
+      },
+      {
+        "round": 10,
+        "application": "0.3.219/build227",
+        "adam_updates": 16,
+        "adopted": true,
+        "outcome": "committed",
+        "submission_through_lease_release_seconds": 35.08327388763428,
+        "engine_reported_seconds": 31.195345041000053
+      },
+      {
+        "round": 11,
+        "application": "0.3.219/build227",
+        "adam_updates": 192,
+        "adopted": false,
+        "outcome": "rejected_quality",
+        "submission_through_lease_release_seconds": 342.986515045166,
+        "engine_reported_seconds": 338.22835458300005
+      },
+      {
+        "round": 12,
+        "application": "0.3.219/build227",
+        "adam_updates": 192,
+        "adopted": false,
+        "outcome": "rejected_quality",
+        "submission_through_lease_release_seconds": 308.889447927475,
+        "engine_reported_seconds": 303.69737645899994
+      },
+      {
+        "round": 13,
+        "application": "0.3.219/build227",
+        "adam_updates": 192,
+        "adopted": false,
+        "outcome": "rejected_quality",
+        "submission_through_lease_release_seconds": 342.09661293029785,
+        "engine_reported_seconds": 339.6112858750001
+      },
+      {
+        "round": 14,
+        "application": "0.3.219/build227",
+        "adam_updates": 192,
+        "adopted": false,
+        "outcome": "rejected_quality",
+        "submission_through_lease_release_seconds": 297.4734079837799,
+        "engine_reported_seconds": 291.768782167
+      },
+      {
+        "round": 15,
+        "application": "0.3.219/build227",
+        "adam_updates": 192,
+        "adopted": false,
+        "outcome": "rejected_quality",
+        "submission_through_lease_release_seconds": 272.54193687438965,
+        "engine_reported_seconds": 267.844480917
+      },
+      {
+        "round": 16,
+        "application": "0.3.219/build227",
+        "adam_updates": 192,
+        "adopted": false,
+        "outcome": "rejected_quality",
+        "submission_through_lease_release_seconds": 415.6550271511078,
+        "engine_reported_seconds": 413.2566818329999
+      },
+      {
+        "round": 17,
+        "application": "0.3.219/build227",
+        "adam_updates": 192,
+        "adopted": false,
+        "outcome": "rejected_quality",
+        "submission_through_lease_release_seconds": 267.6419529914856,
+        "engine_reported_seconds": 260.57895491700015
+      },
+      {
+        "round": 18,
+        "application": "0.3.219/build227",
+        "adam_updates": 56,
+        "adopted": true,
+        "outcome": "committed",
+        "submission_through_lease_release_seconds": 100.05121326446533,
+        "engine_reported_seconds": 91.89705629199976
+      }
+    ],
+    "pool": {
+      "TRAIN": 136,
+      "VALID": 37
+    },
+    "eligible_daily": {
+      "TRAIN": 80,
+      "VALID": 18
+    },
+    "remaining_uncovered_daily": {
+      "TRAIN": 29,
+      "VALID": 0
+    },
+    "accepted_report_knowledge_pool": 18,
+    "stopping_reason": "After round18 committed, all18 eligible daily validation records are covered by the accepted report; new submission rejected before job creation for0/2 independent VALID. Existing19 other VALID records are not eligible daily material. No new data or relaxed checks.",
+    "nontraining_attempts": {
+      "database_preparation_failures": 2,
+      "next_submission_admission_rejection": 1,
+      "earlier_route_rejection_outside_controller": 1
+    },
+    "controlled_teacher_calls": 0,
+    "preparation_teacher_incident": {
+      "calls": 2,
+      "provider_reported_tokens": 1958,
+      "monetary_charge": null
+    },
+    "native_job_running": false,
+    "controller_exited": true,
+    "automatic_learning_enabled": false,
+    "follow_up": "paused pending additional suitable independent validation material or a changed user objective",
+    "scope": "Finite FAQ development validation across3 application/protocol phases; totals count work, not same-condition replication,18 novel skills or an untouched transfer test; bounded rotating historical protection, no new peak-memory sampling; all18 not freshly retested together at stop"
   }
 }
