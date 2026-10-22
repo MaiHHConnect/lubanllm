@@ -89,6 +89,302 @@
       "factory_archive_bytes": 25763569,
       "app_archive_bytes": 288527153,
       "outcome": "Inference and source inheritance/admission smoke passed; no new training-effect measurement"
+    },
+    {
+      "id": "E4",
+      "date": "2026-10-22",
+      "status": "ongoing-study-fixed-three-round-prefix",
+      "scheduled_actual_training_rounds": 20,
+      "reported_actual_training_rounds": 3,
+      "accepted_rounds": 1,
+      "adam_updates": 408,
+      "hardware_model": "Mac16,10",
+      "ram_bytes": 17179869184,
+      "os": "macOS 26.4",
+      "model": "Qwen3.5-2B-derived MLX 4bit with frozen accepted core",
+      "expert_precision": "BF16 weights; FP32 Adam moments and update arithmetic",
+      "seed": 42,
+      "learning_rate": 0.0002,
+      "preservation_weight": 5,
+      "candidate_update_limit": 64,
+      "validation_interval_updates": 8,
+      "decoding": {
+        "temperature": 0,
+        "seed": 42,
+        "thinking": "off",
+        "cache_reuse": false,
+        "new_material_max_tokens": 192,
+        "some_old_protection_max_tokens": 64
+      },
+      "peak_memory_bytes": null,
+      "memory_note": "No all-process physical or Metal peak sampler",
+      "facts": [
+        "minimum macOS 26",
+        "Apple Silicon",
+        "Luban.app filename",
+        "brand 麦好火"
+      ],
+      "validation_role": "Repeated development validation on paraphrases of the same fact families; no transfer test",
+      "rounds": [
+        {
+          "round": 1,
+          "application": "0.3.208",
+          "build": 216,
+          "adam_updates": 24,
+          "adopted": true,
+          "outcome": "committed",
+          "submission_to_lease_release_seconds": 53.19678997993469,
+          "engine_reported_seconds": 47.92777479100006,
+          "training_count": 16,
+          "validation_count": 4,
+          "validation_before_correct": 1,
+          "last_candidate_validation_correct": 2,
+          "historical_protection_count": 6,
+          "historical_protection_before_correct": 6,
+          "last_candidate_protection_correct": 6,
+          "gained": 1,
+          "forgotten": 0,
+          "net_gain": 1,
+          "baseline_validation_loss": 3.986865997314453,
+          "last_candidate_validation_loss": 1.3306396408006549,
+          "baseline_instability": {
+            "observed_records": 26,
+            "inconsistent_records": 0,
+            "by_source": {}
+          },
+          "last_candidate_instability": {
+            "observed_records": 26,
+            "inconsistent_records": 0,
+            "by_source": {}
+          },
+          "candidates": [
+            {
+              "width": 32,
+              "initialization": "reuse",
+              "actual_steps": 24,
+              "accepted": true,
+              "gates": {
+                "mlx_closed_book_gain": true,
+                "mlx_deterministic": true,
+                "mlx_net_gain": true,
+                "mlx_routes_available": true,
+                "mlx_same_inputs": true,
+                "mlx_validation_loss_improved": true
+              }
+            }
+          ]
+        },
+        {
+          "round": 2,
+          "application": "0.3.208",
+          "build": 216,
+          "adam_updates": 192,
+          "adopted": false,
+          "outcome": "rejected_quality",
+          "submission_to_lease_release_seconds": 350.1305170059204,
+          "engine_reported_seconds": 347.141721041,
+          "training_count": 16,
+          "validation_count": 6,
+          "validation_before_correct": 2,
+          "last_candidate_validation_correct": 4,
+          "historical_protection_count": 8,
+          "historical_protection_before_correct": 7,
+          "last_candidate_protection_correct": 7,
+          "gained": 2,
+          "forgotten": 1,
+          "net_gain": 1,
+          "baseline_validation_loss": 2.0551243225733438,
+          "last_candidate_validation_loss": 0.2469400631574293,
+          "baseline_instability": {
+            "observed_records": 30,
+            "inconsistent_records": 2,
+            "by_source": {
+              "core": 2
+            }
+          },
+          "last_candidate_instability": {
+            "observed_records": 30,
+            "inconsistent_records": 4,
+            "by_source": {
+              "candidate": 3,
+              "core": 1
+            }
+          },
+          "candidates": [
+            {
+              "width": 32,
+              "initialization": "reuse",
+              "actual_steps": 64,
+              "accepted": false,
+              "gates": {
+                "mlx_closed_book_gain": true,
+                "mlx_deterministic": false,
+                "mlx_net_gain": true,
+                "mlx_routes_available": false,
+                "mlx_same_inputs": true,
+                "mlx_validation_loss_improved": true
+              }
+            },
+            {
+              "width": 64,
+              "initialization": "reuse",
+              "actual_steps": 64,
+              "accepted": false,
+              "gates": {
+                "mlx_closed_book_gain": true,
+                "mlx_deterministic": false,
+                "mlx_net_gain": true,
+                "mlx_routes_available": false,
+                "mlx_same_inputs": true,
+                "mlx_validation_loss_improved": true
+              }
+            },
+            {
+              "width": 32,
+              "initialization": "fresh",
+              "actual_steps": 64,
+              "accepted": false,
+              "gates": {
+                "mlx_closed_book_gain": true,
+                "mlx_deterministic": false,
+                "mlx_net_gain": true,
+                "mlx_routes_available": false,
+                "mlx_same_inputs": true,
+                "mlx_validation_loss_improved": true
+              }
+            }
+          ]
+        },
+        {
+          "round": 3,
+          "application": "0.3.208",
+          "build": 216,
+          "adam_updates": 192,
+          "adopted": false,
+          "outcome": "rejected_quality",
+          "submission_to_lease_release_seconds": 358.8742582798004,
+          "engine_reported_seconds": 357.4094439170001,
+          "training_count": 16,
+          "validation_count": 10,
+          "validation_before_correct": 4,
+          "last_candidate_validation_correct": 8,
+          "historical_protection_count": 8,
+          "historical_protection_before_correct": 7,
+          "last_candidate_protection_correct": 4,
+          "gained": 4,
+          "forgotten": 4,
+          "net_gain": 0,
+          "baseline_validation_loss": 1.9823481798171998,
+          "last_candidate_validation_loss": 0.18839579252526165,
+          "baseline_instability": {
+            "observed_records": 34,
+            "inconsistent_records": 2,
+            "by_source": {
+              "parent": 2
+            }
+          },
+          "last_candidate_instability": {
+            "observed_records": 34,
+            "inconsistent_records": 7,
+            "by_source": {
+              "candidate": 5,
+              "core": 2
+            }
+          },
+          "candidates": [
+            {
+              "width": 32,
+              "initialization": "reuse",
+              "actual_steps": 64,
+              "accepted": false,
+              "gates": {
+                "mlx_closed_book_gain": true,
+                "mlx_deterministic": false,
+                "mlx_net_gain": false,
+                "mlx_routes_available": false,
+                "mlx_same_inputs": true,
+                "mlx_validation_loss_improved": true
+              }
+            },
+            {
+              "width": 64,
+              "initialization": "reuse",
+              "actual_steps": 64,
+              "accepted": false,
+              "gates": {
+                "mlx_closed_book_gain": true,
+                "mlx_deterministic": false,
+                "mlx_net_gain": true,
+                "mlx_routes_available": false,
+                "mlx_same_inputs": true,
+                "mlx_validation_loss_improved": true
+              }
+            },
+            {
+              "width": 32,
+              "initialization": "fresh",
+              "actual_steps": 64,
+              "accepted": false,
+              "gates": {
+                "mlx_closed_book_gain": true,
+                "mlx_deterministic": false,
+                "mlx_net_gain": false,
+                "mlx_routes_available": false,
+                "mlx_same_inputs": true,
+                "mlx_validation_loss_improved": true
+              }
+            }
+          ]
+        }
+      ],
+      "teacher": {
+        "unexpected_preparation_calls": 2,
+        "provider_reported_tokens": 1958,
+        "controlled_training_calls": 0,
+        "charge": null,
+        "charge_note": "Unknown; both preparation outputs incomplete"
+      },
+      "interpretation": "Rejected last-candidate gains are not committed capabilities; instability root cause unresolved",
+      "continuation": "Existing-data repetition under application 0.3.218 is a separate protocol phase, not this fixed prefix"
     }
-  ]
+  ],
+  "continuation_prefix": {
+    "application": "0.3.218/build226",
+    "observation_cutoff_utc": "2026-10-22T05:21:00Z",
+    "protocol": "Existing authorized pool only, no new questions; explicit retry of quality-rejected expert rounds, unchanged adoption checks",
+    "pool": {
+      "TRAIN": 136,
+      "VALID": 37
+    },
+    "selected": {
+      "TRAIN": 16,
+      "VALID": 10,
+      "historical_protection": 8
+    },
+    "actual_rounds": 1,
+    "adam_updates": 192,
+    "adopted": 0,
+    "last_candidate_gain": 1,
+    "last_candidate_historical_forgetting": 2,
+    "last_candidate_net_gain": -1,
+    "submission_through_lease_release_seconds": 344.3273470401764,
+    "engine_elapsed_seconds": 342.48222316600004,
+    "next_submission": {
+      "actual_updates": 0,
+      "state": "failed",
+      "phase": "preparing_round",
+      "error": "database is locked",
+      "elapsed_seconds": 25.175909757614136,
+      "counts_toward_actual_rounds": false
+    },
+    "normal_retry": "entered training after read-only inspection; not evidence of a root-cause fix",
+    "locking_diagnosis": "Same-process transaction-arbitration mechanism suspected; original lock holder/stack not captured",
+    "controlled_new_teacher_calls": 0,
+    "cumulative_across_distinct_phases": {
+      "actual_rounds": 4,
+      "adam_updates": 600,
+      "adopted": 1
+    },
+    "same_condition_replication": false
+  }
 }

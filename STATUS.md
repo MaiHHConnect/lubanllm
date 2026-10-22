@@ -1,10 +1,10 @@
 # 状态 / Status
 
-Updated2026-10-22 / 更新于2026-10-22。
+Updated 2026-10-22 / 更新于2026-10-22。
 
 | 内容 / Item | 状态 / Status |
 | --- | --- |
-| 应用 / Application | 0.3.217 公开内测 / Public beta 0.3.217 |
+| 应用 / Application | 0.3.218 公开内测 / Public beta 0.3.218 |
 | 技术报告 / Technical report | v0.1 Research Preview，公开研究预览 / Public research preview |
 | 同行评审 / Peer review | 尚未投稿或评审 / Not submitted or peer reviewed |
 | 作者与机构 / Author and affiliation | vinson · 麦好火电商研究 |
@@ -19,7 +19,9 @@ Updated2026-10-22 / 更新于2026-10-22。
 
 Public scope includes project information, the technical report, and sanitized summaries. Internal logs, workflow maps, user material, and private model-migration archives remain restricted. Application and upstream components retain their respective terms; the technical report grants no open-source license for the project.
 
-下载 / Downloads: [Download the macOS beta](https://github.com/MaiHHConnect/lubanllm/releases/tag/v0.3.217-beta.1) · [Quark Drive](https://pan.quark.cn/s/0e9c14c97c78)
+完整包约3.62GB，建议预留16GB / About 3.62 GB; keep 16 GB free.
+
+下载 / Downloads: [Complete installer / 完整包（含模型）](https://ai.maihh.net/downloads/Luban-0.3.218-macos-arm64-full.zip) · [Download the macOS beta](https://github.com/MaiHHConnect/lubanllm/releases/tag/v0.3.218-beta.1) · [Quark Drive](https://pan.quark.cn/s/0c64deea0cd9)
 
 macOS 26+ / Apple Silicon。内测版尚未经过 Apple 公证，首次启动可能受到系统安全限制。
 
