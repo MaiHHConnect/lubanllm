@@ -6,6 +6,14 @@
 
 鲁班零号（luban0）是面向个人设备的持续学习AI原型，以约2B语言核心起步，探索本地推理、路由选择、用户授权资料学习和遗忘控制。
 
+## 本地生成速度实测
+
+2026-10-23，Apple M6、16GB 内存 Mac 上的一次本地回答，界面记录生成速度 **94.1 token/秒**，输入 **96 tokens**、输出 **30 tokens**，使用本地核心。
+
+![M6、16GB Mac：一次本地回答的界面记录，输入96、输出30 tokens，生成速度94.1 token/秒](docs/images/m6-16gb-generation-94.1-20261023.png)
+
+此数值为单次短回答的生成阶段（decode）速度，不包含输入预处理和首 token 等待；不是多轮平均或端到端速度，不能据此推断训练提速或所有任务的表现。
+
 ## Research Paper — Luban0
 
 **Luban: Budget-Constrained Continual Learning with Disk-Resident Neural Experts**

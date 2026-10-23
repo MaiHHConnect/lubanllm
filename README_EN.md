@@ -6,6 +6,14 @@
 
 Luban Zero (luban0) is a continual-learning AI prototype for personal devices, starting from an approximately 2B language core. It explores local inference, routing, learning from authorized material, and forgetting control.
 
+## Local generation speed observation
+
+On 23 October 2026, a local response on an **Apple M6 Mac with 16 GB memory** displayed **94.1 tokens/s** generation speed: **96 input tokens**, **30 output tokens**, using the local core.
+
+![UI observation on an M6 Mac with 16 GB memory: 96 input tokens, 30 output tokens, and 94.1 tokens/s generation speed](docs/images/m6-16gb-generation-94.1-20261023.png)
+
+This is the decode speed of one short response, excluding input processing and the wait for the first token. It is not a multi-run average or end-to-end rate and does not establish training speedup or performance across tasks.
+
 ## Research Paper — Luban0
 
 **Luban: Budget-Constrained Continual Learning with Disk-Resident Neural Experts**
