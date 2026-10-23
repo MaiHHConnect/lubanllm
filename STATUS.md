@@ -5,7 +5,7 @@ Updated 2026-10-23 / 更新于2026-10-23。
 | 内容 / Item | 状态 / Status |
 | --- | --- |
 | 应用 / Application | 0.3.218 公开内测 / Public beta 0.3.218 |
-| 技术报告 / Technical report | v0.1 Research Preview，公开研究预览 / Public research preview |
+| 技术报告 / Technical report | v0.2 Research Preview，公开研究预览 / Public research preview |
 | 同行评审 / Peer review | 尚未投稿或评审 / Not submitted or peer reviewed |
 | 作者与机构 / Author and affiliation | vinson · 麦好火电商研究 |
 | 报告许可 / Report license | [CC BY-NC-ND 4.0](LICENSE-REPORT.txt)，限报告及脱敏汇总 / Report and sanitized summaries only |

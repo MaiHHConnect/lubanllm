@@ -1,7 +1,7 @@
 {
   "schema": "luban-public-experiments-v1",
-  "report_version": "0.1",
-  "report_date": "2026-10-22",
+  "report_version": "0.2",
+  "report_date": "2026-10-23",
   "status": "research-preview",
   "independently_reproduced": false,
   "peer_reviewed": false,

@@ -1,6 +1,6 @@
 # Luban Zero architecture / 鲁班零号当前架构
 
-Technical Report v0.1 · Research Preview · 2026-10-22
+Technical Report v0.2 · Research Preview · 2026-10-23
 
 [Main report](../paper/Luban_Technical_Report.md) · [中文补充](../paper/Luban_Technical_Report_ZH.md)
 

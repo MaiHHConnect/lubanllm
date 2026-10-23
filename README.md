@@ -10,21 +10,15 @@
 
 **Luban: Budget-Constrained Continual Learning with Disk-Resident Neural Experts**
 
-DOI: [10.5281/zenodo.23552845](https://doi.org/10.5281/zenodo.23552845)
+v0.2 DOI: [10.5281/zenodo.23585073](https://doi.org/10.5281/zenodo.23585073)
 
-DOI 对应归档预印本；本仓库文件包含后续实验更新。
-
-状态：**Technical Report / Preprint（未经同行评审）**。
-
-DOI: [10.5281/zenodo.23552845](https://doi.org/10.5281/zenodo.23552845)
-
-DOI 对应归档预印本；本仓库文件包含后续实验更新。
+[全部版本（自动指向最新版）](https://doi.org/10.5281/zenodo.23552844) · [原v0.1归档](https://doi.org/10.5281/zenodo.23552845)；旧版独立保留。
 
 状态：**Technical Report / Preprint（未经同行评审）**。
 
 [📄 Read Paper](paper/Luban_Technical_Report.md) · [PDF](paper/Luban_Technical_Report.pdf) · [中文补充](paper/Luban_Technical_Report_ZH.md) · [📊 Experimental Results](docs/EXPERIMENTS.md)
 
-技术报告v0.1（2026-10-22）以英文为主，介绍当前MLX 4bit架构、专家学习、实际路由验收、净增采纳、失败记录及研究限制。状态为 **Technical Report — Research Preview / Work in Progress**，尚未投稿或经过同行评审；作者为vinson，所属机构为麦好火电商研究；终稿检查尚待确认，未经独立同行评审。报告及脱敏汇总采用[CC BY-NC-ND 4.0](LICENSE-REPORT.txt)。
+技术报告v0.2（2026-10-23）以英文为主，介绍当前MLX 4bit架构、专家学习、实际路由验收、净增采纳、失败记录及研究限制。状态为 **Technical Report — Research Preview / Work in Progress**，尚未投稿或经过同行评审；作者为vinson，所属机构为麦好火电商研究；终稿检查尚待确认，未经独立同行评审。报告及脱敏汇总采用[CC BY-NC-ND 4.0](LICENSE-REPORT.txt)。
 
 当前日常学习冻结基座和已采纳核心，训练专家候选；“进化”入口同样使用该专家学习链。新增掌握多于抽查遗忘且通过质量检查，才保存采纳。自动分化多个独立专家和长期持续增长仍是研究方向。
 

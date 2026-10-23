@@ -1,10 +1,10 @@
 # Luban: Budget-Constrained Continual Learning with Disk-Resident Neural Experts
 
-**Technical Report v0.1 - Research Preview / Work in Progress**
+**Technical Report v0.2 - Research Preview / Work in Progress**
 
 **Author: vinson | Affiliation: 麦好火电商研究**
 
-22 October 2026; repository update 23 October 2026 | Implementation reference: application 0.3.218 (build 226); experiment versions are recorded separately
+23 October 2026; original v0.1 dated 22 October 2026 | Implementation reference: application 0.3.218 (build 226); experiment versions are recorded separately
 
 The author is responsible for the report. Completion of the final manuscript review has not been confirmed; no independent review is claimed. This report has not been submitted to a venue or peer reviewed. AI assistance was used to organize the report and implement parts of the prototype.
 
@@ -91,7 +91,7 @@ After the first three rounds, the stored pool stayed at 136 TRAIN and 37 VALID; 
 
 Private 219 reused the main database connection and awaited existing RPC leases asynchronously for short ledger stages. Relevant CPU tests passed 98/98; its 12 real rounds completed without another observed database-lock failure. The original failed-round lock holder was not captured, and repeated-output instability remains unresolved. This coordination repair does not establish improved model mathematics or remove quality checks. Public installer 218 remains a separate frozen artifact.
 
-The controller exited, no native job or model lease remained, automatic learning stayed off and controlled teacher calls remained zero. Follow-up was paused rather than inventing two extra rounds or adding material against the existing-data instruction. The 18-record knowledge pool includes prior and previously correct records; it is not 18 newly learned abilities or a simultaneous fresh retest of every retained record. Rotating historical checks and repeated same-family development validation do not establish broad transfer, universal retention or scientific completion. The published DOI archive was not replaced by this repository update.
+The controller exited, no native job or model lease remained, automatic learning stayed off and controlled teacher calls remained zero. Follow-up was paused rather than inventing two extra rounds or adding material against the existing-data instruction. The 18-record knowledge pool includes prior and previously correct records; it is not 18 newly learned abilities or a simultaneous fresh retest of every retained record. Rotating historical checks and repeated same-family development validation do not establish broad transfer, universal retention or scientific completion. This v0.2 edition adds these results while retaining the original v0.1 archive as a separate historical version.
 
 ### E6: isolated inference and training-lifecycle reliability (23 October 2026)
 
@@ -105,7 +105,7 @@ Each lifecycle session used two approved TRAIN records and one frozen-teacher pr
 
 All twenty repetitions completed in 386.70 seconds, including both subprocess drivers through exit and the explicit reload checks; the median repetition was 19.3892 seconds (range 18.6460-20.0591). No teacher calls or adoptions occurred. Frozen source-file states and production pointers remained unchanged, all workers closed and model locks were released. The installed application and current qualification proofs were not replaced. Child RSS samples and lifecycle current/peak metrics were retained privately; they are not an all-process or GPU peak benchmark.
 
-These are fixed-seed reliability repetitions on exposed material, not semantic-accuracy tests, new knowledge gains, independent seed replications, universal determinism or a speedup measurement. Exact full-product-route qualification and longer-term evaluation remain necessary before this candidate becomes an installed release. The repository report/PDF is updated; the existing DOI archive remains unchanged. Aggregate settings and results are in [the experiment ledger](../docs/experiments.json).
+These are fixed-seed reliability repetitions on exposed material, not semantic-accuracy tests, new knowledge gains, independent seed replications, universal determinism or a speedup measurement. Exact full-product-route qualification and longer-term evaluation remain necessary before this candidate becomes an installed release. This v0.2 edition includes the reliability results; the original v0.1 archive remains a separate historical version. Aggregate settings and results are in [the experiment ledger](../docs/experiments.json).
 
 ## Results
 
@@ -148,7 +148,7 @@ The [reproduction protocol and remaining evaluation](../docs/REPRODUCIBILITY.md)
 
 For a future independently reproducible evaluation, the project needs a releasable dataset with provenance and training rights, exact model/runtime revisions, complete hardware and decoding settings, a held-out final test, matched baseline budgets, multiple seeds, and task-by-time retention results. Teacher costs, storage, active parameters, resident tensors, process RSS, and device allocation should be measured and reported separately.
 
-The planned comparisons are a frozen backbone, a fixed-capacity expert/adapter, and a growing expert system with matched training and teacher budgets. Ablations should isolate replay/protection, routing, and disk residency. These experiments are proposed, not completed results. This v0.1 report is a dated research preview; publishing it does not mark the application's scientific release gate as complete.
+The planned comparisons are a frozen backbone, a fixed-capacity expert/adapter, and a growing expert system with matched training and teacher budgets. Ablations should isolate replay/protection, routing, and disk residency. These experiments are proposed, not completed results. This v0.2 report is a dated research preview; publishing it does not mark the application's scientific release gate as complete.
 
 ## References
 
@@ -158,6 +158,6 @@ The planned comparisons are a frozen backbone, a fixed-capacity expert/adapter, 
 
 ### Version and license
 
-Report v0.1, 22 October 2026; repository edition updated 23 October 2026. English is primary; Chinese is supplementary. Review remains pending. This report does not announce an application release.
+Report v0.2, 23 October 2026; original v0.1 dated 22 October 2026. English is primary; Chinese is supplementary. Review remains pending. This report does not announce an application release.
 
-Copyright 2026 vinson (麦好火电商研究). The report, Chinese supplement, architecture description and sanitized experiment summaries are licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/). Application source code, model weights, private data and upstream works are excluded. Attribution: vinson, 麦好火电商研究, *Luban Technical Report v0.1*, 2026.
+Copyright 2026 vinson (麦好火电商研究). The report, Chinese supplement, architecture description and sanitized experiment summaries are licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/). Application source code, model weights, private data and upstream works are excluded. Attribution: vinson, 麦好火电商研究, *Luban Technical Report v0.2*, 2026.

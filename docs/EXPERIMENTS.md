@@ -1,6 +1,6 @@
 # Experimental results / 实验结果
 
-**Technical Report v0.1 - Research Preview.** Reported local observations, not independently reproduced or peer reviewed. / 本地实测汇总，未经独立复现或同行评审。
+**Technical Report v0.2 - Research Preview.** Reported local observations, not independently reproduced or peer reviewed. / 本地实测汇总，未经独立复现或同行评审。
 
 [Full method and limitations](../paper/Luban_Technical_Report.md) · [中文补充](../paper/Luban_Technical_Report_ZH.md) · [Machine-readable summary](experiments.json)
 
@@ -75,7 +75,7 @@ After the first three rounds, the stored pool stayed at 136 TRAIN and 37 VALID; 
 
 Private 219 reused the main database connection and awaited existing RPC leases asynchronously for short ledger stages. Relevant CPU tests passed 98/98; its 12 real rounds completed without another observed database-lock failure. The original failed-round lock holder was not captured, and repeated-output instability remains unresolved. This coordination repair does not establish improved model mathematics or remove quality checks. Public installer 218 remains a separate frozen artifact.
 
-The controller exited, no native job or model lease remained, automatic learning stayed off and controlled teacher calls remained zero. Follow-up was paused rather than inventing two extra rounds or adding material against the existing-data instruction. The 18-record knowledge pool includes prior and previously correct records; it is not 18 newly learned abilities or a simultaneous fresh retest of every retained record. Rotating historical checks and repeated same-family development validation do not establish broad transfer, universal retention or scientific completion. The published DOI archive was not replaced by this repository update.
+The controller exited, no native job or model lease remained, automatic learning stayed off and controlled teacher calls remained zero. Follow-up was paused rather than inventing two extra rounds or adding material against the existing-data instruction. The 18-record knowledge pool includes prior and previously correct records; it is not 18 newly learned abilities or a simultaneous fresh retest of every retained record. Rotating historical checks and repeated same-family development validation do not establish broad transfer, universal retention or scientific completion. This v0.2 edition adds these results while retaining the original v0.1 archive as a separate historical version.
 
 ## 现有资料续训与停止条件
 
@@ -85,7 +85,7 @@ The controller exited, no native job or model lease remained, automatic learning
 
 私有219复用主服务Memory并在短账本阶段异步等待既有RPC租约，98项相关CPU测试通过；后继12个实际轮未再观察到数据库锁失败。原历史持锁者未捕获，底层双遍输出不一致仍未解决；数据库协调修复不是新数学资格或模型能力证明。公开218完整包保持独立冻结。
 
-控制器已退出，无运行任务或租约，自动学习和教师继续关闭；受控训练教师新增0，早期2次/1958词元、金额未知的准备事故保留。定时跟进暂停，未凑满剩余2轮、未违背原资料续训要求加料。当前18条知识池包含历史和原本答对的条目，不等于18项新增能力，也没有在停止时重新同时验证全部条目；轮换保护和同事实开发验证不能证明广泛迁移或全面无遗忘。本次仓库更新不替换已发布DOI归档。
+控制器已退出，无运行任务或租约，自动学习和教师继续关闭；受控训练教师新增0，早期2次/1958词元、金额未知的准备事故保留。定时跟进暂停，未凑满剩余2轮、未违背原资料续训要求加料。当前18条知识池包含历史和原本答对的条目，不等于18项新增能力，也没有在停止时重新同时验证全部条目；轮换保护和同事实开发验证不能证明广泛迁移或全面无遗忘。本v0.2版纳入上述结果，原v0.1归档作为独立历史版本保留。
 
 ## E6: isolated stability and lifecycle repetitions / 隔离稳定性与生命周期复测
 
@@ -106,9 +106,9 @@ Each repetition used 64 ABBA source-order observations, 16 continuous repetition
 
 每轮148次纳入比较加2预热；完整34题、ABBA和连续观察的tokens/输入/完成状态/来源跨进程一致，资格8阶段也一致。生命周期保留精确恢复、取消及默认产品新进程重载，再检学习模式。观察32宽当前专家、训练64宽历史父专家分开；2条TRAIN/1保护、seed42贪心、新请求新缓存、文件缓存不清空，生产来源/冻结文件不变，全部进程及锁释放。
 
-This is separate from E5's 18/20 product-learning study, which remains paused. No model was adopted or application installed. These are same-seed reliability observations on exposed material, not semantic accuracy, twenty completed product-learning rounds or a speed comparison. Hardware differs from E4/E5; no all-process/GPU peak-memory benchmark or matched 20-round compiled baseline was measured. The existing DOI archive is unchanged.
+This is separate from E5's 18/20 product-learning study, which remains paused. No model was adopted or application installed. These are same-seed reliability observations on exposed material, not semantic accuracy, twenty completed product-learning rounds or a speed comparison. Hardware differs from E4/E5; no all-process/GPU peak-memory benchmark or matched 20-round compiled baseline was measured. The original v0.1 archive remains a separate historical version.
 
-本次不补齐E5的18/20产品学习，原实验仍暂停；无采纳、无安装替换，不证明答案全对、新能力或提速，硬件不同且无20轮匹配编译对照或全进程/GPU峰值；DOI归档不替换。
+本次不补齐E5的18/20产品学习，原实验仍暂停；无采纳、无安装替换，不证明答案全对、新能力或提速，硬件不同且无20轮匹配编译对照或全进程/GPU峰值；原v0.1归档保留为独立历史版本。
 
 ## Availability / 可用性
 
