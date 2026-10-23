@@ -53,3 +53,14 @@ The controller stopped after18 actual rounds/2800 updates/4 commits. Its unchang
 No status flag, public beta release or DOI substitutes for these experiments and review. No claim of an optimal material threshold, universal zero forgetting, automatic many-expert specialization or unlimited improvement is supported.
 
 内测开放、DOI或状态字段都不能代替实测和审阅；不把实现门槛称最优数量，不宣称全面无遗忘、自动多专家长期效果或无限成长。
+
+
+## E6 fixed-source reliability protocol / E6固定来源可靠性协议
+
+Twenty independent candidate repetitions on 23 October used the exposed 34-record observation set and a separate two-TRAIN/one-protection lifecycle set. Each repetition ran 64 ABBA + 16 continuous + 68 full-pair checked generations, two warmups, and eight lifecycle generations; all observations were compared against the first repetition's corresponding full-record outputs. The lifecycle executed four Adam updates including a checkpoint replay, ending at step 3, and checked seven gates plus a fresh default-product reload before selecting learning mode. Observation width 32 and lifecycle width 64 are distinct sources. Fixed seed42, temperature0, fresh per-request caches and non-purged filesystem caches are part of the protocol. The candidate disables compilation through training ACKs rather than an environment override. The immutable worker SHA, exact hardware/runtime and counts are in E6 of [experiments.json](experiments.json).
+
+20个独立会话仅复测同一候选，不采纳；每轮148次比较＋2预热＋8资格生成，4次实际Adam含1次重放、step3。32宽观察和64宽生命周期来源分开，保留七门及默认产品新进程重载。固定seed42/贪心/新请求新缓存、文件缓存不清空，通过训练ACK切换非编译模式，未使用环境强制开关；原18/20学习实验仍暂停。
+
+The private raw records, implementation and checkpoints remain restricted. This protocol describes the measurement but does not make the full experiment independently executable. Multiple seeds, long sequences, exact installed-product qualification, a matched compiled baseline and broad semantic/retention tests remain outstanding. No new source-code license or DOI-archive revision is implied.
+
+原始资料、实现及检查点保持受限；公开协议不等于已可独立完整执行。多种子、长序列、准确安装产品资格、匹配编译基线和广泛语义/遗忘评估仍待完成，不授予新源码许可、不替换DOI归档。

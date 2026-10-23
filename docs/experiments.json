@@ -346,6 +346,72 @@
       },
       "interpretation": "Rejected last-candidate gains are not committed capabilities; instability root cause unresolved",
       "continuation": "Existing-data repetition under application 0.3.218 is a separate protocol phase, not this fixed prefix"
+    },
+    {
+      "id": "E6",
+      "date": "2026-10-23",
+      "protocol": "Isolated fixed-source inference stability and training-lifecycle repetitions; no adoption",
+      "application": null,
+      "worker_sha256": "f99d6210e35ea10db8f9ade4d5c194ce72e8c2e7d837d2062781a2cd7e91282b",
+      "requested_repetitions": 20,
+      "completed_repetitions": 20,
+      "hardware_model": "Mac18,5",
+      "chip": "Apple M6",
+      "ram_bytes": 17179869184,
+      "os": "27.0.1",
+      "mlx_swift": "0.32.3",
+      "mlx_swift_lm": "3.32.3",
+      "base_precision": "affine Q4 group64",
+      "core_expert_precision": "BF16",
+      "adam_precision": "FP32",
+      "seed": 42,
+      "temperature": 0,
+      "cache_reuse": false,
+      "file_cache": "Not purged; fresh observation/training/reload processes each repetition",
+      "observation_records": 34,
+      "checked_generations": 2960,
+      "warmup_generations": 40,
+      "lifecycle_generations": 160,
+      "total_generations": 3160,
+      "all_checked_observations_exact": true,
+      "cross_repetition_stage_responses_exact": true,
+      "training_rows": 2,
+      "frozen_teacher_protection_rows": 1,
+      "observation_expert_width": 32,
+      "lifecycle_parent_width": 64,
+      "executed_adam_updates": 80,
+      "checkpoint_replay_executions": 20,
+      "final_step_each_independent_session": 3,
+      "seven_lifecycle_gates_passed_repetitions": 20,
+      "default_product_reload_before_learning_mode_reload": true,
+      "total_seconds": 386.69850974995643,
+      "time_scope": "Both drivers through subprocess exit including explicit saved reload; not 450-update learning rounds",
+      "median_repetition_seconds": 19.3891533545102,
+      "min_repetition_seconds": 18.645984709030017,
+      "max_repetition_seconds": 20.059101124992594,
+      "teacher_calls": 0,
+      "adoptions": 0,
+      "frozen_sources_and_production_pointers_unchanged": true,
+      "workers_closed_and_locks_released": true,
+      "installed_application_changed": false,
+      "quality_admitted": false,
+      "peak_memory_bytes": null,
+      "memory_scope": "Child RSS snapshots and existing lifecycle current/peak process metrics; not all-process/GPU peak",
+      "compiled_diagnostic_within_pair_mismatch_counts": [
+        [
+          1,
+          0,
+          1,
+          0
+        ],
+        [
+          0,
+          2,
+          1,
+          2
+        ]
+      ],
+      "interpretation": "Reliability on exposed records and one seed, not semantic accuracy, transfer, universal determinism, speedup or twenty product-learning rounds; exact kernel cause unresolved; E5 remains paused"
     }
   ],
   "continuation_prefix": {
@@ -619,5 +685,6 @@
     "automatic_learning_enabled": false,
     "follow_up": "paused pending additional suitable independent validation material or a changed user objective",
     "scope": "Finite FAQ development validation across3 application/protocol phases; totals count work, not same-condition replication,18 novel skills or an untouched transfer test; bounded rotating historical protection, no new peak-memory sampling; all18 not freshly retested together at stop"
-  }
+  },
+  "repository_updated": "2026-10-23"
 }

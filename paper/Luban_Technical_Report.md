@@ -4,7 +4,7 @@
 
 **Author: vinson | Affiliation: 麦好火电商研究**
 
-22 October 2026 | Implementation reference: application 0.3.218 (build 226); experiment versions are recorded separately
+22 October 2026; repository update 23 October 2026 | Implementation reference: application 0.3.218 (build 226); experiment versions are recorded separately
 
 The author is responsible for the report. Completion of the final manuscript review has not been confirmed; no independent review is claimed. This report has not been submitted to a venue or peer reviewed. AI assistance was used to organize the report and implement parts of the prototype.
 
@@ -93,6 +93,20 @@ Private 219 reused the main database connection and awaited existing RPC leases 
 
 The controller exited, no native job or model lease remained, automatic learning stayed off and controlled teacher calls remained zero. Follow-up was paused rather than inventing two extra rounds or adding material against the existing-data instruction. The 18-record knowledge pool includes prior and previously correct records; it is not 18 newly learned abilities or a simultaneous fresh retest of every retained record. Rotating historical checks and repeated same-family development validation do not establish broad transfer, universal retention or scientific completion. The published DOI archive was not replaced by this repository update.
 
+### E6: isolated inference and training-lifecycle reliability (23 October 2026)
+
+This follow-up tests an inference-engine candidate, separately from E5's stopped learning study. Source-switch diagnostics twice reproduced greedy-output differences on the compiled path; disabling compilation in the same original worker made the shared observations agree. The candidate disables MLX graph compilation only after a training operation in a learning-owned process and checks the source/mode acknowledgement. A fresh ordinary product process retains its default mode. This narrows the investigated execution path; it does not identify a unique kernel-level cause or retroactively validate rejected E4/E5 candidates.
+
+Twenty independent repetitions used the same candidate worker, fixed sources and seed 42 on Apple M6 / Mac18,5, 16 GiB RAM, macOS 27.0.1, MLX Swift 0.32.3 and Swift LM 3.32.3. The base was Qwen3.5-2B-derived affine Q4 group64, with BF16 core/expert tensors and FP32 Adam. Decoding was greedy with fresh per-request caches; filesystem caches were not purged. This hardware differs from E4/E5 and does not provide a matched performance comparison.
+
+Each repetition checked 64 interleaved/grouped ABBA generations, 16 continuous repetitions and two full passes over 34 previously exposed records: 148 checked generations plus 2 warmups. Grouping was diagnostic only and was not adopted as the production observation order. All 2,960 checked observations matched their corresponding first-repetition full-record tokens, inputs, completion states and selected sources. There were also 40 warmups and 160 lifecycle generations, for 3,160 actual generation requests. The eight lifecycle generation stages agreed across repetitions.
+
+Each lifecycle session used two approved TRAIN records and one frozen-teacher protection record, executing four Adam updates including one checkpoint replay and ending at step 3. All twenty sessions passed preparation equivalence, real updates, exact checkpoint replay, atomic cancellation, continuation after cancellation, saved-expert reload equality and frozen-source checks. Reload verification first generated in a fresh default product process, then checked the learning mode. Observation used the current width-32 expert; the independent lifecycle test used a historical width-64 parent. Thus the total of 80 executed updates, including 20 replays, is not one candidate trained continuously for 80 steps or twenty product-learning rounds.
+
+All twenty repetitions completed in 386.70 seconds, including both subprocess drivers through exit and the explicit reload checks; the median repetition was 19.3892 seconds (range 18.6460-20.0591). No teacher calls or adoptions occurred. Frozen source-file states and production pointers remained unchanged, all workers closed and model locks were released. The installed application and current qualification proofs were not replaced. Child RSS samples and lifecycle current/peak metrics were retained privately; they are not an all-process or GPU peak benchmark.
+
+These are fixed-seed reliability repetitions on exposed material, not semantic-accuracy tests, new knowledge gains, independent seed replications, universal determinism or a speedup measurement. Exact full-product-route qualification and longer-term evaluation remain necessary before this candidate becomes an installed release. The repository report/PDF is updated; the existing DOI archive remains unchanged. Aggregate settings and results are in [the experiment ledger](../docs/experiments.json).
+
 ## Results
 
 | Observation | Before | After | Interpretation |
@@ -118,6 +132,8 @@ The factory expert archive is **25,763,569 bytes** (about 25.8 decimal MB), incl
 
 ## Limitations
 
+E6 provides twenty same-seed reliability repetitions on a separate candidate and device, not a new learning-quality or transfer result. Its observed stability does not establish that the installed E4/E5 runtime is repaired.
+
 E1 covers four validation paraphrases of two identity facts, alongside two already-correct basic-task checks. E4 adds a committed one-record gain on a four-fact FAQ set, but also two rejected rounds and unresolved repeated-output instability. Shared fact families, routing-based selection, repeated validation access, one seed, and missing multi-run uncertainty estimates limit interpretation. Generalization to unseen tasks, long-term stability, teacher-call savings, and superiority over fixed-capacity baselines remain unmeasured.
 
 An empty protection pool cannot prove absence of forgetting. Even a nonempty rotating sample can miss regressions, and the net-gain rule explicitly permits some losses. Record-level answer matching also cannot establish robust knowledge or safety outside the tested prompts.
@@ -142,6 +158,6 @@ The planned comparisons are a frozen backbone, a fixed-capacity expert/adapter, 
 
 ### Version and license
 
-Report v0.1, 22 October 2026. English is primary; Chinese is supplementary. Review remains pending. This report does not announce an application release.
+Report v0.1, 22 October 2026; repository edition updated 23 October 2026. English is primary; Chinese is supplementary. Review remains pending. This report does not announce an application release.
 
 Copyright 2026 vinson (麦好火电商研究). The report, Chinese supplement, architecture description and sanitized experiment summaries are licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/). Application source code, model weights, private data and upstream works are excluded. Attribution: vinson, 麦好火电商研究, *Luban Technical Report v0.1*, 2026.

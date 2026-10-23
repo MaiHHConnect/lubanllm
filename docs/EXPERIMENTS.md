@@ -87,6 +87,29 @@ The controller exited, no native job or model lease remained, automatic learning
 
 控制器已退出，无运行任务或租约，自动学习和教师继续关闭；受控训练教师新增0，早期2次/1958词元、金额未知的准备事故保留。定时跟进暂停，未凑满剩余2轮、未违背原资料续训要求加料。当前18条知识池包含历史和原本答对的条目，不等于18项新增能力，也没有在停止时重新同时验证全部条目；轮换保护和同事实开发验证不能证明广泛迁移或全面无遗忘。本次仓库更新不替换已发布DOI归档。
 
+## E6: isolated stability and lifecycle repetitions / 隔离稳定性与生命周期复测
+
+On 23 October, all **20/20 fixed-source repetitions** passed on an Apple M6 / Mac18,5 with 16 GiB RAM and macOS 27.0.1. The candidate disables graph compilation after training operations in the learning-owned process; the ordinary fresh product process retains its default mode. Two original compiled-path diagnostics reproduced differences; the same original worker with compilation disabled and the candidate agreed on shared observations. A unique kernel-level cause remains unproven.
+
+10月23日，Apple M6/Mac18,5、16GiB、macOS27.0.1上固定来源候选 **20/20轮隔离测试通过**。学习进程在训练操作后禁编译，普通产品新进程保持默认；原编译路径两次复现差异、原worker禁编译及候选共享观察一致，但唯一内核根因未定位。
+
+| Measurement / 指标 | Result / 结果 |
+| --- | --- |
+| Checked generations / 纳入比较生成 | 2,960; all matched first-repetition corresponding records / 全部与首轮对应记录一致 |
+| Additional generations / 其他生成 | 40 warmups + 160 lifecycle; 3,160 total / 40预热+160资格，实际3160次 |
+| Lifecycle gates / 生命周期门 | All seven passed in each of 20 sessions / 七门20轮全通过 |
+| Actual Adam executions / 实际Adam执行 | 80 including 20 checkpoint replays; each independent session ends at step 3 / 含20重放，各会话step3 |
+| Total time / 总耗时 | 386.70 seconds; median repetition 19.3892 seconds / 秒 |
+| Teacher calls; adoptions / 教师调用；采纳 | 0; 0 |
+
+Each repetition used 64 ABBA source-order observations, 16 continuous repetitions and 68 full-pair generations over 34 exposed records, plus two warmups. All observed tokens, inputs, completion states and sources matched across schedules and processes; the eight lifecycle response stages also matched across repetitions. Each lifecycle session retained exact checkpoint replay, cancellation and fresh default-product reload before an additional learning-mode reload. Observation used a width-32 current expert; training used a historical width-64 parent with two approved TRAIN records and one frozen-teacher protection record. Seed 42, greedy decoding, per-request fresh caches; filesystem caches were not purged. Source pointers/frozen files were unchanged and every worker/lease was released.
+
+每轮148次纳入比较加2预热；完整34题、ABBA和连续观察的tokens/输入/完成状态/来源跨进程一致，资格8阶段也一致。生命周期保留精确恢复、取消及默认产品新进程重载，再检学习模式。观察32宽当前专家、训练64宽历史父专家分开；2条TRAIN/1保护、seed42贪心、新请求新缓存、文件缓存不清空，生产来源/冻结文件不变，全部进程及锁释放。
+
+This is separate from E5's 18/20 product-learning study, which remains paused. No model was adopted or application installed. These are same-seed reliability observations on exposed material, not semantic accuracy, twenty completed product-learning rounds or a speed comparison. Hardware differs from E4/E5; no all-process/GPU peak-memory benchmark or matched 20-round compiled baseline was measured. The existing DOI archive is unchanged.
+
+本次不补齐E5的18/20产品学习，原实验仍暂停；无采纳、无安装替换，不证明答案全对、新能力或提速，硬件不同且无20轮匹配编译对照或全进程/GPU峰值；DOI归档不替换。
+
 ## Availability / 可用性
 
 The JSON contains sanitized aggregate observations only. No raw prompts, personal records, local filesystem paths, credentials, or internal workflow documents are included. Full independent reproduction remains unavailable because the complete implementation and raw evidence are restricted.

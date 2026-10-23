@@ -1,6 +1,6 @@
 # 状态 / Status
 
-Updated 2026-10-22 / 更新于2026-10-22。
+Updated 2026-10-23 / 更新于2026-10-23。
 
 | 内容 / Item | 状态 / Status |
 | --- | --- |
@@ -10,6 +10,7 @@ Updated 2026-10-22 / 更新于2026-10-22。
 | 作者与机构 / Author and affiliation | vinson · 麦好火电商研究 |
 | 报告许可 / Report license | [CC BY-NC-ND 4.0](LICENSE-REPORT.txt)，限报告及脱敏汇总 / Report and sanitized summaries only |
 | 当前学习 / Current learning | 18/20轮、2800Adam、4采纳；合格新VALID不足，已暂停 /18 of20 rounds,2800 updates,4 commits; paused for eligible new VALID |
+| 隔离可靠性 / Isolated reliability | 20/20轮、2960次一致性比较通过；0采纳 / 20/20 repetitions, 2960 checked generations passed; no adoption |
 | 自动多专家扩展 / Automatic multi-expert expansion | 后续研究方向 / Future research |
 | 完整独立复现 / Full independent reproduction | 暂不具备公开实现及原始材料 / Complete implementation and raw materials are not public |
 

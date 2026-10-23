@@ -30,6 +30,8 @@ Current daily learning freezes the base and accepted core while training an expe
 
 A small study improved development-validation answers from 2/6 to 6/6 for two identity facts. Its historical protection pool was empty, so it does not demonstrate broad retention or generalization. The later FAQ study paused at18/20 actual rounds,2800 Adam updates,4 commits and14 quality rejections because no uncovered eligible independent validation records remained. The208/218/private219 phases are reported separately; this is neither20 completed rounds nor18 novel abilities. Read the [experiment summary](docs/EXPERIMENTS.md) and [reproduction protocol](docs/REPRODUCIBILITY.md) for conditions, instability and missing evaluation.
 
+On 23 October, a separate 20/20-repetition isolated inference/lifecycle test passed: all 2,960 checked observations agreed; 80 actual updates included 20 checkpoint replays, with no adoption or teacher calls. This does not complete the earlier 18/20 learning study or establish new abilities or speedup. See the [experiment summary](docs/EXPERIMENTS.md).
+
 ## Product directions
 
 - Local customer service and enterprise knowledge questions
