@@ -47,7 +47,7 @@ These are directions rather than completed capability promises. See [the current
 
 This repository publishes project information, the technical report, and sanitized aggregate results. Source code, personal data, complete raw research evidence, and internal workflow documents remain restricted. Publication grants no new source-code or model license; upstream components retain their own licenses.
 
-Application **0.3.248 beta**: [complete installer with models](https://ai.maihh.net/downloads/Luban-0.3.248-macos-arm64-full.zip) · [GitHub small app and release notes](https://github.com/MaiHHConnect/lubanllm/releases/tag/v0.3.248-beta.1). The complete installer includes the base, metadata, speech and factory expert and is about 3.05 GB; keep 16 GB free before downloading. Extract it into Applications, open it and accept the terms; included models install and start automatically. The small GitHub archive excludes models. Requires macOS 26 or later and Apple Silicon; not notarized by Apple.
+Application **0.3.248 beta**: [complete installer with models](https://ai.maihh.net/downloads/Luban-0.3.248-macos-arm64-full.zip) · [Quark Drive mirror](https://pan.quark.cn/s/b8c8b8538c6b) · [GitHub small app and release notes](https://github.com/MaiHHConnect/lubanllm/releases/tag/v0.3.248-beta.1). The complete installer includes the base, metadata, speech and factory expert and is about 3.05 GB; keep 16 GB free before downloading. Extract it into Applications, open it and accept the terms; included models install and start automatically. The small GitHub archive excludes models. Requires macOS 26 or later and Apple Silicon; not notarized by Apple.
 
 ## 0.3.248 disk prefix cache (2026-10-28)
 

@@ -45,7 +45,7 @@ v0.2 DOI: [10.5281/zenodo.23585073](https://doi.org/10.5281/zenodo.23585073)
 
 本仓库公开项目介绍、技术报告和脱敏实验汇总。源码、个人数据、完整原始研究证据和内部流程资料不在本仓库公开；未授予项目源码或模型新的开源许可，上游组件保留各自许可。
 
-完整安装包含基础模型、语音模型、元数据和初始专家，约3.05GB，建议下载前预留16GB。应用 **0.3.248 内测版**：[完整包（含模型）](https://ai.maihh.net/downloads/Luban-0.3.248-macos-arm64-full.zip) · [GitHub 小包与更新说明](https://github.com/MaiHHConnect/lubanllm/releases/tag/v0.3.248-beta.1)。完整包解压后移入“应用程序”，打开并同意使用协议，内置模型会自动安装并启动；GitHub 小包不含模型。需要 macOS 26 或更新版本、Apple Silicon；尚未经过 Apple 公证。
+完整安装包含基础模型、语音模型、元数据和初始专家，约3.05GB，建议下载前预留16GB。应用 **0.3.248 内测版**：[完整包（含模型）](https://ai.maihh.net/downloads/Luban-0.3.248-macos-arm64-full.zip) · [夸克网盘镜像](https://pan.quark.cn/s/b8c8b8538c6b) · [GitHub 小包与更新说明](https://github.com/MaiHHConnect/lubanllm/releases/tag/v0.3.248-beta.1)。完整包解压后移入“应用程序”，打开并同意使用协议，内置模型会自动安装并启动；GitHub 小包不含模型。需要 macOS 26 或更新版本、Apple Silicon；尚未经过 Apple 公证。
 
 10月22日连续FAQ研究因现有合格独立验证题已覆盖而暂停，实际18/20轮、2800次Adam、4轮采纳、14轮质量拒绝；跨208/218/私有219阶段分别报告，不声称20轮完成或18项新能力，确定性失败与教师准备费用保留。详[实验汇总](docs/EXPERIMENTS.md)和[复现协议](docs/REPRODUCIBILITY.md)。
 
