@@ -16,9 +16,9 @@ Updated 2026-10-23 / 更新于2026-10-23。
 
 [Read the report / 阅读报告](paper/Luban_Technical_Report.md) · [Experimental results / 实验结果](docs/EXPERIMENTS.md) · [官网 / Website](https://ai.maihh.net/)
 
-公开范围为项目介绍、技术报告和脱敏汇总；内部日志、流程图、用户资料和私有模型迁移包保持受限。应用与上游组件仍按各自许可与发布条件提供，技术报告不授予项目开源许可。
+公开范围为项目介绍、技术报告、脱敏汇总和应用源码（源码许可为 PolyForm Noncommercial 1.0.0，个人和非商业免费，商业需授权）；内部日志、流程图、用户资料和私有模型迁移包保持受限。上游组件和模型权重仍按各自许可提供；技术报告本身的许可仍是 CC BY-NC-ND 4.0。
 
-Public scope includes project information, the technical report, and sanitized summaries. Internal logs, workflow maps, user material, and private model-migration archives remain restricted. Application and upstream components retain their respective terms; the technical report grants no open-source license for the project.
+Public scope includes project information, the technical report, sanitized summaries and the application source code (PolyForm Noncommercial 1.0.0: free for personal and noncommercial use, commercial use requires a license). Internal logs, workflow maps, user material, and private model-migration archives remain restricted. Upstream components and model weights keep their own licenses; the technical report itself stays CC BY-NC-ND 4.0.
 
 完整包约3.62GB，建议预留16GB / About 3.62 GB; keep 16 GB free.
 

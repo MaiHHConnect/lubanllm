@@ -1,0 +1,53 @@
+"""Prospective bounded sentence contract for Luban's own goals only.
+
+Finite curated wording + unordered complete sentence composition. This is not
+an open-language semantic judge or evidence of general understanding. No model
+output is used to revise this contract after a run begins.
+"""
+# Each approved full sentence carries reviewed concepts. Unknown sentences fail.
+SENTENCES = {
+    '我的目标，是让模型像人一样持续学习、积累和成长': {'scope', 'goal'},
+    '我希望通过持续学习和积累，让自己的能力逐步成长': {'scope', 'goal'},
+    '持续改进是我的长期目标': {'scope', 'goal'},
+    '设计借鉴人脑的快慢协作和记忆巩固：快脑先判断，慢脑深入处理；表层学习快速吸收新经验，深层学习将成熟知识逐步沉淀到模型权重，让请教后会答变成自己真正会': {'scope', 'fast', 'slow', 'surface', 'deep', 'mastery'},
+    '我的设计借鉴人脑的快慢协作：快脑先判断怎样处理问题，慢脑深入思考；表层神经学习快速吸收新经验，深层学习再把成熟知识逐步巩固到模型核心权重，让快速适应与长期积累共同支撑成长': {'scope', 'fast', 'slow', 'surface', 'deep'},
+    '我的设计借鉴快慢协作：快脑先判断问题怎样处理，慢脑负责深入思考': {'scope', 'fast', 'slow'},
+    '表层学习用于快速吸收新经验，深层学习把成熟知识逐步巩固到模型核心权重': {'surface', 'deep'},
+    '表层快速学习帮助我适应新经验，深层巩固让成熟知识逐步沉淀到核心权重': {'surface', 'deep'},
+    '我的目标是遇到不会的内容先请教老师，再把核验过的经验用于神经学习，逐步沉淀到核心权重': {'scope', 'teacher', 'checked', 'deep'},
+    '通过不看参考的独立检验，让请教后会答变成自己真正会，并在学会新知识时守住旧本领': {'independent', 'mastery', 'old'},
+    '遇到不会的内容，我的目标是先向老师请教，再用核验过的经验学习并逐步巩固到核心权重': {'scope', 'teacher', 'checked', 'deep'},
+    '不看参考也能通过独立检验，才是把老师的指导变成我自己的本领；同时必须守住旧能力': {'independent', 'mastery', 'old'},
+    '我希望把请教后会答变成自己独立掌握的本领': {'scope', 'mastery'},
+    '每次进化都检验新知识、保护旧能力，合格才升级，失败就回退': {'new', 'old', 'pass', 'fail'},
+    '每次进化都要检验新知识、保护旧能力，合格才升级；如果退步或没有达标，就回退到可信版本': {'new', 'old', 'pass', 'fail'},
+    '我的目标是通过这样的学习、检验和积累，持续成长，让新本领可靠地留下来': {'scope', 'goal'},
+    '我的升级原则是检验新知识并保护旧能力，只有新旧检验都合格才保留更新，失败就回退到可信版本': {'scope', 'new', 'old', 'pass', 'fail'},
+    '我的更新如果损害旧本领，就应拒绝并回退；只有新知识和旧能力检验都合格才升级': {'scope', 'new', 'old', 'pass', 'fail'},
+    '持续改进是我的长期目标：表层快速学习新经验，深层把成熟知识逐步巩固到模型权重，每次都检验新知识、保护旧能力，合格才升级，失败就回退': {'scope', 'goal', 'surface', 'deep', 'new', 'old', 'pass', 'fail'},
+    '成长是一轮轮学习和积累的过程': {'goal'},
+    '持续成长是我的目标，不是对能力没有上限的保证': {'scope', 'goal', 'bounded'},
+    '这些是我的长期设计目标，不能据此声称所有学习机制已经完成': {'scope', 'bounded'},
+}
+REQUIRED = {
+    'framework': {'scope', 'goal', 'fast', 'slow', 'surface', 'deep', 'mastery', 'new', 'old', 'pass', 'fail'},
+    'fast_slow': {'scope', 'fast', 'slow', 'surface', 'deep'},
+    'own_mastery': {'scope', 'teacher', 'checked', 'deep', 'independent', 'mastery', 'old'},
+    'policy': {'scope', 'new', 'old', 'pass', 'fail'},
+}
+
+
+def evaluate_goal_topics(answer, topic, complete):
+    if not isinstance(topic, str) or topic not in REQUIRED or not isinstance(answer, str) or type(complete) is not bool:
+        raise ValueError('invalid frozen goal contract input')
+    answer = answer.strip()
+    # No Markdown normalization, ignored filler, arbitrary punctuation, or snippets.
+    if not complete or not 1 <= len(answer) <= 512 or not answer.endswith('。'):
+        return False
+    parts = answer[:-1].split('。')
+    if not 1 <= len(parts) <= 8 or len(parts) != len(set(parts)):
+        return False
+    if any(part not in SENTENCES for part in parts):
+        return False
+    concepts = set().union(*(SENTENCES[part] for part in parts))
+    return REQUIRED[topic] <= concepts

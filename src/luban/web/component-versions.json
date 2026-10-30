@@ -1,0 +1,127 @@
+{
+  "schema": 1,
+  "app": {
+    "version": "0.3.248",
+    "build": 256
+  },
+  "components": [
+    {
+      "id": "frontend",
+      "name": "界面",
+      "version": "1.0.146"
+    },
+    {
+      "id": "service",
+      "name": "本地服务",
+      "version": "1.0.142"
+    },
+    {
+      "id": "generation",
+      "name": "生成引擎",
+      "version": "1.0.127"
+    },
+    {
+      "id": "operators",
+      "name": "算子",
+      "version": "1.0.31"
+    },
+    {
+      "id": "training",
+      "name": "训练引擎",
+      "version": "1.0.114"
+    },
+    {
+      "id": "decision",
+      "name": "快脑决策",
+      "version": "1.0.3"
+    },
+    {
+      "id": "vision",
+      "name": "图片理解",
+      "version": "1.0.46"
+    },
+    {
+      "id": "speech",
+      "name": "声音识别",
+      "version": "1.0.6"
+    }
+  ],
+  "pending_components": [
+    {
+      "name": "深度学习",
+      "status": "操作学习实现随训练引擎版本；真实质量、采纳与执行待验收"
+    }
+  ],
+  "artifacts": {
+    "app.js": "727417acc3938a91aa023b700347c7858e5c125e49d699b15bba7f81aba8da12",
+    "assets/brand/favicon.svg": "c1cedea68567cd56d26602595906fc3166263168eba79d30303cb7b2ca6f319a",
+    "assets/brand/home-balcony.webp": "c6e588943dad69b83c027b6dbe8088f124ac6e9bb87e14fecce396e640b19b3d",
+    "assets/brand/home-camp.webp": "d90ee4f473632f8a275916cce1c5ea59ca71f710623d3b675e95937afe9c1e3e",
+    "assets/brand/home-castle.webp": "689f5b30a31594a45ce90212b482bd65f77d0c5cc268c8e5ddf7fffe80f9ddbb",
+    "assets/brand/home-coffee.webp": "caa02d42642b8e6cad09fbed0c14f5af6cc70a2111f5aaef623536d9bb7b6077",
+    "assets/brand/home-comfort.webp": "58dce61c9e1f0b0bb09e5a47e8529518f567286ba26b7777eb0cddec987f1455",
+    "assets/brand/home-departure.webp": "d1b58b3e59dc6359ffc9c27a0221cb1e7e6b265e04d0d1ff0902c3d23f58f6ca",
+    "assets/brand/home-fishing.webp": "78e652b958b84a8f5dc707a90091b71e133debc8b594a2571a2309aed774a189",
+    "assets/brand/home-flight.webp": "02b38604d54b39860174e31ad093989eca2932caadac4c8ca32b3b17a912c58f",
+    "assets/brand/home-free-cards.webp": "1fe9d887ec30e546e3c758207717752b2fdbd95c112b79f0d94d9136ccc8e16b",
+    "assets/brand/home-free-faces.webp": "f9989b5f78889e9767c68b67a7a18bb68aa9e86a4663ab68c228e700514e2f8d",
+    "assets/brand/home-free-fishing.webp": "ef3787a058e57126620ce995d8c71e8df2f046540bf89a37cc68507d874b8579",
+    "assets/brand/home-free-marbles.webp": "3d29b1adb2ac6f4b1d4f402a0bc138a4d8e798bb526ae0a6abb1ab37514d347f",
+    "assets/brand/home-free-memories.webp": "1566527b765f41b1d96698f44e0186dfa89e83864652ed8d6e5aba92268d098b",
+    "assets/brand/home-free-nap.webp": "ea6916ef5dfbb376ae38e8c91e6754daa750ad351ce52496b239206c92569436",
+    "assets/brand/home-free-stickers.webp": "9ab62216cc2b632875c8edb685f8db42fdd7eb80591fca69e9bbffb35e639e0f",
+    "assets/brand/home-free-summit.webp": "62e873c613d6e16dd70c61b6c7d2b8b96ad765fbd151ca1082442aae33352d20",
+    "assets/brand/home-free-warehouse.webp": "d82d1ce896699394abc6e0d20c05fa7433db4e2c616c857370d57c95d8c129fe",
+    "assets/brand/home-game.webp": "b533948e64cf917525b7b0f686e137edd8be6784972a5641cccff64621f15543",
+    "assets/brand/home-hiking.webp": "9e3dee6299f367d1fe2fcb40b269d0bf35ec840c6a4db47189291712c2628619",
+    "assets/brand/home-ideas.webp": "44cabd33c547b821efe5803f49dc544bf6cc0e4372cb3f0fd834db3f43ce1773",
+    "assets/brand/home-inspiration.webp": "14f7cdd684c56e6317159829b7f136d759454c4737fe01da67ad69bfecbcf8db",
+    "assets/brand/home-journey.webp": "4c6001d7dc2f1ea71009b723f63dd36888946ae8f3f7ab083bb5deb7d459fc8a",
+    "assets/brand/home-logo.png": "05bb285234320e4885074f5a0fcf2c58ab81fa37263d4840435c5454481daba5",
+    "assets/brand/home-map.webp": "41aefcce190128922894e133a5e00e8ba104123a82749e0497f2619e5da96f98",
+    "assets/brand/home-milestone-hundred.webp": "b954c8bb32a274c4aed9d3da835d02d5e880938d85228d665b2b869bd0e4dabc",
+    "assets/brand/home-milestone-ten.webp": "3cbc8835b3ecad4541aa89743828c211db227eb5e19c711cd6349f855dd6fbc6",
+    "assets/brand/home-milestone-two-hundred.webp": "8f06ace8c74c417b5eaafec24ac1acb8c7213778b4098a81d6a170ff2bcca5c1",
+    "assets/brand/home-music.webp": "d9a050d80c7254bae64beb615678f491276030e18e6b655aa46761dae6b9f4ab",
+    "assets/brand/home-night.webp": "dd5fa174bb7971779cffe6e0bfe62fa2a5d27120b29ba48f3ea511e6a8be91ce",
+    "assets/brand/home-overlook.webp": "72f8103a3b715ae8b742d901766c38a2532e8b24cfdf172d1948b172b1bf024a",
+    "assets/brand/home-painting.webp": "47fa5ce072d7248f86eaecd14e96c9df5c396b6e3a57bb80bf1c74bc9e4d984b",
+    "assets/brand/home-pencil.png": "8e3e3a75cd91c3fda97082899992cd0ea6e6323a0db2bd38bfa14809b2944806",
+    "assets/brand/home-pixel-music.webp": "4b00acd79a0445f8ed094d95bc008eace780c0c9d2775115fcdde425720690d3",
+    "assets/brand/home-pixel-night.webp": "310c8434aa6b4491dea0adeee3e733051efc935d8c2a4460163e15b723a73437",
+    "assets/brand/home-pixel-sunset.webp": "9899ff820f6c1d16957a8a2935df2e2c80f793d3fa7cbd289ed6eba0a3d0f164",
+    "assets/brand/home-play.svg": "4286f5261d978353f0fb5a6facd79fd0f8483a62e7d5842c1f21a4e71a1111b0",
+    "assets/brand/home-relax.webp": "b5279c85a78daf1d5ba0e221553f2f6f7bdf46f83e84d32dbe7c299757ec8d41",
+    "assets/brand/home-scene.webp": "81f0c19664795fb930ff4b058ff97a7cc4f6ce0d4addd2bc6e2de052f9bf7794",
+    "assets/brand/home-seaside.webp": "33164f99643c46804f61d04fe91389b684f861b9139a3630f184265c1386f0fa",
+    "assets/brand/home-stroll.webp": "e766a27327b0e14b2d7b0a7f3ef18f2bc757f60ec174900edc6f956b4f81c7fe",
+    "assets/brand/home-study.webp": "a4cef7cca7df2edf28fd47934b2e09e9b14ea635c97651e840fa617682e4ec63",
+    "assets/brand/home-summit.webp": "796473f23784334bc291b5a7480a8792fd1a48c8636dae189b381fe1eba0b676",
+    "assets/brand/home-sunset.webp": "35342b0e08025319d7fd6ddb90f6526c0bf37169c86282b8e652ec6e8a98bf3c",
+    "assets/brand/home-team.webp": "ad6c33af5f91ab06d05ec633cfec23768d969d4a0607f5a07b55b1235621b591",
+    "assets/brand/home-valley.webp": "dc3fbfe1ba5108d5ca1f54e4a238ece87b4e45dcc7bb6e8b2ac7c720b8168508",
+    "assets/brand/home-victory.webp": "0c950b3879adb26d9e600a6f5ff2cbfcd346ab0a0229576a0fe9f38c8e258d89",
+    "assets/brand/home-workshop.webp": "a9ad5f0fd901ae47e9b9ae67141953e02dd7f435747d32cac1577287025d2101",
+    "assets/brand/luban-intro-v1.png": "3c17bc1a4417fa161969e1f95daf2210a6f5d4bf7cc15eb86aaeaccf27e7941e",
+    "assets/brand/luban-zero-logo.png": "79de2a278346f2bf2e247d8b68834a36e52549f8b62155111d61cbd6adcd37dc",
+    "assets/integrations/chatbox.png": "8c1db15c81ca0692d2fe82acc84cbc17ca64950a44f40dd60878ace62e3b89f3",
+    "assets/integrations/cherry-studio.png": "5f742ba1de17aac360cffbc1ab77aac3cfa1632cf8be0abe66cc3f97dc719b8b",
+    "assets/integrations/codebuddy.svg": "149baa45b9f9370c15f20d599afe381aa138e4fc13acf503f435c571ac93ecf5",
+    "assets/integrations/codex.png": "2ce1c57dd3b312417106a487815ab1235bddce17e1fa9b32a2f048bd71ee25d3",
+    "assets/integrations/hermes.png": "5fbced606189c9bfc2925a16f8903333041cabbf1f8699fe9fe9b3e24504048f",
+    "assets/integrations/openclaw.svg": "fa7e2ec07ebfa696bcc8c27d7e36425cbb7b1772f6f7f04ce390cf5f1c35cf0e",
+    "assets/integrations/pi.svg": "d266b2c1d2c7bf169ca30d438963b176fba16fea6263b9ac30c8302f34ad7ce7",
+    "assets/integrations/qoder.svg": "5e1843cb50c4613855024453e76d5c06d2ca5562efebc12b4fcd80cf9ece1dd0",
+    "assets/integrations/qwen-office.png": "cd9390bc4209c319121d111f3a1f535b3c7dd909b8f860d41acc9744138d58df",
+    "assets/integrations/trae.png": "9bd320f7e23594183d7552751f558a5ba57aab267fa9404c2750263507496006",
+    "assets/integrations/workbuddy.svg": "10ccbc099e7bc3d5ff12c315c4edd7b21386aa7166c1ec19997b3d55010d5c7d",
+    "assets/integrations/wukong.png": "64d927fd815d63f89c6e4ee1155a2f92b9f013d3e6454262204686cc14943aae",
+    "assets/integrations/zcode.png": "089bdfa74910eaed241eac46bf5d02bb5718f15d8d6b247a1ee61b3372c9c82c",
+    "assets/share/evolution-success.png": "5bc0724f66722c254887c52ebc96339490415cd44999ca4befef274168b3209b",
+    "assets/templates/qa.csv": "65f139764462733bc9b73e39de55c93bc0bc452a80682bd2dbec7441ecc2977a",
+    "assets/templates/qa.jsonl": "688d3fbe1d42c160edd6677588e8188a9f6a1cebb413d8d028e8c82e23342492",
+    "assets/templates/source.txt": "b70a5ec1df0137607e3dd41c81a7ec566d2e9f3ceaed45fe6907eed48ac1478e",
+    "index.html": "3127957d0a2a3eb344238fd2de18f9e368d3bbaf583d407f01164a02ba831047",
+    "style.css": "9c6dff7cb1a41ea8cbee287befa7b8f8537c1c17774f2962a7b50209543e318f"
+  }
+}

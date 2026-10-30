@@ -1,0 +1,1003 @@
+[
+  {
+    "schema": "luban-factory-engine-qualification-v1",
+    "complete": true,
+    "teacher_calls": 0,
+    "sources_unchanged": true,
+    "source_proof": {
+      "schema": "mlx-expert-learning-v1",
+      "scope": "product",
+      "quality_admitted": true,
+      "training_admitted": true,
+      "identity": "673b16c69c39f750c6d92a22532d31eafac22bead9c284dc10d465b553b282df",
+      "core_version": "core-fdfa0ce5a75c",
+      "core_file_sha256": "bed06ece53a5ee6a4eff0c00161868d0011cc39d16ece246b8bffb3f1a360e64",
+      "expert_id": "learned-bafb4050374f",
+      "expert_file_sha256": "f65eb6b16ba5ba38e7f27f23656264d6d35327ecc03eb7c545cd2134fbf205cc",
+      "router_id": "router-bafb4050374f",
+      "router_sha256": "b480a271cfa801fe5cd31f02004f319d3bcb969dc47a146db524e2edb4f1cca9",
+      "mlx_model_sha256": "713fe7e5d3c3965f7106b0d0ee17615f7869c23c8d327996df8c1196fbcf07d5",
+      "worker_binary_sha256": "f6e045d92f8d9702c60661313db8a5bd4dba556ecc01e228f1b41cf0335a6d9b",
+      "width": 32,
+      "route_checked": true,
+      "report": "learning-bafb4050374f.json",
+      "report_sha256": "b55e2920f1a803e0d6f9c30894a774733466143a792972c3ca2b96a9c8757136"
+    },
+    "worker_binary_sha256": "7f5054c11b496137dd303603397ae5e7d01404acdf66e0d6869b14b6066006d5",
+    "training": {
+      "schema": "mlx-native-training-qualification-v1",
+      "complete": true,
+      "worker_binary_sha256": "7f5054c11b496137dd303603397ae5e7d01404acdf66e0d6869b14b6066006d5",
+      "core_file_sha256": "bed06ece53a5ee6a4eff0c00161868d0011cc39d16ece246b8bffb3f1a360e64",
+      "mlx_model_sha256": "713fe7e5d3c3965f7106b0d0ee17615f7869c23c8d327996df8c1196fbcf07d5",
+      "parent_expert_file_sha256": "f65eb6b16ba5ba38e7f27f23656264d6d35327ecc03eb7c545cd2134fbf205cc",
+      "gates": {
+        "prepare_equivalent": true,
+        "real_adam_updates": true,
+        "checkpoint_replay_exact": true,
+        "cancellation_atomic": true,
+        "continued_after_cancel": true,
+        "saved_expert_reload_equal": true,
+        "base_core_frozen": true
+      }
+    },
+    "math": {
+      "expert_file_sha256": "f65eb6b16ba5ba38e7f27f23656264d6d35327ecc03eb7c545cd2134fbf205cc",
+      "fp32_pass": true,
+      "bf16_pass_assumed": false,
+      "stages": [
+        {
+          "dtype": "fp32",
+          "exact": false,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 8.58306884765625e-06,
+          "nonzero": true,
+          "relative_l2": 6.071529696782818e-07,
+          "stage": "gate"
+        },
+        {
+          "dtype": "fp32",
+          "exact": false,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 1.5497207641601562e-06,
+          "nonzero": true,
+          "relative_l2": 3.936698362849711e-07,
+          "stage": "up"
+        },
+        {
+          "dtype": "fp32",
+          "exact": false,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 8.940696716308594e-07,
+          "nonzero": true,
+          "relative_l2": 5.886234930585488e-07,
+          "stage": "activation"
+        },
+        {
+          "dtype": "fp32",
+          "exact": false,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 9.702518582344055e-06,
+          "nonzero": true,
+          "relative_l2": 0.00041221908759325743,
+          "stage": "output"
+        },
+        {
+          "dtype": "bf16",
+          "exact": true,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 0,
+          "nonzero": true,
+          "relative_l2": 0,
+          "stage": "gate"
+        },
+        {
+          "dtype": "bf16",
+          "exact": true,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 0,
+          "nonzero": true,
+          "relative_l2": 0,
+          "stage": "up"
+        },
+        {
+          "dtype": "bf16",
+          "exact": true,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 0,
+          "nonzero": true,
+          "relative_l2": 0,
+          "stage": "activation"
+        },
+        {
+          "dtype": "bf16",
+          "exact": false,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 4.76837158203125e-07,
+          "nonzero": true,
+          "relative_l2": 5.847646775691828e-07,
+          "stage": "output"
+        }
+      ],
+      "passed": true,
+      "bf16_relative_l2_limit": 0.03,
+      "bf16_numerical_pass": true
+    },
+    "quality": {
+      "complete": true,
+      "rows": 80,
+      "two_passes_equal": true,
+      "routes_equal": true,
+      "protected_answers_equal": true,
+      "all_previously_correct_still_pass": true,
+      "previously_correct": 71,
+      "factory_adoption_rows": 22
+    }
+  },
+  {
+    "schema": "luban-factory-engine-qualification-v1",
+    "complete": true,
+    "teacher_calls": 0,
+    "sources_unchanged": true,
+    "source_proof": {
+      "schema": "mlx-expert-learning-v1",
+      "scope": "product",
+      "quality_admitted": true,
+      "training_admitted": true,
+      "identity": "673b16c69c39f750c6d92a22532d31eafac22bead9c284dc10d465b553b282df",
+      "core_version": "core-fdfa0ce5a75c",
+      "core_file_sha256": "bed06ece53a5ee6a4eff0c00161868d0011cc39d16ece246b8bffb3f1a360e64",
+      "expert_id": "learned-bafb4050374f",
+      "expert_file_sha256": "f65eb6b16ba5ba38e7f27f23656264d6d35327ecc03eb7c545cd2134fbf205cc",
+      "router_id": "router-bafb4050374f",
+      "router_sha256": "b480a271cfa801fe5cd31f02004f319d3bcb969dc47a146db524e2edb4f1cca9",
+      "mlx_model_sha256": "713fe7e5d3c3965f7106b0d0ee17615f7869c23c8d327996df8c1196fbcf07d5",
+      "worker_binary_sha256": "f6e045d92f8d9702c60661313db8a5bd4dba556ecc01e228f1b41cf0335a6d9b",
+      "width": 32,
+      "route_checked": true,
+      "report": "learning-bafb4050374f.json",
+      "report_sha256": "b55e2920f1a803e0d6f9c30894a774733466143a792972c3ca2b96a9c8757136"
+    },
+    "worker_binary_sha256": "1cf865b05183bdc4293bee1eba79ebe970ad7f2054969002197bd67e73517db5",
+    "training": {
+      "schema": "mlx-native-training-qualification-v1",
+      "complete": true,
+      "worker_binary_sha256": "1cf865b05183bdc4293bee1eba79ebe970ad7f2054969002197bd67e73517db5",
+      "core_file_sha256": "bed06ece53a5ee6a4eff0c00161868d0011cc39d16ece246b8bffb3f1a360e64",
+      "mlx_model_sha256": "713fe7e5d3c3965f7106b0d0ee17615f7869c23c8d327996df8c1196fbcf07d5",
+      "parent_expert_file_sha256": "f65eb6b16ba5ba38e7f27f23656264d6d35327ecc03eb7c545cd2134fbf205cc",
+      "gates": {
+        "prepare_equivalent": true,
+        "real_adam_updates": true,
+        "checkpoint_replay_exact": true,
+        "cancellation_atomic": true,
+        "continued_after_cancel": true,
+        "saved_expert_reload_equal": true,
+        "base_core_frozen": true
+      }
+    },
+    "math": {
+      "expert_file_sha256": "f65eb6b16ba5ba38e7f27f23656264d6d35327ecc03eb7c545cd2134fbf205cc",
+      "fp32_pass": true,
+      "bf16_pass_assumed": false,
+      "stages": [
+        {
+          "dtype": "fp32",
+          "exact": false,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 8.58306884765625e-06,
+          "nonzero": true,
+          "relative_l2": 6.071529696782818e-07,
+          "stage": "gate"
+        },
+        {
+          "dtype": "fp32",
+          "exact": false,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 1.5497207641601562e-06,
+          "nonzero": true,
+          "relative_l2": 3.936698362849711e-07,
+          "stage": "up"
+        },
+        {
+          "dtype": "fp32",
+          "exact": false,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 8.940696716308594e-07,
+          "nonzero": true,
+          "relative_l2": 5.886234930585488e-07,
+          "stage": "activation"
+        },
+        {
+          "dtype": "fp32",
+          "exact": false,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 9.702518582344055e-06,
+          "nonzero": true,
+          "relative_l2": 0.00041221908759325743,
+          "stage": "output"
+        },
+        {
+          "dtype": "bf16",
+          "exact": true,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 0,
+          "nonzero": true,
+          "relative_l2": 0,
+          "stage": "gate"
+        },
+        {
+          "dtype": "bf16",
+          "exact": true,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 0,
+          "nonzero": true,
+          "relative_l2": 0,
+          "stage": "up"
+        },
+        {
+          "dtype": "bf16",
+          "exact": true,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 0,
+          "nonzero": true,
+          "relative_l2": 0,
+          "stage": "activation"
+        },
+        {
+          "dtype": "bf16",
+          "exact": false,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 4.76837158203125e-07,
+          "nonzero": true,
+          "relative_l2": 5.847646775691828e-07,
+          "stage": "output"
+        }
+      ],
+      "passed": true,
+      "bf16_relative_l2_limit": 0.03,
+      "bf16_numerical_pass": true
+    },
+    "quality": {
+      "complete": true,
+      "rows": 80,
+      "two_passes_equal": true,
+      "routes_equal": true,
+      "protected_answers_equal": true,
+      "all_previously_correct_still_pass": true,
+      "previously_correct": 71,
+      "factory_adoption_rows": 22
+    }
+  },
+  {
+    "schema": "luban-factory-engine-qualification-v1",
+    "complete": true,
+    "teacher_calls": 0,
+    "sources_unchanged": true,
+    "source_proof": {
+      "schema": "mlx-expert-learning-v1",
+      "scope": "product",
+      "quality_admitted": true,
+      "training_admitted": true,
+      "identity": "673b16c69c39f750c6d92a22532d31eafac22bead9c284dc10d465b553b282df",
+      "core_version": "core-fdfa0ce5a75c",
+      "core_file_sha256": "bed06ece53a5ee6a4eff0c00161868d0011cc39d16ece246b8bffb3f1a360e64",
+      "expert_id": "learned-bafb4050374f",
+      "expert_file_sha256": "f65eb6b16ba5ba38e7f27f23656264d6d35327ecc03eb7c545cd2134fbf205cc",
+      "router_id": "router-bafb4050374f",
+      "router_sha256": "b480a271cfa801fe5cd31f02004f319d3bcb969dc47a146db524e2edb4f1cca9",
+      "mlx_model_sha256": "713fe7e5d3c3965f7106b0d0ee17615f7869c23c8d327996df8c1196fbcf07d5",
+      "worker_binary_sha256": "f6e045d92f8d9702c60661313db8a5bd4dba556ecc01e228f1b41cf0335a6d9b",
+      "width": 32,
+      "route_checked": true,
+      "report": "learning-bafb4050374f.json",
+      "report_sha256": "b55e2920f1a803e0d6f9c30894a774733466143a792972c3ca2b96a9c8757136"
+    },
+    "worker_binary_sha256": "f963b437a691ecb9c9bd70fbb4aeb4f6b00859d1c203f15e1ca128203b31dedd",
+    "training": {
+      "schema": "mlx-native-training-qualification-v1",
+      "complete": true,
+      "worker_binary_sha256": "f963b437a691ecb9c9bd70fbb4aeb4f6b00859d1c203f15e1ca128203b31dedd",
+      "core_file_sha256": "bed06ece53a5ee6a4eff0c00161868d0011cc39d16ece246b8bffb3f1a360e64",
+      "mlx_model_sha256": "713fe7e5d3c3965f7106b0d0ee17615f7869c23c8d327996df8c1196fbcf07d5",
+      "parent_expert_file_sha256": "f65eb6b16ba5ba38e7f27f23656264d6d35327ecc03eb7c545cd2134fbf205cc",
+      "gates": {
+        "prepare_equivalent": true,
+        "real_adam_updates": true,
+        "checkpoint_replay_exact": true,
+        "cancellation_atomic": true,
+        "continued_after_cancel": true,
+        "saved_expert_reload_equal": true,
+        "base_core_frozen": true
+      }
+    },
+    "math": {
+      "expert_file_sha256": "f65eb6b16ba5ba38e7f27f23656264d6d35327ecc03eb7c545cd2134fbf205cc",
+      "fp32_pass": true,
+      "bf16_pass_assumed": false,
+      "stages": [
+        {
+          "dtype": "fp32",
+          "exact": false,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 8.58306884765625e-06,
+          "nonzero": true,
+          "relative_l2": 6.071529696782818e-07,
+          "stage": "gate"
+        },
+        {
+          "dtype": "fp32",
+          "exact": false,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 1.5497207641601562e-06,
+          "nonzero": true,
+          "relative_l2": 3.936698362849711e-07,
+          "stage": "up"
+        },
+        {
+          "dtype": "fp32",
+          "exact": false,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 8.940696716308594e-07,
+          "nonzero": true,
+          "relative_l2": 5.886234930585488e-07,
+          "stage": "activation"
+        },
+        {
+          "dtype": "fp32",
+          "exact": false,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 9.702518582344055e-06,
+          "nonzero": true,
+          "relative_l2": 0.00041221908759325743,
+          "stage": "output"
+        },
+        {
+          "dtype": "bf16",
+          "exact": true,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 0,
+          "nonzero": true,
+          "relative_l2": 0,
+          "stage": "gate"
+        },
+        {
+          "dtype": "bf16",
+          "exact": true,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 0,
+          "nonzero": true,
+          "relative_l2": 0,
+          "stage": "up"
+        },
+        {
+          "dtype": "bf16",
+          "exact": true,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 0,
+          "nonzero": true,
+          "relative_l2": 0,
+          "stage": "activation"
+        },
+        {
+          "dtype": "bf16",
+          "exact": false,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 4.76837158203125e-07,
+          "nonzero": true,
+          "relative_l2": 5.847646775691828e-07,
+          "stage": "output"
+        }
+      ],
+      "passed": true,
+      "bf16_relative_l2_limit": 0.03,
+      "bf16_numerical_pass": true
+    },
+    "quality": {
+      "complete": true,
+      "rows": 80,
+      "two_passes_equal": true,
+      "routes_equal": true,
+      "protected_answers_equal": true,
+      "all_previously_correct_still_pass": true,
+      "previously_correct": 71,
+      "factory_adoption_rows": 22
+    }
+  },
+  {
+    "schema": "luban-factory-engine-qualification-v1",
+    "complete": true,
+    "teacher_calls": 0,
+    "sources_unchanged": true,
+    "source_proof": {
+      "schema": "mlx-expert-learning-v1",
+      "scope": "product",
+      "quality_admitted": true,
+      "training_admitted": true,
+      "identity": "673b16c69c39f750c6d92a22532d31eafac22bead9c284dc10d465b553b282df",
+      "core_version": "core-fdfa0ce5a75c",
+      "core_file_sha256": "bed06ece53a5ee6a4eff0c00161868d0011cc39d16ece246b8bffb3f1a360e64",
+      "expert_id": "learned-bafb4050374f",
+      "expert_file_sha256": "f65eb6b16ba5ba38e7f27f23656264d6d35327ecc03eb7c545cd2134fbf205cc",
+      "router_id": "router-bafb4050374f",
+      "router_sha256": "b480a271cfa801fe5cd31f02004f319d3bcb969dc47a146db524e2edb4f1cca9",
+      "mlx_model_sha256": "713fe7e5d3c3965f7106b0d0ee17615f7869c23c8d327996df8c1196fbcf07d5",
+      "worker_binary_sha256": "f6e045d92f8d9702c60661313db8a5bd4dba556ecc01e228f1b41cf0335a6d9b",
+      "width": 32,
+      "route_checked": true,
+      "report": "learning-bafb4050374f.json",
+      "report_sha256": "b55e2920f1a803e0d6f9c30894a774733466143a792972c3ca2b96a9c8757136"
+    },
+    "worker_binary_sha256": "7b95ee5104a0c1a5eb78001a0a7c3ec52896458f484fac013eca076093a80c89",
+    "training": {
+      "schema": "mlx-native-training-qualification-v1",
+      "complete": true,
+      "worker_binary_sha256": "7b95ee5104a0c1a5eb78001a0a7c3ec52896458f484fac013eca076093a80c89",
+      "core_file_sha256": "bed06ece53a5ee6a4eff0c00161868d0011cc39d16ece246b8bffb3f1a360e64",
+      "mlx_model_sha256": "713fe7e5d3c3965f7106b0d0ee17615f7869c23c8d327996df8c1196fbcf07d5",
+      "parent_expert_file_sha256": "f65eb6b16ba5ba38e7f27f23656264d6d35327ecc03eb7c545cd2134fbf205cc",
+      "gates": {
+        "prepare_equivalent": true,
+        "real_adam_updates": true,
+        "checkpoint_replay_exact": true,
+        "cancellation_atomic": true,
+        "continued_after_cancel": true,
+        "saved_expert_reload_equal": true,
+        "base_core_frozen": true
+      }
+    },
+    "math": {
+      "expert_file_sha256": "f65eb6b16ba5ba38e7f27f23656264d6d35327ecc03eb7c545cd2134fbf205cc",
+      "fp32_pass": true,
+      "bf16_pass_assumed": false,
+      "stages": [
+        {
+          "dtype": "fp32",
+          "exact": false,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 8.58306884765625e-06,
+          "nonzero": true,
+          "relative_l2": 6.071529696782818e-07,
+          "stage": "gate"
+        },
+        {
+          "dtype": "fp32",
+          "exact": false,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 1.5497207641601562e-06,
+          "nonzero": true,
+          "relative_l2": 3.936698362849711e-07,
+          "stage": "up"
+        },
+        {
+          "dtype": "fp32",
+          "exact": false,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 8.940696716308594e-07,
+          "nonzero": true,
+          "relative_l2": 5.886234930585488e-07,
+          "stage": "activation"
+        },
+        {
+          "dtype": "fp32",
+          "exact": false,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 9.702518582344055e-06,
+          "nonzero": true,
+          "relative_l2": 0.00041221908759325743,
+          "stage": "output"
+        },
+        {
+          "dtype": "bf16",
+          "exact": true,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 0,
+          "nonzero": true,
+          "relative_l2": 0,
+          "stage": "gate"
+        },
+        {
+          "dtype": "bf16",
+          "exact": true,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 0,
+          "nonzero": true,
+          "relative_l2": 0,
+          "stage": "up"
+        },
+        {
+          "dtype": "bf16",
+          "exact": true,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 0,
+          "nonzero": true,
+          "relative_l2": 0,
+          "stage": "activation"
+        },
+        {
+          "dtype": "bf16",
+          "exact": false,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 4.76837158203125e-07,
+          "nonzero": true,
+          "relative_l2": 5.847646775691828e-07,
+          "stage": "output"
+        }
+      ],
+      "passed": true,
+      "bf16_relative_l2_limit": 0.03,
+      "bf16_numerical_pass": true
+    },
+    "quality": {
+      "complete": true,
+      "rows": 80,
+      "two_passes_equal": true,
+      "routes_equal": true,
+      "protected_answers_equal": true,
+      "all_previously_correct_still_pass": true,
+      "previously_correct": 71,
+      "factory_adoption_rows": 22
+    }
+  },
+  {
+    "schema": "luban-factory-engine-qualification-v1",
+    "complete": true,
+    "teacher_calls": 0,
+    "sources_unchanged": true,
+    "source_proof": {
+      "schema": "mlx-expert-learning-v1",
+      "scope": "product",
+      "quality_admitted": true,
+      "training_admitted": true,
+      "identity": "673b16c69c39f750c6d92a22532d31eafac22bead9c284dc10d465b553b282df",
+      "core_version": "core-fdfa0ce5a75c",
+      "core_file_sha256": "bed06ece53a5ee6a4eff0c00161868d0011cc39d16ece246b8bffb3f1a360e64",
+      "expert_id": "learned-bafb4050374f",
+      "expert_file_sha256": "f65eb6b16ba5ba38e7f27f23656264d6d35327ecc03eb7c545cd2134fbf205cc",
+      "router_id": "router-bafb4050374f",
+      "router_sha256": "b480a271cfa801fe5cd31f02004f319d3bcb969dc47a146db524e2edb4f1cca9",
+      "mlx_model_sha256": "713fe7e5d3c3965f7106b0d0ee17615f7869c23c8d327996df8c1196fbcf07d5",
+      "worker_binary_sha256": "f6e045d92f8d9702c60661313db8a5bd4dba556ecc01e228f1b41cf0335a6d9b",
+      "width": 32,
+      "route_checked": true,
+      "report": "learning-bafb4050374f.json",
+      "report_sha256": "b55e2920f1a803e0d6f9c30894a774733466143a792972c3ca2b96a9c8757136"
+    },
+    "worker_binary_sha256": "3e79245f2e216a8995f5f1d69d7572bab6b83baa38b6b42115b9ec74e5e18945",
+    "training": {
+      "schema": "mlx-native-training-qualification-v1",
+      "complete": true,
+      "worker_binary_sha256": "3e79245f2e216a8995f5f1d69d7572bab6b83baa38b6b42115b9ec74e5e18945",
+      "core_file_sha256": "bed06ece53a5ee6a4eff0c00161868d0011cc39d16ece246b8bffb3f1a360e64",
+      "mlx_model_sha256": "713fe7e5d3c3965f7106b0d0ee17615f7869c23c8d327996df8c1196fbcf07d5",
+      "parent_expert_file_sha256": "f65eb6b16ba5ba38e7f27f23656264d6d35327ecc03eb7c545cd2134fbf205cc",
+      "gates": {
+        "prepare_equivalent": true,
+        "real_adam_updates": true,
+        "checkpoint_replay_exact": true,
+        "cancellation_atomic": true,
+        "continued_after_cancel": true,
+        "saved_expert_reload_equal": true,
+        "base_core_frozen": true
+      }
+    },
+    "math": {
+      "expert_file_sha256": "f65eb6b16ba5ba38e7f27f23656264d6d35327ecc03eb7c545cd2134fbf205cc",
+      "fp32_pass": true,
+      "bf16_pass_assumed": false,
+      "stages": [
+        {
+          "dtype": "fp32",
+          "exact": false,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 8.58306884765625e-06,
+          "nonzero": true,
+          "relative_l2": 6.071529696782818e-07,
+          "stage": "gate"
+        },
+        {
+          "dtype": "fp32",
+          "exact": false,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 1.5497207641601562e-06,
+          "nonzero": true,
+          "relative_l2": 3.936698362849711e-07,
+          "stage": "up"
+        },
+        {
+          "dtype": "fp32",
+          "exact": false,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 8.940696716308594e-07,
+          "nonzero": true,
+          "relative_l2": 5.886234930585488e-07,
+          "stage": "activation"
+        },
+        {
+          "dtype": "fp32",
+          "exact": false,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 9.702518582344055e-06,
+          "nonzero": true,
+          "relative_l2": 0.00041221908759325743,
+          "stage": "output"
+        },
+        {
+          "dtype": "bf16",
+          "exact": true,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 0,
+          "nonzero": true,
+          "relative_l2": 0,
+          "stage": "gate"
+        },
+        {
+          "dtype": "bf16",
+          "exact": true,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 0,
+          "nonzero": true,
+          "relative_l2": 0,
+          "stage": "up"
+        },
+        {
+          "dtype": "bf16",
+          "exact": true,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 0,
+          "nonzero": true,
+          "relative_l2": 0,
+          "stage": "activation"
+        },
+        {
+          "dtype": "bf16",
+          "exact": false,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 4.76837158203125e-07,
+          "nonzero": true,
+          "relative_l2": 5.847646775691828e-07,
+          "stage": "output"
+        }
+      ],
+      "passed": true,
+      "bf16_relative_l2_limit": 0.03,
+      "bf16_numerical_pass": true
+    },
+    "quality": {
+      "complete": true,
+      "rows": 80,
+      "two_passes_equal": true,
+      "routes_equal": true,
+      "protected_answers_equal": true,
+      "all_previously_correct_still_pass": true,
+      "previously_correct": 71,
+      "factory_adoption_rows": 22
+    }
+  },
+  {
+    "schema": "luban-factory-engine-qualification-v1",
+    "complete": true,
+    "teacher_calls": 0,
+    "sources_unchanged": true,
+    "source_proof": {
+      "schema": "mlx-expert-learning-v1",
+      "scope": "product",
+      "quality_admitted": true,
+      "training_admitted": true,
+      "identity": "673b16c69c39f750c6d92a22532d31eafac22bead9c284dc10d465b553b282df",
+      "core_version": "core-fdfa0ce5a75c",
+      "core_file_sha256": "bed06ece53a5ee6a4eff0c00161868d0011cc39d16ece246b8bffb3f1a360e64",
+      "expert_id": "learned-bafb4050374f",
+      "expert_file_sha256": "f65eb6b16ba5ba38e7f27f23656264d6d35327ecc03eb7c545cd2134fbf205cc",
+      "router_id": "router-bafb4050374f",
+      "router_sha256": "b480a271cfa801fe5cd31f02004f319d3bcb969dc47a146db524e2edb4f1cca9",
+      "mlx_model_sha256": "713fe7e5d3c3965f7106b0d0ee17615f7869c23c8d327996df8c1196fbcf07d5",
+      "worker_binary_sha256": "f6e045d92f8d9702c60661313db8a5bd4dba556ecc01e228f1b41cf0335a6d9b",
+      "width": 32,
+      "route_checked": true,
+      "report": "learning-bafb4050374f.json",
+      "report_sha256": "b55e2920f1a803e0d6f9c30894a774733466143a792972c3ca2b96a9c8757136"
+    },
+    "worker_binary_sha256": "a599b97c7fe6a8671b4895d5f8a659d5ee7edf3db6563f91421113e0432d9e47",
+    "training": {
+      "schema": "mlx-native-training-qualification-v1",
+      "complete": true,
+      "worker_binary_sha256": "a599b97c7fe6a8671b4895d5f8a659d5ee7edf3db6563f91421113e0432d9e47",
+      "core_file_sha256": "bed06ece53a5ee6a4eff0c00161868d0011cc39d16ece246b8bffb3f1a360e64",
+      "mlx_model_sha256": "713fe7e5d3c3965f7106b0d0ee17615f7869c23c8d327996df8c1196fbcf07d5",
+      "parent_expert_file_sha256": "f65eb6b16ba5ba38e7f27f23656264d6d35327ecc03eb7c545cd2134fbf205cc",
+      "gates": {
+        "prepare_equivalent": true,
+        "real_adam_updates": true,
+        "checkpoint_replay_exact": true,
+        "cancellation_atomic": true,
+        "continued_after_cancel": true,
+        "saved_expert_reload_equal": true,
+        "base_core_frozen": true
+      }
+    },
+    "math": {
+      "expert_file_sha256": "f65eb6b16ba5ba38e7f27f23656264d6d35327ecc03eb7c545cd2134fbf205cc",
+      "fp32_pass": true,
+      "bf16_pass_assumed": false,
+      "stages": [
+        {
+          "dtype": "fp32",
+          "exact": false,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 8.58306884765625e-06,
+          "nonzero": true,
+          "relative_l2": 6.071529696782818e-07,
+          "stage": "gate"
+        },
+        {
+          "dtype": "fp32",
+          "exact": false,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 1.5497207641601562e-06,
+          "nonzero": true,
+          "relative_l2": 3.936698362849711e-07,
+          "stage": "up"
+        },
+        {
+          "dtype": "fp32",
+          "exact": false,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 8.940696716308594e-07,
+          "nonzero": true,
+          "relative_l2": 5.886234930585488e-07,
+          "stage": "activation"
+        },
+        {
+          "dtype": "fp32",
+          "exact": false,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 9.702518582344055e-06,
+          "nonzero": true,
+          "relative_l2": 0.00041221908759325743,
+          "stage": "output"
+        },
+        {
+          "dtype": "bf16",
+          "exact": true,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 0,
+          "nonzero": true,
+          "relative_l2": 0,
+          "stage": "gate"
+        },
+        {
+          "dtype": "bf16",
+          "exact": true,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 0,
+          "nonzero": true,
+          "relative_l2": 0,
+          "stage": "up"
+        },
+        {
+          "dtype": "bf16",
+          "exact": true,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 0,
+          "nonzero": true,
+          "relative_l2": 0,
+          "stage": "activation"
+        },
+        {
+          "dtype": "bf16",
+          "exact": false,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 4.76837158203125e-07,
+          "nonzero": true,
+          "relative_l2": 5.847646775691828e-07,
+          "stage": "output"
+        }
+      ],
+      "passed": true,
+      "bf16_relative_l2_limit": 0.03,
+      "bf16_numerical_pass": true
+    },
+    "quality": {
+      "complete": true,
+      "rows": 80,
+      "two_passes_equal": true,
+      "routes_equal": true,
+      "protected_answers_equal": true,
+      "all_previously_correct_still_pass": true,
+      "previously_correct": 71,
+      "factory_adoption_rows": 22
+    }
+  },
+  {
+    "schema": "luban-factory-engine-qualification-v1",
+    "complete": true,
+    "teacher_calls": 0,
+    "sources_unchanged": true,
+    "source_proof": {
+      "schema": "mlx-expert-learning-v1",
+      "scope": "product",
+      "quality_admitted": true,
+      "training_admitted": true,
+      "identity": "673b16c69c39f750c6d92a22532d31eafac22bead9c284dc10d465b553b282df",
+      "core_version": "core-fdfa0ce5a75c",
+      "core_file_sha256": "bed06ece53a5ee6a4eff0c00161868d0011cc39d16ece246b8bffb3f1a360e64",
+      "expert_id": "learned-bafb4050374f",
+      "expert_file_sha256": "f65eb6b16ba5ba38e7f27f23656264d6d35327ecc03eb7c545cd2134fbf205cc",
+      "router_id": "router-bafb4050374f",
+      "router_sha256": "b480a271cfa801fe5cd31f02004f319d3bcb969dc47a146db524e2edb4f1cca9",
+      "mlx_model_sha256": "713fe7e5d3c3965f7106b0d0ee17615f7869c23c8d327996df8c1196fbcf07d5",
+      "worker_binary_sha256": "f6e045d92f8d9702c60661313db8a5bd4dba556ecc01e228f1b41cf0335a6d9b",
+      "width": 32,
+      "route_checked": true,
+      "report": "learning-bafb4050374f.json",
+      "report_sha256": "b55e2920f1a803e0d6f9c30894a774733466143a792972c3ca2b96a9c8757136"
+    },
+    "worker_binary_sha256": "bb8c9a89180b2bffcf6e6b1eae9d9d1270e4a61716e7f6092e8553830f592f96",
+    "training": {
+      "schema": "mlx-native-training-qualification-v1",
+      "complete": true,
+      "worker_binary_sha256": "bb8c9a89180b2bffcf6e6b1eae9d9d1270e4a61716e7f6092e8553830f592f96",
+      "core_file_sha256": "bed06ece53a5ee6a4eff0c00161868d0011cc39d16ece246b8bffb3f1a360e64",
+      "mlx_model_sha256": "713fe7e5d3c3965f7106b0d0ee17615f7869c23c8d327996df8c1196fbcf07d5",
+      "parent_expert_file_sha256": "f65eb6b16ba5ba38e7f27f23656264d6d35327ecc03eb7c545cd2134fbf205cc",
+      "gates": {
+        "prepare_equivalent": true,
+        "real_adam_updates": true,
+        "checkpoint_replay_exact": true,
+        "cancellation_atomic": true,
+        "continued_after_cancel": true,
+        "saved_expert_reload_equal": true,
+        "base_core_frozen": true
+      }
+    },
+    "math": {
+      "expert_file_sha256": "f65eb6b16ba5ba38e7f27f23656264d6d35327ecc03eb7c545cd2134fbf205cc",
+      "fp32_pass": true,
+      "bf16_pass_assumed": false,
+      "stages": [
+        {
+          "dtype": "fp32",
+          "exact": false,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 8.58306884765625e-06,
+          "nonzero": true,
+          "relative_l2": 6.071529696782818e-07,
+          "stage": "gate"
+        },
+        {
+          "dtype": "fp32",
+          "exact": false,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 1.5497207641601562e-06,
+          "nonzero": true,
+          "relative_l2": 3.936698362849711e-07,
+          "stage": "up"
+        },
+        {
+          "dtype": "fp32",
+          "exact": false,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 8.940696716308594e-07,
+          "nonzero": true,
+          "relative_l2": 5.886234930585488e-07,
+          "stage": "activation"
+        },
+        {
+          "dtype": "fp32",
+          "exact": false,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 9.702518582344055e-06,
+          "nonzero": true,
+          "relative_l2": 0.00041221908759325743,
+          "stage": "output"
+        },
+        {
+          "dtype": "bf16",
+          "exact": true,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 0,
+          "nonzero": true,
+          "relative_l2": 0,
+          "stage": "gate"
+        },
+        {
+          "dtype": "bf16",
+          "exact": true,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 0,
+          "nonzero": true,
+          "relative_l2": 0,
+          "stage": "up"
+        },
+        {
+          "dtype": "bf16",
+          "exact": true,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 0,
+          "nonzero": true,
+          "relative_l2": 0,
+          "stage": "activation"
+        },
+        {
+          "dtype": "bf16",
+          "exact": false,
+          "finite": true,
+          "fp32_tolerance_pass": true,
+          "max_abs_error": 4.76837158203125e-07,
+          "nonzero": true,
+          "relative_l2": 5.847646775691828e-07,
+          "stage": "output"
+        }
+      ],
+      "passed": true,
+      "bf16_relative_l2_limit": 0.03,
+      "bf16_numerical_pass": true
+    },
+    "quality": {
+      "complete": true,
+      "rows": 80,
+      "two_passes_equal": true,
+      "routes_equal": true,
+      "protected_answers_equal": true,
+      "all_previously_correct_still_pass": true,
+      "previously_correct": 71,
+      "factory_adoption_rows": 22
+    }
+  }
+]

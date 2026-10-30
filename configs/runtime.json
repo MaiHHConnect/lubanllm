@@ -1,0 +1,13 @@
+{
+  "project": "动态参数无限进化大模型 / Luban",
+  "storage_root": "/Volumes/移动数据库/lubanllm",
+  "base_model": "Qwen/Qwen3.5-2B",
+  "speech_model": "Qwen/Qwen3-ASR-0.6B-hf",
+  "target_resident_params_max": 10000000000,
+  "target_process_memory_bytes_max": 10000000000,
+  "v0_insertion_layers": [23],
+  "v0_expert_width": 128,
+  "v0_experts_resident_per_layer": 1,
+  "teacher_api_enabled": false,
+  "note": "Parameter budget enforced by prototype. Process memory is a research target, not yet a hard runtime guarantee. Teacher calls need a provider, terms allowing distillation, and a spend budget."
+}

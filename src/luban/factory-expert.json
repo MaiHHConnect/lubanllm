@@ -1,0 +1,105 @@
+{
+  "schema": "luban-factory-expert-v1",
+  "identity": "673b16c69c39f750c6d92a22532d31eafac22bead9c284dc10d465b553b282df",
+  "factory_runs": [
+    "bafb4050374f",
+    "fdfa0ce5a75c"
+  ],
+  "files": {
+    "modules/luban0-v1/active-core.json": {
+      "sha256": "c470630486842adf69e27fefe06f0703f1ad320acb6cb86e091b142532698c47",
+      "size": 186
+    },
+    "modules/luban0-v1/active-router.json": {
+      "sha256": "277e6510e30d1fabf5967fd873042b34de67b9715fb72ebb815765431720c986",
+      "size": 408
+    },
+    "modules/luban0-v1/active.json": {
+      "sha256": "84dab7efeb5fbf667fe9503f80199dad5f7a3ee1a5dd7990100ae043dd39a0ca",
+      "size": 259
+    },
+    "modules/luban0-v1/core-fdfa0ce5a75c.json": {
+      "sha256": "7b501a25d1a986f3adfa781efdcb9c08bfc16f857ceda961738fd1421d052c17",
+      "size": 729
+    },
+    "modules/luban0-v1/core-fdfa0ce5a75c.retention.json": {
+      "sha256": "ac5714602c139554c8518c29a4607adf923f7b3c67f6f47d3afb33549c74e0fd",
+      "size": 87067
+    },
+    "modules/luban0-v1/core-fdfa0ce5a75c.safetensors": {
+      "sha256": "bed06ece53a5ee6a4eff0c00161868d0011cc39d16ece246b8bffb3f1a360e64",
+      "size": 25165960
+    },
+    "modules/luban0-v1/evolution-fdfa0ce5a75c.json": {
+      "sha256": "fd7d55a970ac261a0185d589022b716bc357770b9282bf4c373d8758535c9cf5",
+      "size": 660864
+    },
+    "modules/luban0-v1/layer-23/learned-bafb4050374f.json": {
+      "sha256": "5361bcd192194aecc09e1402add548c2d339a1a4be249bf5f17fb69abc31c500",
+      "size": 410
+    },
+    "modules/luban0-v1/layer-23/learned-bafb4050374f.safetensors": {
+      "sha256": "f65eb6b16ba5ba38e7f27f23656264d6d35327ecc03eb7c545cd2134fbf205cc",
+      "size": 393478
+    },
+    "modules/luban0-v1/learning-bafb4050374f.json": {
+      "sha256": "b55e2920f1a803e0d6f9c30894a774733466143a792972c3ca2b96a9c8757136",
+      "size": 97345
+    },
+    "modules/luban0-v1/router-bafb4050374f.json": {
+      "sha256": "6d0bb5cd5fe03f14a8e5f7f0ebdef7a13c4a37b8c22e0893b5c31e993e35bef0",
+      "size": 55877
+    },
+    "modules/luban0-v1/router-bafb4050374f.safetensors": {
+      "sha256": "b480a271cfa801fe5cd31f02004f319d3bcb969dc47a146db524e2edb4f1cca9",
+      "size": 24748
+    },
+    "runtime/mlx/expert-proof.json": {
+      "sha256": "aa54c12864c507f2597c799fb9bcef715a238983013e3ea92a307da333f03c8d",
+      "size": 871
+    },
+    "runtime/mlx/training-proof.json": {
+      "sha256": "f693e7b518d223ed0b47099408ebdba352a2db2ed43621132c9604ed611a3338",
+      "size": 55479
+    },
+    "accepted.json": {
+      "size": 843946,
+      "sha256": "0125704cd0f88e39f712229e3d40810abcd0cd47ca41792d60e652d487f69719"
+    },
+    "NOTICE": {
+      "size": 1585,
+      "sha256": "b04b68cf15a4756ee61be9b18e6aad356c2e53944340d54d17c427602a896cd6"
+    },
+    "LICENSE": {
+      "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a",
+      "size": 11544
+    }
+  },
+  "asset": {
+    "kind": "expert",
+    "name": "Luban-Factory-Expert.zip",
+    "prefix": "Luban-Factory-Expert",
+    "bytes": 25763569,
+    "sha256": "4bff271036e2a28e1fa9176cfe6233c0cd383fe530f0c5dec154975e9df4a140",
+    "expanded_bytes": 27400756,
+    "files": [
+      "LICENSE",
+      "NOTICE",
+      "accepted.json",
+      "modules/luban0-v1/active-core.json",
+      "modules/luban0-v1/active-router.json",
+      "modules/luban0-v1/active.json",
+      "modules/luban0-v1/core-fdfa0ce5a75c.json",
+      "modules/luban0-v1/core-fdfa0ce5a75c.retention.json",
+      "modules/luban0-v1/core-fdfa0ce5a75c.safetensors",
+      "modules/luban0-v1/evolution-fdfa0ce5a75c.json",
+      "modules/luban0-v1/layer-23/learned-bafb4050374f.json",
+      "modules/luban0-v1/layer-23/learned-bafb4050374f.safetensors",
+      "modules/luban0-v1/learning-bafb4050374f.json",
+      "modules/luban0-v1/router-bafb4050374f.json",
+      "modules/luban0-v1/router-bafb4050374f.safetensors",
+      "runtime/mlx/expert-proof.json",
+      "runtime/mlx/training-proof.json"
+    ]
+  }
+}

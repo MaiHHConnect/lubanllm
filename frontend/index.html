@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>鲁班零号 · 无限进化</title>
+  <link rel="icon" type="image/svg+xml" href="/assets/brand/favicon.svg">
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" type="module"></script>
+</head>
+<body>
+  <div class="console">
+    <header>
+      <div class="brand"><h1><img src="/assets/brand/home-logo.png" width="166" height="52" alt="鲁班零号"></h1><p>伴你成长 无限进化</p></div>
+      <div class="header-actions"><button id="open-settings" class="button" data-tab="settings" aria-label="打开设置">⚙ 设置</button></div>
+    </header>
+    <div id="error-banner" class="error-banner" role="alert" hidden><span id="error-text"></span><button id="dismiss-error" class="icon-button" aria-label="关闭错误提示">×</button></div>
+    <nav class="tabs" aria-label="控制台导航"><button data-tab="home" class="active" aria-current="page">首页</button><button data-tab="interface">模型概况</button><button data-tab="learning">学习</button><button data-tab="evolution">进化</button><button data-tab="chat">实验我的模型</button><button data-tab="leaderboard">进化排行</button><button id="open-backgrounds" type="button" aria-haspopup="dialog" aria-controls="background-dialog">背景</button></nav>
+    <main>
+      <section id="view-home" class="page" aria-label="首页"><section class="model-home" aria-label="我的大模型"><div class="model-identity"><div class="model-identity-details">
+        <div class="model-title"><strong id="home-model-name">luban0</strong><button id="rename-model" class="text-button" aria-label="修改模型名字"><img src="/assets/brand/home-pencil.png" width="24" height="28" alt="">修改名字</button></div>
+        <p id="home-model-meta" class="muted">正在读取模型状态…</p></div>
+        <div id="first-install" hidden><p id="install-description">首次使用需下载文字、图片和语音模型。</p><button id="install-models" class="button primary" type="button">下载基础模型</button><progress id="install-progress" aria-label="基础模型下载进度" hidden></progress><p id="install-status" class="muted" role="status" aria-live="polite"></p></div>
+            <button id="reload-model" class="model-orb" type="button" data-state="loading" aria-label="正在连接模型服务" aria-busy="true" disabled><span class="model-orb-symbol" aria-hidden="true"><img class="model-orb-play" src="/assets/brand/home-play.svg" width="60" height="65" alt=""><span class="model-orb-spinner"></span><span class="model-orb-live"></span></span><span id="home-start-action">连接中</span><span id="runtime-state" role="status">正在连接模型服务…</span></button>
+          </div>
+        <div class="home-artwork"><img id="home-background" class="home-scene" src="/assets/brand/home-free-memories.webp" alt="" width="1672" height="941"></div>
+</section></section>
+      <section id="view-interface" class="page" aria-label="模型概况" hidden>
+      <section class="card model-overview" aria-labelledby="model-overview-heading">
+        <div class="card-heading"><h2 id="model-overview-heading">模型概况</h2></div>
+        <div class="model-overview-body">
+        <section class="usage-column home-usage" aria-label="本地模型与 API 教师用量">
+          <div class="card usage-card"><div class="card-heading"><h3>鲁班本地</h3><span id="local-calls" class="tag">0 次调用</span></div><div class="usage-grid"><div><span>输入词元</span><strong id="local-prompt">—</strong></div><div><span>输出词元</span><strong id="local-completion">—</strong></div><div><span>总词元</span><strong id="local-total">—</strong></div></div><p id="local-estimated" class="field-hint" hidden></p></div>
+          <div class="card usage-card"><div class="card-heading"><h3 id="home-teacher-name">API 教师</h3><div class="teacher-heading-actions"><span id="teacher-calls" class="tag">0 次调用</span><button id="home-teacher" type="button" class="button primary" data-tab="settings">拜师</button></div></div><div class="usage-grid"><div><span>输入词元</span><strong id="teacher-prompt">—</strong></div><div><span>输出词元</span><strong id="teacher-completion">—</strong></div><div><span>总词元</span><strong id="teacher-total">—</strong></div></div><div class="teacher-feedback"><span id="home-teacher-feedback">今天收到 — 条教师反馈</span><span title="今天教师批改明确判错的记录">发现能力缺口 <strong id="home-today-gaps">—</strong></span></div><p id="teacher-estimated" class="field-hint" hidden></p></div>
+        </section>
+        </div>
+        <div class="model-facts"><div><span>当前能力</span><p id="home-capability">尚无个人评测</p></div><div><span>本周成长</span><p id="home-week-growth">正在读取…</p></div><div><span>当前语言核心</span><p id="home-core-parameters">— 参数</p></div><div><span>生成速度</span><p id="home-token-speed">—</p></div><div><span>内存占用</span><p id="home-memory"><span id="home-memory-main">主进程 RSS —</span><span id="home-memory-inference">推理进程 —</span></p></div></div>
+      </section>
+      <section class="card connect-work" aria-labelledby="connect-heading">
+        <span class="home-eyebrow">让你的 AI 开始工作</span>
+        <h2 id="connect-heading">连接你的 AI，<br>让每一次使用都成为成长的机会。</h2>
+        <label for="connection-protocol">连接协议</label><select id="connection-protocol"><option value="openai">OpenAI Chat Completions</option><option value="claude">Claude Messages</option></select>
+        <p class="field-hint">OpenAI 与 Claude 均支持文字与工具调用，工具由连接的应用执行。</p>
+        <p class="muted">以下应用教程使用 OpenAI Chat Completions。</p>
+        <div id="integration-apps" class="integration-apps" aria-label="可连接的应用"></div>
+        <div class="connect-bottom"><div><span class="connection-dot" aria-hidden="true"></span>本地 API <code id="home-api-base">http://127.0.0.1:8765/v1</code></div><button id="home-copy-connection" class="button primary">复制连接信息</button></div>
+        <p id="home-connection-feedback" class="field-hint" role="status" aria-live="polite"></p>
+      </section>
+      </section>
+      <section id="view-teacher-required" class="page" aria-label="设置教师" hidden><div class="card teacher-required"><h2>先设置 API 教师</h2><p class="muted">设置好教师的 API 地址、密钥和模型后，才可以学习或进化。</p><button id="configure-teacher" class="button primary" data-tab="settings" type="button">去设置教师</button></div></section>
+      <section id="view-model-required" class="page" aria-labelledby="model-required-message" hidden><div class="card teacher-required"><h2 id="model-required-message" role="status">模型还没启动</h2></div></section>
+      <section id="view-learning" class="page" aria-label="学习" hidden>
+      <div id="learning-panel" class="card disclosure">
+        <div class="panel-heading"><h2>学习</h2><div class="learning-actions"><label class="learning-switch"><input id="learning-automatic" type="checkbox" role="switch" checked disabled><span>自动学习</span></label><button id="learning-start" class="button" type="button">立即学习</button><button id="open-feeding" class="button primary" aria-expanded="false" aria-controls="feeding-panel">教AI新知识</button></div></div>
+        <div class="disclosure-content learning-dashboard">
+          <div class="material-grid learning-simple-totals"><div><span>已经学会</span><strong id="learning-mastered-count">—</strong><small>项</small></div><div><span>还没学会</span><strong id="learning-pending-count">—</strong><small>项</small></div></div>
+          <p id="learning-content-state" class="muted" role="status">正在读取学习内容…</p>
+            <p id="learning-state" class="muted" role="status" hidden></p>
+            <div id="job" class="job" role="status" hidden><strong id="job-title"></strong><span id="job-progress"></span><progress id="job-bar" max="1" value="0" aria-label="当前训练实际步数"></progress><p id="job-detail"></p></div>
+          <div class="learning-content-grid"><section class="learning-box" aria-labelledby="learning-mastered-heading"><h3 id="learning-mastered-heading">已经学会</h3><ul id="learning-mastered-list" class="learning-content-list"></ul></section><section class="learning-box" aria-labelledby="learning-pending-heading"><h3 id="learning-pending-heading">还没学会</h3><ul id="learning-pending-list" class="learning-content-list"></ul></section></div>
+          <section class="learning-box learning-counts" aria-label="学习状态">
+            <div><span>能力更新</span><p><strong id="fastbrain-updates">—</strong> 次</p></div>
+            <div><span>学习</span><p><strong id="learning-count">—</strong> 次</p></div>
+            <div><span>上次学习尝试</span><p id="last-learning-time">—</p><small id="last-learning-state" class="muted" role="status" hidden></small></div>
+          </section>
+          <div class="learning-storage-grid">
+            <section class="learning-box" aria-labelledby="versions-heading"><div class="versions-heading"><h3 id="versions-heading">学习记录</h3><button id="refresh-versions" class="text-button">刷新</button></div><div id="versions" class="versions"><p class="muted">还没有保存的学习记录。</p></div></section>
+            <section class="learning-box" aria-labelledby="backups-heading"><div class="versions-heading"><h3 id="backups-heading">训练前备份（最近 3 次）</h3><button id="refresh-backups" class="text-button">刷新</button></div><p class="muted">恢复到这次学习前的状态，保留已收集的资料。</p><div id="training-backups" class="versions" aria-label="训练前备份"><p class="muted">正在读取备份。</p></div></section>
+          </div>
+        </div>
+      </div>
+      <section id="feeding-panel" class="card feeding-workspace" aria-labelledby="feeding-heading" hidden>
+        <div class="card-heading"><div><button id="feeding-back" class="text-button" type="button">← 返回学习</button><h2 id="feeding-heading">教AI新知识</h2></div></div>
+        <div id="feeding-choice" class="feeding-choices">
+          <button id="feeding-self" class="feeding-choice" type="button"><strong>自己训练</strong><span>已有问答，按模板准备，核对后加入学习</span></button>
+          <button id="feeding-teacher" class="feeding-choice" type="button"><strong>教师训练</strong><span>提供原文，由 API 教师整理成问答</span></button>
+        </div>
+        <div id="feeding-operation" class="feeding-operation" hidden>
+          <nav class="tabs feeding-kinds" aria-label="学习能力"><button id="feeding-kind-text" type="button" aria-pressed="true">文字理解</button><button id="feeding-kind-image" type="button" aria-pressed="false">图片训练</button><button id="feeding-kind-sound" type="button" aria-pressed="false">声音训练</button><button id="feeding-kind-operation" type="button" aria-pressed="false">深度学习</button></nav>
+          <section id="feeding-operation-panel" class="learning-box" aria-label="操作示范" hidden><p class="muted">录制其他软件或浏览器的操作，停止后核对并私有保存；只训练候选，不会自动执行操作，不调用 API 教师。</p><div class="button-row"><button id="feeding-record-operation" class="button primary" type="button">录制操作示范</button></div><p id="feeding-operation-status" class="muted" role="status" aria-live="polite">请在 Mac 应用中录制。</p></section>
+          <section id="feeding-media-panel" class="learning-box" aria-label="本地图片声音与操作学习" hidden>
+            <label id="media-type-field" hidden>资料类型<select id="media-type"><option value="image">图片</option><option value="video">短视频（多帧联合，不含音轨）</option></select></label>
+            <p id="media-source-hint" class="muted"></p><button id="media-select" class="button" type="button">选择学习文件</button><input id="media-files" type="file" multiple hidden>
+            <div id="media-files-list" class="feeding-preview"></div>
+            <label class="checkbox-label"><input id="media-consent" type="checkbox">我已核对标注和独立来源分组，确认资料允许本地训练。</label>
+            <div class="button-row"><button id="media-start" class="button primary" type="button" disabled>开始本轮训练</button><button id="media-pause" class="button" type="button" hidden>暂停并保留检查点</button></div>
+            <progress id="media-progress" aria-label="本轮实际训练更新" hidden></progress><p id="media-status" class="muted" role="status" aria-live="polite"></p>
+          </section>
+          <div id="feeding-text-panel" class="feeding-operation">
+          <div class="card-heading"><p id="feeding-mode-hint" class="muted intro"></p><div class="button-row"><button id="feeding-select" class="button primary" type="button">选择文件或文件夹</button><button id="feeding-select-folder" class="button" type="button">选择文件夹</button></div></div>
+          <section id="feeding-guide" class="learning-box feeding-guide" aria-labelledby="feeding-templates-heading"><div class="card-heading"><h3 id="feeding-templates-heading">教材模板</h3><div class="feeding-template-links"><a id="feeding-source-template" class="button" href="/assets/templates/source.txt" download="原文资料模板.txt">原文 TXT</a><a class="button" href="/assets/templates/qa.csv" download="问答模板.csv">问答 CSV</a><a class="button" href="/assets/templates/qa.jsonl" download="问答模板.jsonl">问答 JSONL</a></div></div>
+          <details><summary>教材标准与支持范围</summary><ul class="muted"><li id="feeding-format-hint">UTF-8 编码；问答字段严格为 question、answer，答案明确完整，并有可靠来源。</li><li>最多 20 个文件；文档单个 8 MiB，提取文字单个 64 KiB、每批 512 KiB；长资料请分批。</li><li>只使用有权用于学习的资料，移除密钥、隐私和内部文件；交给老师整理时，资料会发送给所选 API 教师。</li><li>核对问答后才加入学习，资料不足或检验未通过时不会采纳为已学。</li></ul></details></section>
+        <input id="feeding-files" type="file" multiple accept=".txt,.md,.csv,.json,.jsonl" hidden><input id="feeding-folder" type="file" multiple webkitdirectory hidden>
+        <section class="learning-box feeding-results" aria-label="资料整理与核对">
+          <p id="feeding-status" class="muted" role="status" aria-live="polite">请选择资料。识别文件不会调用教师。</p>
+          <div id="feeding-file-list" class="feeding-file-list" aria-label="资料识别清单"></div>
+          <div id="feeding-clean-panel" hidden><p id="feeding-fee" class="muted"></p><label class="checkbox-label"><input id="feeding-api-consent" type="checkbox">同意将这些资料发送给所列 API 教师自动整理，可能产生费用。</label><div class="button-row"><button id="feeding-clean" class="button primary" disabled>API 教师自动整理</button></div></div>
+          <p id="feeding-usage" class="muted" role="status" hidden></p><button id="feeding-select-all" class="text-button" type="button" hidden>全选</button><div id="feeding-preview" class="feeding-preview" aria-label="逐条核验问答"></div>
+          <div id="feeding-confirm-panel" hidden><label class="checkbox-label"><input id="feeding-answer-consent" type="checkbox">我已逐条核对所选问题、答案和原文引用，确认内容正确，允许加入学习。</label><div class="button-row"><button id="feeding-confirm" class="button primary" disabled>确认内容并加入学习</button></div></div>
+        </section>
+        </div>
+        </div>
+      </section>
+      </section>
+      <section id="view-settings" class="page" aria-label="设置" hidden>
+      <nav class="settings-menu" aria-label="设置菜单"><button class="button active" data-setting="general" aria-current="page">运行设置</button><button class="button" data-setting="language">语言</button><button class="button" data-setting="teacher">API 教师</button><button class="button" data-setting="packages">模型导出</button><button class="button" data-setting="reset">模型重修</button><button class="button" data-setting="update">更新</button><button class="button" data-setting="feedback">反馈</button><button class="button" data-setting="about">关于</button></nav>
+      <div id="settings-language" class="settings-page" hidden><div class="card"><h2>语言</h2><label for="interface-language">界面语言</label><select id="interface-language"><option value="zh" data-no-translate>中文</option><option value="en" data-no-translate>English</option></select></div></div>
+      <div id="settings-teacher" class="settings-page" hidden>
+      <form id="teacher-form" class="card" aria-labelledby="teacher-heading">
+        <div class="card-heading"><div class="label-help"><h2 id="teacher-heading">API 教师设置</h2><details class="help-tip"><summary class="help-icon" aria-label="教师设置说明">?</summary><div class="help-content"><p>测试教师会发送真实请求，可能产生费用。测试和获取列表不会保存配置。</p></div></details></div><span id="teacher-key-state" class="tag">未配置</span></div>
+        <section class="teacher-section" aria-labelledby="teacher-connection-heading"><h3 id="teacher-connection-heading">连接教师</h3>
+          <div class="teacher-fields">
+            <div><label for="teacher-name">教师名称（选填）</label><input id="teacher-name" maxlength="120" autocomplete="off" placeholder="例如：我的编程老师"></div>
+            <div><label for="teacher-base">API 地址</label><input id="teacher-base" type="url" placeholder="http://host:port/v1 或 https://api.example.com/v1" autocomplete="off"></div>
+            <div><label for="teacher-key">API 密钥</label><div class="input-action"><input id="teacher-key" type="password" placeholder="输入密钥；留空保留原密钥" autocomplete="off"><button id="toggle-teacher-key" class="button" type="button">显示</button></div></div>
+            <div><label for="teacher-model">教师模型</label><div class="input-action"><input id="teacher-model" list="teacher-models" placeholder="选择或输入模型名称" autocomplete="off"><datalist id="teacher-models"></datalist><button id="fetch-models" class="button" type="button">获取列表</button></div></div>
+          </div>
+        </section>
+        <section class="teacher-section" aria-labelledby="teacher-learning-heading"><div class="label-help"><h3 id="teacher-learning-heading">教学方式</h3><details class="help-tip"><summary class="help-icon" aria-label="教学方式说明">?</summary><div class="help-content"><p>仅发送已选择且明确提交的资料；每段视频最多4帧按时间共同标注，1次请求，不含音轨或全部画面。</p><p>选中文字且使用教师先回答时，文字对话由教师回答；本地模型启动且空闲后独立练习，再由教师批改。回答与批改会调用教师服务，可能产生费用，计入每次启动调用上限。</p></div></details></div>
+          <fieldset><legend>教什么</legend><div class="teacher-options"><label class="checkbox-label"><input id="teacher-teach-text" type="checkbox" checked> 文字</label><label class="checkbox-label"><input id="teacher-teach-image" type="checkbox"> 图片</label><label class="checkbox-label"><input id="teacher-teach-video" type="checkbox"> 视频</label><label class="checkbox-label"><input id="teacher-teach-audio" type="checkbox"> 音频</label></div></fieldset>
+          <fieldset class="answer-mode-group" aria-describedby="answer-mode-help"><legend>回答方式</legend><p id="answer-mode-help" class="field-hint">选择本地核心、API 教师，或让鲁班按问题自动判断。</p><div class="answer-mode-options">
+            <label class="answer-mode-card"><input id="teacher-answer-local_first" name="teacher-answer-mode" type="radio" value="local_first" checked><span><strong>本地优先</strong><small>本地先回答，教师再指正</small></span></label>
+            <label class="answer-mode-card"><input id="teacher-answer-teacher_first" name="teacher-answer-mode" type="radio" value="teacher_first"><span><strong>教师优先</strong><small>教师先回答，本地空闲时学习</small></span></label>
+            <label class="answer-mode-card"><input id="teacher-answer-auto" name="teacher-answer-mode" type="radio" value="auto"><span><strong>自动选择</strong><small>自动判断使用本地核心或 API 教师</small></span></label>
+          </div></fieldset>
+        </section>
+        <section class="teacher-section" aria-labelledby="teacher-limits-heading"><h3 id="teacher-limits-heading">思考与调用额度</h3><div class="teacher-fields">
+          <div><div class="label-help"><label for="teacher-thinking">思考程度</label><details class="help-tip"><summary class="help-icon" aria-label="思考程度说明">?</summary><div class="help-content"><p id="reasoning-help">通过 reasoning_effort 参数发送，仅在教师接口支持时开启；不支持时请关闭。</p></div></details></div><select id="teacher-thinking"><option value="default">提供者默认</option><option value="none">不思考</option><option value="minimal">最少</option><option value="low">低</option><option value="medium">中</option><option value="high">高</option></select>
+          <label class="checkbox-label reasoning-option"><input id="teacher-send-reasoning" type="checkbox" aria-describedby="reasoning-help">向教师发送思考程度</label></div>
+          <div><div class="label-help"><label for="teacher-limit">每次启动的教师调用上限</label><details class="help-tip"><summary class="help-icon" aria-label="教师调用上限说明">?</summary><div class="help-content"><p id="teacher-limit-help">限制本次应用服务启动后的教师请求次数，重启服务后重新计数。回答、批改和测试均计入，失败请求也可能占用次数；不是费用上限。</p></div></details></div><select id="teacher-limit" aria-describedby="teacher-limit-help"><option value="0">不限</option><option value="500">500</option><option value="300">300</option><option value="200">200</option><option value="100">100</option><option value="50">50</option></select></div>
+        </div></section>
+        <p id="teacher-test-result" class="muted" role="status" hidden></p>
+        <div class="card-bottom teacher-bottom"><div class="chat-actions"><button id="test-teacher" type="button" class="button">测试教师</button><button type="submit" class="button primary">保存教师设置</button></div></div>
+      </form>
+      </div>
+      <section id="settings-packages" class="settings-page" aria-label="模型导出" hidden>
+        <div class="card package-card"><div class="card-heading"><h2>带走你的鲁班</h2><span class="tag">已采纳的学习版本</span></div><p class="muted">将当前模型和已保留的学习成果打包，下次可以继续使用。</p><p id="package-contents" class="muted">包含基础模型、声音模型、已采纳权重与保护材料，可能包含你的知识。密钥、聊天和未采纳外脑资料不进入包。</p><div class="button-row"><button id="package-export" class="button primary">导出模型 ZIP</button><a id="package-download" class="button primary" download hidden>下载模型 ZIP</a></div><div class="package-import"><label for="package-import">导入自己或可信来源的模型 ZIP</label><input id="package-import" type="file" accept=".zip,application/zip"></div><p id="package-status" class="muted" role="status" aria-live="polite">正在读取模型包状态…</p><progress id="package-progress" max="1" aria-label="服务端实际处理字节" hidden></progress></div>
+      </section>
+      <div id="settings-reset" class="settings-page" hidden><div class="card"><h2>模型重修</h2><p class="reset-warning">重修将重置全部此前学习与模型，换回基础鲁班零号。完成后无法靠此操作找回学习成果。</p><p class="muted">基础包地址：<a href="https://ai.maihh.net/models/luban0/base.zip" id="foundation-url">https://ai.maihh.net/models/luban0/base.zip</a></p><p id="foundation-state" class="muted" role="status">基础重修包尚未发布。</p><label for="reset-phrase">输入「我同意重修」确认</label><input data-no-translate id="reset-phrase" autocomplete="off" placeholder="我同意重修"><div class="button-row"><button id="package-reset" class="button danger" disabled>确定重修</button></div></div></div>
+      <div id="settings-general" class="settings-page">
+      <div class="card disclosure">
+        <div class="panel-heading"><div class="label-help"><h2>本地模型与运行设置</h2><details class="help-tip"><summary class="help-icon" aria-label="内存用量说明">?</summary><div class="help-content"><p id="memory-summary"></p></div></details></div><span id="device-summary" class="muted">luban0 · 约 2B</span></div>
+        <form id="settings-form" class="disclosure-content"><div class="two-columns"><div><div class="label-help"><label for="model-path">模型目录</label><details class="help-tip"><summary class="help-icon" aria-label="模型目录说明">?</summary><div class="help-content"><p>更改目录后需重新加载模型。外置存储盘须保持连接。</p></div></details></div><input id="model-path" required autocomplete="off"></div><div><label for="storage-root">材料与权重存储目录</label><input id="storage-root" required autocomplete="off"></div><div><label for="local-thinking">本地默认思考程度</label><select id="local-thinking"><option value="off">快速回答</option><option value="low">浅度思考</option><option value="medium">中度思考</option><option value="high">深度思考</option></select></div><div><div class="label-help"><label for="context-tokens">上下文容量</label><details class="help-tip"><summary class="help-icon" aria-label="上下文容量说明">?</summary><div class="help-content"><p id="context-summary" role="status">自动根据设备可用内存调整。</p></div></details></div><select id="context-tokens"><option value="auto">自动 · 上限 256K</option><option value="65536">手动 · 64K</option><option value="131072">手动 · 128K</option><option value="262144">手动 · 256K</option></select></div><div><div class="label-help"><label for="temperature">采样温度</label><details class="help-tip"><summary class="help-icon" aria-label="什么是采样温度">?</summary><div class="help-content"><p>温度决定回答的随机程度：0 更确定，数值越高，表达越多样，也更容易偏离主题。日常使用建议保持默认 0.6；温度不是准确率或思考能力。</p></div></details></div><input id="temperature" type="number" min="0" max="2" step="0.05" required></div></div><div class="card-bottom"><button type="submit" class="button primary">保存运行设置</button></div></form>
+      </div>
+      </div>
+      <div id="settings-update" class="settings-page" hidden><div class="card"><div class="card-heading"><div><h2>客户端更新</h2><p id="update-state" class="muted" role="status" hidden></p></div><button id="check-update" class="button" type="button">检查更新</button></div><p id="client-version" class="muted">正在读取当前版本…</p><div id="component-versions" aria-label="组件版本" aria-live="polite"><p class="muted">正在读取引擎版本…</p></div><button id="view-update" class="button primary" type="button" hidden>查看更新内容</button></div></div>
+      <div id="settings-feedback" class="settings-page" aria-label="反馈" hidden><div class="card"><h2>反馈</h2><p>有问题可以发送邮件到 <a href="mailto:lubanlinghao@agent.qq.com">lubanlinghao@agent.qq.com</a></p></div></div>
+      <div id="settings-about" class="settings-page" aria-label="关于" hidden>
+        <div class="card"><div class="card-heading"><h2>关于鲁班零号</h2><span class="tag">luban0</span></div><p class="muted">鲁班零号提供本地语言模型 API、教师接口与可检验的神经模块学习。</p><p id="agreement-state" class="muted">正在读取使用协议。</p><button id="view-agreement" class="button" type="button">查看完整使用协议</button></div>
+      </div>
+      </section>
+      <section id="view-chat" class="page" aria-label="实验我的模型" hidden>
+        <div class="card chat-workspace">
+          <aside class="chat-sidebar" aria-label="会话列表">
+            <button id="chat-new" class="button primary" type="button">＋ 新会话</button>
+            <div id="chat-conversations" class="chat-conversations" role="navigation" aria-label="保存的会话"></div>
+            <p id="chat-save-state" class="muted" role="status">会话保存在本机</p>
+          </aside>
+          <div class="chat-main">
+            <div class="card-heading"><h2 id="chat-title">新会话</h2><div class="button-row"><button id="model-quiz-open" class="button" type="button">考考我的 AI</button><span id="chat-state" class="tag" role="status">正在连接服务</span></div></div>
+            <div class="chat-context-bar"><span id="chat-context" class="field-hint" role="status">上下文达到实际容量的 75% 时自动压缩</span><button id="chat-compact" class="text-button" type="button" disabled>压缩上下文</button></div>
+            <div id="chat-messages" class="chat-messages" role="log" aria-label="会话消息" aria-live="polite" aria-relevant="additions" tabindex="0"></div>
+            <form id="chat-form" aria-label="发送消息" aria-busy="false">
+              <div class="chat-options"><div><label for="chat-route">回答来源</label><select id="chat-route"><option value="auto">自动决策</option><option value="local">本地模型</option><option value="teacher">API 教师</option></select></div><div><label for="chat-thinking">思考程度</label><select id="chat-thinking"><option value="off">快速回答</option><option value="low">浅度思考</option><option value="medium">中度思考</option><option value="high">深度思考</option></select></div></div>
+              <div class="chat-composer">
+                <div id="chat-attachments" class="chat-attachments" aria-label="待发送附件"></div>
+                <label class="sr-only" for="chat-input">消息</label><textarea id="chat-input" rows="3" maxlength="1048576" placeholder="输入消息，或添加文字文件" aria-describedby="chat-hint attachment-state"></textarea>
+                <div class="chat-composer-bottom">
+                  <div class="chat-add-wrap">
+                    <button id="chat-add" class="button chat-add" type="button" aria-label="添加附件" aria-expanded="false" aria-controls="chat-attachment-menu">＋</button>
+                    <div id="chat-attachment-menu" class="chat-attachment-menu" hidden aria-label="选择附件">
+                      <button id="chat-pick-file" type="button">文件</button><button id="chat-pick-folder" type="button">文件夹</button>
+                    </div>
+                  </div>
+                  <p id="chat-hint" class="muted">Enter 发送 · Shift + Enter 换行</p>
+                  <div class="chat-actions"><button id="chat-stop" class="button" type="button" hidden>停止</button><button id="chat-send" class="button primary" type="submit" disabled>发送</button></div>
+                </div>
+              </div>
+              <p id="attachment-state" class="muted" role="status" hidden></p>
+              <p id="chat-teacher-hint" class="muted" hidden>教师回答会发送当前对话和附件文本，并使用已配置的调用额度。</p>
+              <input id="chat-file" type="file" multiple hidden><input id="chat-folder" type="file" webkitdirectory multiple hidden>
+            </form>
+          </div>
+        </div>
+      </section>
+
+      <section id="view-evolution" class="page" aria-label="进化" hidden>
+        <div id="evolution-panel" class="evolution-dashboard">
+          <section class="evolution-hero" aria-label="进化概览">
+          <div class="evolution-network">
+            <div class="energy-corner">LUBAN ZERO<span>持续学习 · 不断进化</span></div>
+            <svg id="evolution-graph" viewBox="0 0 800 500" role="img" aria-labelledby="evolution-graph-title evolution-graph-description">
+              <title id="evolution-graph-title">鲁班零号 · 进化能量核心</title><desc id="evolution-graph-description">抽象能量光效表现实际进化状态。</desc>
+              <defs>
+                <radialGradient id="energy-aura"><stop stop-color="#87b6ff" stop-opacity=".28"/><stop offset=".65" stop-color="#7265ff" stop-opacity=".12"/><stop offset="1" stop-color="#060b18" stop-opacity="0"/></radialGradient>
+                <radialGradient id="energy-sphere" cx=".42" cy=".36"><stop stop-color="#a6e9ff" stop-opacity=".2"/><stop offset=".55" stop-color="#4c59c9" stop-opacity=".14"/><stop offset=".9" stop-color="#7d7afe" stop-opacity=".12"/><stop offset="1" stop-color="#a8e7ff" stop-opacity=".4"/></radialGradient>
+                <radialGradient id="energy-heart"><stop stop-color="#fff"/><stop offset=".2" stop-color="#c9f8ff"/><stop offset=".48" stop-color="#75beff" stop-opacity=".75"/><stop offset="1" stop-color="#ad85ff" stop-opacity="0"/></radialGradient>
+                <linearGradient id="energy-thread" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#79e7ff"/><stop offset=".5" stop-color="#b5a2ff"/><stop offset="1" stop-color="#568eff" stop-opacity=".3"/></linearGradient>
+                <linearGradient id="energy-orbit"><stop stop-color="#64dbff" stop-opacity=".05"/><stop offset=".35" stop-color="#95dcff"/><stop offset=".65" stop-color="#b09aff"/><stop offset="1" stop-color="#8873ff" stop-opacity=".05"/></linearGradient>
+                <filter id="energy-glow" x="-100%" y="-100%" width="300%" height="300%"><feGaussianBlur stdDeviation="4"/></filter>
+              </defs>
+              <g id="evolution-connections" aria-hidden="true"></g>
+              <circle cx="400" cy="250" r="232" fill="url(#energy-aura)" class="energy-aura"/>
+              <g class="energy-rings" aria-hidden="true"><circle cx="400" cy="250" r="202"/><circle cx="400" cy="250" r="211" stroke-dasharray="1 16"/><path d="M263 106A199 199 0 0 1 543 113M547 391A199 199 0 0 1 260 391"/></g>
+              <g class="energy-orbits" aria-hidden="true"><ellipse cx="400" cy="250" rx="239" ry="71" transform="rotate(-28 400 250)"/><ellipse cx="400" cy="250" rx="228" ry="68" transform="rotate(33 400 250)"/><ellipse cx="400" cy="250" rx="171" ry="158" transform="rotate(55 400 250)" stroke-dasharray="3 13"/></g>
+              <circle cx="400" cy="250" r="137" fill="url(#energy-sphere)" class="energy-shell"/>
+              <g id="evolution-layers" aria-hidden="true"></g>
+              <g class="energy-particles" aria-hidden="true"><circle cx="193" cy="331" r="3"/><circle cx="609" cy="157" r="3"/><circle cx="215" cy="130" r="2"/><circle cx="579" cy="378" r="2"/><circle cx="566" cy="263" r="3"/></g>
+              <g class="energy-core" aria-hidden="true"><circle cx="400" cy="250" r="62" fill="url(#energy-heart)" filter="url(#energy-glow)"/><circle cx="400" cy="250" r="33" fill="url(#energy-heart)"/><path d="M363 250H437M400 213V287" stroke="#d9f5ff" stroke-opacity=".55" stroke-width=".6"/><circle cx="400" cy="250" r="5" fill="#e9fbff"/></g>
+            </svg>
+            <p id="evolution-graph-wait">正在连接鲁班零号…</p>
+            <div class="energy-caption"><span id="evolution-energy-state">积蓄新的力量</span><span class="energy-caption-sub">每一次学习，都向前一点</span></div>
+          </div>
+            <div class="evolution-hero-overview">
+              <div class="card-heading"><h2>进化</h2><div class="evolution-hero-actions"><span id="evolution-layer-count" class="tag">连接核心</span><button id="evolution-start" class="button primary evolution-start-top" type="button" disabled>开始进化</button></div></div>
+              <div class="evolution-cycle"><h3 id="evolution-cycle-round">轮次待确认</h3><p id="evolution-cycle-progress" role="status">等待开始成长</p><progress id="evolution-progress" max="1" aria-label="本轮实际训练步数" hidden></progress><progress id="evolution-experience" max="1" value="0" aria-label="合格新知识进度" aria-describedby="evolution-experience-hint" hidden></progress><p id="evolution-experience-label">正在统计合格新知识…</p><p id="evolution-experience-hint" class="field-hint">验证新增知识，并抽查已学内容；结果有净增长才保留。</p><p id="evolution-start-hint" class="field-hint" role="status">内容不足，暂不能进化。</p><p id="evolution-cycle-next">学习专家模块，验证通过后结束本轮</p></div>
+              <div class="evolution-totals">
+                <div title="本地模型与教师 API 的累计输入和输出词元"><span id="evolution-usage-label">累计使用词元</span><strong id="evolution-token-total">—</strong></div>
+                <div><span>已完成进化</span><strong><span id="evolution-total">—</span><small>次</small></strong></div>
+              </div>
+            </div>
+          </section>
+          <div class="evolution-capacity"><div><span>当前核心</span><output id="evolution-current-parameters">—</output></div><div><span>本次完成后</span><output id="evolution-after-parameters">—</output></div><div><span>新增权重</span><output id="evolution-additional-weights">待测</output></div><div><span>额外内存</span><output id="evolution-additional-memory">待测</output></div></div>
+          <p id="evolution-growth-state" class="field-hint">🔒 结构扩容暂未开放</p>
+        </div>
+      </section>
+      <section id="view-leaderboard" class="page" aria-label="进化排行" hidden>
+        <div class="ranking-tabs" role="tablist" aria-label="进化排行分页">
+          <button id="ranking-tab-submission" type="button" role="tab" aria-selected="true" aria-controls="ranking-submission" data-ranking-panel="submission">我的提交</button>
+          <button id="ranking-tab-board" type="button" role="tab" aria-selected="false" aria-controls="ranking-board" tabindex="-1" data-ranking-panel="board">排行榜</button>
+        </div>
+        <div id="ranking-submission" role="tabpanel" aria-labelledby="ranking-tab-submission">
+        <div class="card"><div class="card-heading"><h2>我的排行资料</h2><span class="tag">自主上榜</span></div>
+          <p class="muted intro">用独立新题对照学习前后，核验个人成长与旧能力保持。</p>
+          <form id="leaderboard-form" aria-busy="false"><div class="two-columns"><div><label for="leaderboard-username">公开用户名</label><input id="leaderboard-username" maxlength="32" required autocomplete="nickname" placeholder="1–16 个字符"></div><div><label for="leaderboard-country">国家/地区</label><select id="leaderboard-country"><option value="">未选择</option></select></div></div><div class="ranking-metrics"><div><span class="field-label">累计Token</span><output id="leaderboard-tokens">—</output></div><div><span class="field-label">模型升级次数</span><output id="leaderboard-count" aria-live="polite">正在统计</output></div><div><span class="field-label">通用能力变化</span><output id="leaderboard-benchmark">—</output></div></div>
+            <div class="button-row"><button id="leaderboard-publish" class="button primary" type="submit" disabled>评测并上报</button><button id="growth-stop" class="button" type="button" hidden>停止成长评测</button><button id="benchmark-start" class="button" type="button" disabled>测通用能力</button><button id="benchmark-stop" class="button" type="button" hidden>停止通用评测</button></div>
+          </form>
+          <div id="growth-exam" class="growth-exam" hidden>
+            <svg class="exam-sheet" viewBox="0 0 104 96" fill="none" aria-hidden="true"><rect x="20" y="9" width="62" height="78" rx="7" fill="#fff" stroke="currentColor" stroke-width="2"/><path d="M33 25h34" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><g class="exam-answers" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="m31 40 3 3 6-7m6 5h22"/><path d="m31 55 3 3 6-7m6 5h22"/><path d="m31 70 3 3 6-7m6 5h22"/></g><g class="exam-pencil"><path d="m59 70 4-12 21-25 8 7-21 25-12 5Z" fill="#fff0f1" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m63 58 8 7m10-28 8 7" stroke="currentColor" stroke-width="2"/><path d="m59 70 6-2-4-4-2 6Z" fill="currentColor"/></g></svg>
+            <div><strong id="growth-exam-phase">正在评测个人成长</strong><p id="growth-time" class="field-hint">已用 — · 上限 5:00</p></div>
+          </div>
+          <progress id="growth-progress" max="1" value="0" aria-label="个人成长评测进度" hidden></progress><p id="growth-state" class="field-hint" role="status">学习前建立基线，学习后自动核验个人成长。</p><progress id="benchmark-progress" max="1" value="0" aria-label="通用能力评测进度" hidden></progress><p id="benchmark-state" class="field-hint" role="status"></p><p class="field-hint">通用能力：MMLU-Pro局部评测，与个人成长分开统计 · 耗时 <output id="leaderboard-elapsed">—</output></p><p id="leaderboard-profile-state" class="field-hint" role="status">尚未读取本地资料。</p><p id="leaderboard-result" class="muted" role="status" hidden></p>
+        </div>
+        <div class="card"><div class="card-heading"><h2>我的模型能力画像</h2></div><div id="capability-profile" class="capability-profile" aria-label="按领域的学习前后能力"><p class="muted">待验证</p></div></div>
+        </div>
+        <div id="ranking-board" role="tabpanel" aria-labelledby="ranking-tab-board" hidden>
+        <div class="card"><div class="card-heading"><h2>全球进化排行</h2><div class="ranking-sort"><label for="leaderboard-sort">排序</label><select id="leaderboard-sort"><option value="growth">本次成长</option><option value="benchmark">通用Benchmark</option><option value="evolution_count">进化次数</option></select><span id="leaderboard-domain-filter" class="ranking-domain-filter"><label for="leaderboard-domain">领域</label><select id="leaderboard-domain"><option value="mathematics">数学</option><option value="programming">编程</option><option value="data">数据处理</option></select></span><button id="leaderboard-refresh" class="text-button" type="button">刷新</button></div></div><p id="leaderboard-summary" class="muted" role="status">打开页面后读取全球排行。</p>
+          <div class="leaderboard-scroll"><table class="leaderboard-table"><caption id="leaderboard-caption" class="muted">数学领域 · 成长为百分点（pp） · 未验证显示 —</caption><thead><tr><th scope="col">排名</th><th scope="col">用户名</th><th scope="col">国家/地区</th><th scope="col">累计Token</th><th scope="col">进化次数</th><th scope="col">本次成长</th><th scope="col">旧能力保持</th><th scope="col">通用Benchmark</th></tr></thead><tbody id="leaderboard-entries"></tbody></table></div>
+          <div id="leaderboard-pagination" class="button-row" hidden><button id="leaderboard-previous" class="button" type="button">上一页</button><span id="leaderboard-page" role="status"></span><button id="leaderboard-next" class="button" type="button">下一页</button></div>
+          <p class="field-hint">官网：<a href="https://ai.maihh.net" target="_blank" rel="noopener noreferrer">ai.maihh.net</a> · 仅发送评测答卷与排行资料，不发送聊天记录、模型权重或教师密钥。</p>
+        </div>
+        </div>
+      </section>
+    </main>
+    <footer>鲁班零号 · 提供本地智能服务，供其他应用与框架调用。</footer>
+  </div>
+  <div id="toast" class="toast" role="status" hidden></div>
+  <aside id="update-notice" class="update-notice" role="status" hidden><p id="update-notice-text">有新更新</p><button id="notice-update" class="button primary" type="button">重启更新</button></aside>
+  <dialog id="background-dialog" aria-labelledby="background-heading"><div class="card-heading"><h2 id="background-heading">选择背景</h2><button id="close-backgrounds" class="button" type="button">关闭</button></div><p id="background-progress" class="muted" role="status"></p><div id="background-grid" class="background-grid"></div></dialog>
+  <aside id="app-ad-popup" class="app-ad-popup" aria-label="鲁班零号推广" hidden><button id="app-ad-close" class="app-ad-close" type="button" aria-label="关闭广告">×</button><a id="app-ad" class="app-ad" href="https://ai.maihh.net/" target="_blank" rel="noopener noreferrer" aria-label="鲁班零号：了解鲁班零号"><img id="app-ad-image" src="/assets/brand/luban-intro-v1.png" width="56" height="56" alt=""><span class="app-ad-copy"><strong id="app-ad-title">鲁班零号</strong><span id="app-ad-subtitle">让每一次使用，都成为成长的机会</span></span><span id="app-ad-cta" class="app-ad-cta">了解鲁班零号 ↗</span><span class="app-ad-label">广告</span></a></aside>
+  <dialog id="evolution-share-dialog" class="evolution-share-dialog" aria-labelledby="evolution-share-title"><div class="card-heading"><h2 id="evolution-share-title">进化成功</h2><button id="evolution-share-close" class="button" type="button">关闭</button></div><img id="evolution-share-image" src="/assets/share/evolution-success.png" alt="鲁班零号进化成功分享海报，扫码访问官网" width="729" height="1024"><div class="button-row"><button id="evolution-share-copy-text" class="button" type="button">复制文本分享</button><button id="evolution-share-copy-image" class="button primary" type="button">复制图片分享</button></div></dialog>
+  <dialog id="model-quiz-dialog" aria-labelledby="model-quiz-title"><div class="card-heading"><h2 id="model-quiz-title">考考我的 AI</h2><button id="model-quiz-close" class="button" type="button">关闭</button></div><p class="muted">抽取教材原题与同类新题，教师全程关闭。</p><p id="model-quiz-state" role="status"></p><progress id="model-quiz-progress" aria-label="小测实际完成题数" max="1" hidden></progress><p id="model-quiz-result" hidden></p><div class="button-row"><button id="model-quiz-start" class="button primary" type="button" disabled>开始小测</button><button id="model-quiz-stop" class="button" type="button" hidden>停止</button></div></dialog>
+  <dialog id="update-dialog" aria-labelledby="update-title"><h2 id="update-title">更新内容</h2><p id="update-target" class="muted"></p><ol id="update-notes"></ol><p class="muted">确认后安装并重启应用；正在推理或训练时会提示稍后重试。</p><p id="update-dialog-error" role="alert" hidden></p><div class="button-row"><button id="install-update" class="button primary" type="button">确认更新</button><button id="close-update" class="button" type="button">稍后</button></div></dialog>
+  <dialog id="agreement-dialog" aria-labelledby="agreement-title" aria-describedby="agreement-intro">
+    <h2 id="agreement-title">使用协议与责任提示</h2><p id="agreement-version" class="muted"></p><p id="agreement-intro" class="muted">请阅读完整协议。数据使用、教师服务条款与费用由使用者核实和管理；本协议不免除法律规定不能免除的义务。</p><div id="agreement-text" class="agreement-text" tabindex="0" aria-label="完整使用协议"></div><p id="agreement-error" class="muted" role="alert" hidden></p><div class="button-row"><button id="agreement-accept" class="button primary" type="button">我已阅读并同意</button><button id="agreement-close" class="button" type="button" hidden>关闭</button></div>
+  </dialog>
+  <dialog id="package-import-dialog" aria-labelledby="package-import-title" aria-describedby="package-import-warning"><h2 id="package-import-title">切换学习版本</h2><p id="package-import-name" class="muted"></p><p id="package-import-warning" class="muted">导入后将切换到包中的学习版本。旧资料保留；校验或加载失败不破坏当前版本。只导入自己或可信来源的包。</p><div class="button-row"><button id="package-import-confirm" class="button primary">确认导入</button><button id="package-import-cancel" class="button">取消</button></div></dialog>
+  <dialog id="connection-dialog" aria-labelledby="connection-heading">
+    <div class="card-heading"><h2 id="connection-heading">连接应用</h2><button id="close-connection" class="icon-button" aria-label="关闭接入说明">×</button></div>
+    <p id="connection-guide" class="muted"></p>
+    <p id="connection-boundary" class="field-hint"></p>
+        <section class="card api-card" aria-labelledby="api-heading">
+          <div class="card-heading"><h2 id="api-heading">连接信息</h2><span class="tag">OpenAI 兼容</span></div>
+          <p class="muted intro">在应用的「自定义模型 / OpenAI 兼容」设置中填入以下信息。</p>
+          <label for="api-base">API 地址</label><div class="input-action"><input id="api-base" value="http://127.0.0.1:8765/v1" readonly><button id="copy-base" class="button">复制</button></div>
+          <label for="access-key">访问密钥</label><div class="input-action"><input id="access-key" type="password" readonly placeholder="点击显示以读取密钥" autocomplete="off"><button id="reveal-key" class="button">显示</button><button id="copy-key" class="button" disabled>复制</button><button id="rotate-key" class="button">轮换</button></div>
+          <div class="api-footer"><span>模型 <code>luban0</code> <span>（模型 ID）</span></span><span><code>POST /v1/chat/completions</code></span></div>
+        </section>
+    <a id="connection-docs" target="_blank" rel="noopener noreferrer">查看官方设置说明 ↗</a>
+  </dialog>
+  <dialog id="startup-ready-dialog" aria-labelledby="startup-ready-heading">
+    <form method="dialog" class="startup-ready-card">
+      <div class="card-heading"><h2 id="startup-ready-heading">模型已启动</h2><button id="close-startup-ready" class="icon-button" type="submit" aria-label="关闭模型已启动提示">×</button></div>
+      <p class="muted">复制下面的信息，填入你正在使用的应用。</p>
+      <div class="startup-ready-fields">
+        <label for="startup-api">API 地址</label><div class="input-action"><input id="startup-api" readonly><button id="copy-startup-api" class="button" type="button">复制</button></div>
+        <label for="startup-key">访问密钥</label><div class="input-action"><input id="startup-key" type="password" readonly placeholder="点击复制时读取"><button id="copy-startup-key" class="button" type="button">复制</button></div>
+        <label for="startup-model">模型名称</label><div class="input-action"><input id="startup-model" readonly value="luban0"><button id="copy-startup-model" class="button" type="button">复制</button></div>
+      </div>
+      <p id="startup-ready-feedback" class="field-hint" role="status" aria-live="polite"></p>
+      <div class="button-row"><button id="startup-ready-use" class="button primary" type="submit">知道了</button></div>
+    </form>
+  </dialog>
+  <dialog id="model-name-dialog" aria-labelledby="model-name-heading"><form id="model-name-form"><div class="card-heading"><h2 id="model-name-heading">给你的模型起个名字</h2><button id="close-model-name" type="button" class="icon-button" aria-label="关闭修改名字">×</button></div><label for="model-display-name">模型名字</label><input id="model-display-name" maxlength="32" required autocomplete="off"><p class="field-hint">只修改展示名字，应用连接时仍填写模型 ID：luban0。</p><div class="button-row"><button type="submit" class="button primary">保存名字</button></div></form></dialog>
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "luban-desktop",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "distribute": "bun scripts/distribute.ts",
+    "website:gate": "bun scripts/website_gate.ts",
+    "build": "bun frontend/build.ts",
+    "versions:gate": "bun scripts/component-versions.ts",
+    "backend": "bun backend/main.ts",
+    "test:backend": "bun test tests/bun_memory.test.ts tests/bun_settings.test.ts tests/bun_backend.test.ts",
+    "app:build": "bun scripts/build-app.ts",
+    "app": "open build/Luban.app",
+    "release:check": "bun scripts/release.ts check",
+    "release:package": "bun scripts/release.ts package",
+    "release:upload": "bun scripts/release.ts upload",
+    "release:payload-gate": "bun scripts/release-payload.ts",
+    "test:release": "bun test --timeout 30000 tests/component-versions.test.ts tests/release.test.ts tests/internal-only.test.ts tests/release-payload.test.ts"
+  }
+}

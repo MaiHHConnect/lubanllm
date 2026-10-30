@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "app": {
+    "version": "0.3.248",
+    "build": 256
+  },
+  "notes_sha256": "8550ce5c5e01fe26ba4870686a5dcb7dd7892a7a445e8cd671ee96781ab8e9a4",
+  "components": {
+    "frontend": {
+      "version": "1.0.146",
+      "source_sha256": "33b0e1330199b5f95d464021d1ca75dd9ac087e435cf8945e03177605d7b38b1"
+    },
+    "service": {
+      "version": "1.0.142",
+      "source_sha256": "a80145c1562ac8ac728ebd6774714c65fa800b9884f953644005db7c90eb0eff"
+    },
+    "generation": {
+      "version": "1.0.127",
+      "source_sha256": "a2524a184de143d588c703f7b3fe3c2b7c9f17eb69be094724f0826f6ddb9e40"
+    },
+    "operators": {
+      "version": "1.0.31",
+      "source_sha256": "80583d78d6e7df6bdbf1e3b93df8708093ffb392a88492d34eeb374f4ed65c0e"
+    },
+    "training": {
+      "version": "1.0.114",
+      "source_sha256": "4ea862294f36e8c871c85558d4070c29940aa0824bd0d06de66354653670b3bd"
+    },
+    "decision": {
+      "version": "1.0.3",
+      "source_sha256": "4f3a7c8f06c3f1043877a54725d162d128d844af9fe66b21dbd038023b978cc1"
+    },
+    "vision": {
+      "version": "1.0.46",
+      "source_sha256": "b10ed7f3414a4d0d21380bee4d1b7acc8726f4bbdf840645fa170ff3fb911f20"
+    },
+    "speech": {
+      "version": "1.0.6",
+      "source_sha256": "ccef60db16b279d4967f991322b858669fd8af986a7ef21a677e2cbaabf55031"
+    }
+  }
+}
